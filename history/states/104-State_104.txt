@@ -1,0 +1,28 @@
+state={
+	id=104
+	name="STATE_104"
+	provinces={
+		313 1382 1434 1786 2600 
+	}
+	manpower=3100085
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = KOR
+		victory_points = {
+			2600 30
+		}
+		buildings = {
+			infrastructure = 7
+			air_base = 2
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 1
+			313 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = KOR
+	}
+}

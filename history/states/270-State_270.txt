@@ -1,0 +1,26 @@
+state={
+	id=270
+	name="STATE_270"
+	provinces={
+		7 711 941 1399 1875 1986 2525 
+	}
+	manpower=1728879
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil=4
+		steel = 12
+	}
+
+	history={
+		owner = REG
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+		}
+		add_core_of = REG
+		add_core_of = LEG
+	}
+}

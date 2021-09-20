@@ -1,0 +1,1820 @@
+###########################
+# News Events
+###########################
+
+add_namespace = mithrasnews
+
+# first summit
+news_event = {
+	id = mithrasnews.1
+	title = mithrasnews.1.t
+	desc = mithrasnews.1.d
+	picture = GFX_firstsummit
+	
+	major = yes
+	
+	trigger = {
+		date > 1934.12.1
+		NOT = { has_global_flag = first_summit }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = first_summit
+	}
+	
+	option = {
+		name = mithrasnews.1.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.1.b
+		trigger = { TAG = EUR }
+	}
+}
+
+news_event = {
+	id = mithrasnews.2
+	title = mithrasnews.2.t
+	desc = mithrasnews.2.d
+	picture = GFX_secondsummit
+	
+	major = yes
+	
+	trigger = {
+		date > 1936.12.1
+		NOT = { has_global_flag = second_summit }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = second_summit
+	}
+	
+	option = {
+		name = mithrasnews.2.a
+		trigger = {
+			NOT = {
+				TAG = OYO
+				TAG = EVO
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.2.b
+		trigger = {
+			OR = {
+				TAG = BOT
+				TAG = EVO } }
+	}
+
+	option = {
+		name = mithrasnews.2.c
+		trigger = { TAG = OYO }
+	}
+}
+
+news_event = {
+	id = mithrasnews.3
+	title = mithrasnews.3.t
+	desc = mithrasnews.3.d
+	picture = GFX_gensokyo_invasion
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = gensokyo_invasion_over }
+		GEN = { has_government = fascism }
+	}
+	
+	immediate = {
+		set_global_flag = gensokyo_invasion_over
+	}
+	
+	option = {
+		name = mithrasnews.3.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = GEN
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.3.b
+		trigger = { TAG = EVO }
+	}
+
+	option = {
+		name = mithrasnews.3.c
+		trigger = { TAG = GEN }
+	}
+}
+
+news_event = {
+	id = mithrasnews.4
+	title = mithrasnews.4.t
+	desc = mithrasnews.4.d
+	picture = GFX_evo_faction_news
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = mithrasnews.4.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = REG
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.4.b
+		trigger = {
+			OR = {
+			TAG = EVO
+			TAG = REG
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.5
+	title = mithrasnews.5.t
+	desc = mithrasnews.5.d
+	picture = GFX_news_event_bose_meeting
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.5.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.5.b
+		trigger = {
+			OR = {
+			TAG = EVO
+			TAG = PES
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.6
+	title = mithrasnews.6.t
+	desc = mithrasnews.6.d
+	picture = GFX_news_event_canada_treaty
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.6.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.6.b
+		trigger = {
+			OR = {
+			TAG = EVO
+			TAG = EUR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.7
+	title = mithrasnews.7.t
+	desc = mithrasnews.7.d
+	picture = GFX_evo_faction_news_2
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.7.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = EIR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.7.b
+		trigger = {
+			OR = {
+			TAG = EVO
+			TAG = EIR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.8
+	title = mithrasnews.8.t
+	desc = mithrasnews.8.d
+	picture = GFX_news_event_017
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.8.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+				TAG = EIR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.8.b
+		trigger = {
+			OR = {
+			TAG = EUR
+			TAG = EIR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.9
+	title = mithrasnews.9.t
+	desc = mithrasnews.9.d
+	picture = GFX_news_event_por_salazar_franco
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = mithrasnews.9.a
+		trigger = {
+			NOT = {
+				TAG = KOR
+				TAG = EIR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.9.b
+		trigger = {
+			OR = {
+			TAG = KOR
+			TAG = EIR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.10
+	title = mithrasnews.10.t
+	desc = mithrasnews.10.d
+	picture = GFX_union_faction_news
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = mithrasnews.10.a
+		trigger = {
+			NOT = {
+				TAG = ESP
+				TAG = EIR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.10.b
+		trigger = {
+			OR = {
+			TAG = ESP
+			TAG = EIR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.11
+	title = mithrasnews.11.t
+	desc = mithrasnews.11.d
+	picture = GFX_news_event_montreux_convention_war
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = mithrasnews.11.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.11.b
+		trigger = {
+			OR = {
+			TAG = EVO
+			TAG = EUR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.12
+	title = mithrasnews.12.t
+	desc = mithrasnews.12.d
+	picture = GFX_news_event_RCMP
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = mithrasnews.12.a
+		trigger = {
+			NOT = {
+				TAG = LEG
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.12.b
+		trigger = {
+			OR = {
+			TAG = LEG
+			TAG = EUR
+		} }
+	}
+}
+
+news_event = {
+	id = mithrasnews.13
+	title = mithrasnews.13.t
+	desc = mithrasnews.13.d
+	picture = GFX_news_event_generic_research_lab
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.13.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.13.b
+		trigger = {
+			TAG = EVO
+		}
+	}
+}
+
+news_event = {
+	id = mithrasnews.14
+	title = mithrasnews.14.t
+	desc = mithrasnews.14.d
+	picture = GFX_news_event_generic_research_lab
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.14.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.14.b
+		trigger = {
+			TAG = EUR
+		}
+	}
+}
+
+news_event = {
+	id = mithrasnews.15
+	title = mithrasnews.15.t
+	desc = mithrasnews.15.d
+	picture = GFX_evo_g_projekt
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.15.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.15.b
+		trigger = {
+			TAG = EUR
+		}
+	}
+}
+
+news_event = {
+	id = mithrasnews.16
+	title = mithrasnews.16.t
+	desc = mithrasnews.16.d
+	picture = GFX_news_event_generic_ruins
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.16.a
+	}
+
+}
+
+news_event = {
+	id = mithrasnews.17
+	title = mithrasnews.17.t
+	desc = mithrasnews.17.d
+	picture = GFX_news_event_generic_ruins
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.17.a
+	}
+
+}
+
+news_event = {
+	id = mithrasnews.18
+	title = mithrasnews.18.t
+	desc = mithrasnews.18.d
+	picture = GFX_news_event_072
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = mithrasnews.18.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+			}
+		}
+	}
+
+	option = {
+		name = mithrasnews.18.b
+		trigger = {
+				TAG = EUR
+			}
+		}
+	}
+
+news_event = {
+	id = mithrasnews.19
+	title = mithrasnews.19.t
+	desc = mithrasnews.19.d
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.19.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+			}
+		}
+	}
+
+	option = {
+		name = mithrasnews.19.b
+		trigger = {
+				TAG = EUR
+			}
+		}
+	}
+
+	news_event = {
+		id = mithrasnews.20
+		title = mithrasnews.20.t
+		desc = mithrasnews.20.d
+		picture = GFX_news_event_french_fleet_scuttled
+		
+		major = yes
+	
+		is_triggered_only = yes
+	
+
+	
+		option = {
+			name = mithrasnews.20.a
+			trigger = {
+				NOT = {
+					TAG = LEG
+					TAG = EVO
+				}
+			}
+		}
+	
+		option = {
+			name = mithrasnews.20.b
+			trigger = {
+					TAG = LEG
+				}
+				declare_war_on = { target = EVO type = annex_everything }
+			}
+
+			option = {
+				name = mithrasnews.20.c
+				trigger = {
+						TAG = EVO
+					}
+				}
+		}
+
+		news_event = {
+			id = mithrasnews.21
+			title = mithrasnews.21.t
+			desc = mithrasnews.21.d
+			picture = GFX_dinosaurs
+			
+			major = yes
+		
+			is_triggered_only = yes
+	
+		
+			option = {
+				name = mithrasnews.21.a
+				trigger = {
+					NOT = {
+						TAG = REG
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.21.b
+				trigger = {
+					TAG = REG
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.22
+			title = mithrasnews.22.t
+			desc = mithrasnews.22.d
+			picture = GFX_wepdino
+			
+			major = yes
+		
+			is_triggered_only = yes
+	
+		
+			option = {
+				name = mithrasnews.22.a
+				trigger = {
+					NOT = {
+						TAG = REG
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.22.b
+				trigger = {
+					TAG = REG
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.23
+			title = mithrasnews.23.t
+			desc = mithrasnews.23.d
+			picture = GFX_news_event_generic_sign_treaty2
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+	
+		
+			option = {
+				name = mithrasnews.23.a
+				trigger = {
+					NOT = {
+						TAG = REG
+						TAG = EUR
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.23.b
+				trigger = {
+					OR = {
+					TAG = REG
+					TAG = EUR
+				} }
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.24
+			title = mithrasnews.24.t
+			desc = mithrasnews.24.d
+			picture = GFX_news_event_german_volunteers
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+	
+		
+			option = {
+				name = mithrasnews.24.a
+				trigger = {
+					NOT = {
+						TAG = EIR
+						TAG = HER
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.24.b
+				trigger = {
+					OR = {
+					TAG = EIR
+					TAG = HER
+				} }
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.25
+			title = mithrasnews.25.t
+			desc = mithrasnews.25.d
+			picture = GFX_news_event_019
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+	
+		
+			option = {
+				name = mithrasnews.25.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.25.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.26
+			title = mithrasnews.26.t
+			desc = mithrasnews.26.d
+			picture = GFX_news_event_banovina_croatia
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+		
+		
+			option = {
+				name = mithrasnews.26.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.26.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.27
+			title = mithrasnews.27.t
+			desc = mithrasnews.27.d
+			picture = GFX_news_event_hol_polderen
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+	
+		
+			option = {
+				name = mithrasnews.27.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.27.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.28
+			title = mithrasnews.28.t
+			desc = mithrasnews.28.d
+			picture = GFX_news_event_indonesia_handover
+			
+			major = yes
+		
+			is_triggered_only = yes
+	
+		
+			option = {
+				name = mithrasnews.28.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.28.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.29
+			title = mithrasnews.29.t
+			desc = mithrasnews.29.d
+			picture = GFX_felikscrash
+			
+			major = yes
+		
+			is_triggered_only = yes
+	
+			option = {
+				name = mithrasnews.29.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.29.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+
+		news_event = {
+			id = mithrasnews.30
+			title = mithrasnews.30.t
+			desc = mithrasnews.30.d
+			picture = GFX_evo_faction_news_2
+			
+			major = yes
+		
+			is_triggered_only = yes
+
+		
+			option = {
+				name = mithrasnews.30.a
+				trigger = {
+					NOT = {
+						TAG = EVO
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.30.b
+				trigger = {
+					OR = {
+					TAG = EVO
+					TAG = POL
+				} }
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.31
+			title = mithrasnews.31.t
+			desc = mithrasnews.31.d
+			picture = GFX_felikscrash
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+	
+		
+			option = {
+				name = mithrasnews.31.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.31.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.32
+			title = mithrasnews.32.t
+			desc = mithrasnews.32.d
+			picture = GFX_felikscrash
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+
+		
+			option = {
+				name = mithrasnews.32.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.32.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.33
+			title = mithrasnews.33.t
+			desc = mithrasnews.33.d
+			picture = GFX_felikscrash
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+
+		
+			option = {
+				name = mithrasnews.33.a
+				trigger = {
+					NOT = {
+						TAG = POL
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.33.b
+				trigger = {
+					TAG = POL
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.34
+			title = mithrasnews.34.t
+			desc = mithrasnews.34.d
+			picture = GFX_news_event_nuke
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+
+		
+			option = {
+				name = mithrasnews.34.a
+				trigger = {
+					NOT = {
+						TAG = PES
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.34.b
+				trigger = {
+					TAG = PES
+				}
+			}
+		}
+
+		news_event = {
+			id = mithrasnews.35
+			title = mithrasnews.35.t
+			desc = mithrasnews.35.d
+			picture = GFX_news_event_nuke
+			
+			major = yes
+		
+			is_triggered_only = yes
+		
+
+		
+			option = {
+				name = mithrasnews.35.a
+				trigger = {
+					NOT = {
+						TAG = LEG
+					}
+				}
+			}
+			option = {
+				name = mithrasnews.35.b
+				trigger = {
+					TAG = LEG
+				}
+			}
+		}
+
+# The Fall of Radolfsburg (Botrelia)
+news_event = {
+	id = mithrasnews.36
+	title = mithrasnews.36.t
+	desc = mithrasnews.36.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		48 = { is_controlled_by = BOT }
+		48 = { is_owned_by = EVO }
+		BOT = { has_war_with = EVO }
+		NOT = { has_global_flag = fall_of_radolfs_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_radolfs_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.36.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.36.b
+		trigger = { TAG = EVO }
+	}
+	option = {
+		name = mithrasnews.36.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Pyrrhus (Botrelia)
+news_event = {
+	id = mithrasnews.37
+	title = mithrasnews.37.t
+	desc = mithrasnews.37.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		225 = { is_controlled_by = BOT }
+		225 = { is_owned_by = EVO }
+		BOT = { has_war_with = EVO }
+		NOT = { has_global_flag = fall_of_pyrrhus_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_pyrrhus_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.37.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.37.b
+		trigger = { TAG = EVO }
+	}
+	option = {
+		name = mithrasnews.37.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Sturmpkeine (Botrelia)
+news_event = {
+	id = mithrasnews.38
+	title = mithrasnews.38.t
+	desc = mithrasnews.38.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		206 = { is_controlled_by = BOT }
+		206 = { is_owned_by = GEL }
+		BOT = { has_war_with = EVO }
+		NOT = { has_global_flag = fall_of_sturm_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_sturm_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.38.a
+		trigger = {
+			NOT = {
+				TAG = GEL
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.38.b
+		trigger = { TAG = GEL }
+	}
+	option = {
+		name = mithrasnews.38.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Draenica (Botrelia)
+news_event = {
+	id = mithrasnews.39
+	title = mithrasnews.39.t
+	desc = mithrasnews.39.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		307 = { is_controlled_by = BOT }
+		307 = { is_owned_by = EUR }
+		BOT = { has_war_with = EUR }
+		NOT = { has_global_flag = fall_of_draenica_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_draenica_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.39.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.39.b
+		trigger = { TAG = EUR }
+	}
+	option = {
+		name = mithrasnews.39.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Lyers (Pestfriland)
+news_event = {
+	id = mithrasnews.40
+	title = mithrasnews.40.t
+	desc = mithrasnews.40.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		235 = { is_controlled_by = PES }
+		235 = { is_owned_by = ALA }
+		PES = { has_war_with = ALA }
+		NOT = { has_global_flag = fall_of_lyers_pes }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_lyers_pes
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.40.a
+		trigger = {
+			NOT = {
+				TAG = ALA
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.40.b
+		trigger = { TAG = ALA }
+	}
+	option = {
+		name = mithrasnews.40.c
+		trigger = { TAG = PES }
+	}
+}
+
+# The Fall of Riverburch (Pestfriland)
+news_event = {
+	id = mithrasnews.41
+	title = mithrasnews.41.t
+	desc = mithrasnews.41.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		65 = { is_controlled_by = PES }
+		65 = { is_owned_by = LEG }
+		PES = { has_war_with = LEG }
+		NOT = { has_global_flag = fall_of_riverburch_pes }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_riverburch_pes
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.41.a
+		trigger = {
+			NOT = {
+				TAG = LEG
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.41.b
+		trigger = { TAG = LEG }
+	}
+	option = {
+		name = mithrasnews.41.c
+		trigger = { TAG = PES }
+	}
+}
+
+# The Fall of Wilnisaw (Botrelia)
+news_event = {
+	id = mithrasnews.42
+	title = mithrasnews.42.t
+	desc = mithrasnews.42.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		304 = { is_controlled_by = BOT }
+		304 = { is_owned_by = POL }
+		BOT = { has_war_with = POL }
+		NOT = { has_global_flag = fall_of_wilnisaw_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_wilnisaw_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.42.a
+		trigger = {
+			NOT = {
+				TAG = POL
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.42.b
+		trigger = { TAG = POL }
+	}
+	option = {
+		name = mithrasnews.42.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Nerjo (Botrelia)
+news_event = {
+	id = mithrasnews.43
+	title = mithrasnews.43.t
+	desc = mithrasnews.43.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		338 = { is_controlled_by = BOT }
+		338 = { is_owned_by = NER }
+		BOT = { has_war_with = NER }
+		NOT = { has_global_flag = fall_of_nerjo_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_nerjo_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.43.a
+		trigger = {
+			NOT = {
+				TAG = POL
+				TAG = NER
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.43.b
+		trigger = {
+			OR = {
+			TAG = POL
+			TAG = NER
+		} }
+	}
+	option = {
+		name = mithrasnews.43.c
+		trigger = { TAG = BOT }
+	}
+}
+
+# The Fall of Regia (Pestfriland)
+news_event = {
+	id = mithrasnews.44
+	title = mithrasnews.44.t
+	desc = mithrasnews.44.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		284 = { is_controlled_by = PES }
+		284 = { is_owned_by = REG }
+		PES = { has_war_with = REG }
+		NOT = { has_global_flag = fall_of_regia_pes }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_regia_pes
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.44.a
+		trigger = {
+			NOT = {
+				TAG = REG
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.44.b
+		trigger = {
+			TAG = REG
+		}
+	}
+	option = {
+		name = mithrasnews.44.c
+		trigger = { TAG = PES }
+	}
+}
+
+# The Fall of Eirie (Pestfriland)
+news_event = {
+	id = mithrasnews.45
+	title = mithrasnews.45.t
+	desc = mithrasnews.45.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		7 = { is_controlled_by = PES }
+		7 = { is_owned_by = EIR }
+		PES = { has_war_with = EIR }
+		NOT = { has_global_flag = fall_of_eirie_pes }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_eirie_pes
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.45.a
+		trigger = {
+			NOT = {
+				TAG = EIR
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.45.b
+		trigger = {
+			TAG = EIR
+		}
+	}
+	option = {
+		name = mithrasnews.45.c
+		trigger = { TAG = PES }
+	}
+}
+
+# The Fall of Pestillience (Eurada) 
+news_event = {
+	id = mithrasnews.46
+	title = mithrasnews.46.t
+	desc = mithrasnews.46.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		9 = { is_controlled_by = EUR }
+		9 = { is_owned_by = PES }
+		PES = { has_war_with = EUR }
+		NOT = { has_global_flag = fall_of_pesti_eur }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_pesti_eur
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.46.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.46.b
+		trigger = {
+			TAG = PES
+		}
+	}
+	option = {
+		name = mithrasnews.46.c
+		trigger = { TAG = EUR }
+	}
+}
+
+# The Fall of Pestillience (Pithia) 
+news_event = {
+	id = mithrasnews.47
+	title = mithrasnews.47.t
+	desc = mithrasnews.47.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		9 = { is_controlled_by = POL }
+		9 = { is_owned_by = PES }
+		PES = { has_war_with = POL }
+		NOT = { has_global_flag = fall_of_pesti_pol }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_pesti_pol
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.47.a
+		trigger = {
+			NOT = {
+				TAG = POL
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.47.b
+		trigger = {
+			TAG = PES
+		}
+	}
+	option = {
+		name = mithrasnews.47.c
+		trigger = { TAG = POL }
+	}
+}
+
+
+# The Fall of Pestillience (Botrelia) 
+news_event = {
+	id = mithrasnews.48
+	title = mithrasnews.48.t
+	desc = mithrasnews.48.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		9 = { is_controlled_by = BOT }
+		9 = { is_owned_by = PES }
+		PES = { has_war_with = BOT }
+		NOT = { has_global_flag = fall_of_pesti_bot }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_pesti_bot
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.48.a
+		trigger = {
+			NOT = {
+				TAG = BOT
+				TAG = PES
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.48.b
+		trigger = {
+			TAG = PES
+		}
+	}
+	option = {
+		name = mithrasnews.48.c
+		trigger = { TAG = BOT }
+	}
+}
+
+
+# The Fall of Sabarona (Evolia) 
+news_event = {
+	id = mithrasnews.49
+	title = mithrasnews.49.t
+	desc = mithrasnews.49.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		207 = { is_controlled_by = EVO }
+		207 = { is_owned_by = BOT }
+		EVO = { has_war_with = BOT }
+		NOT = { has_global_flag = fall_of_sabarona_evo }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_sabarona_evo
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.49.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.49.b
+		trigger = {
+			TAG = EVO	
+		}
+	}
+	option = {
+		name = mithrasnews.49.c
+		trigger = { TAG = BOT }
+	}
+}
+# The Fall of Fellette (Evolia)
+news_event = {
+	id = mithrasnews.50
+	title = mithrasnews.50.t
+	desc = mithrasnews.50.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		268 = { is_controlled_by = EVO }
+		268 = { is_owned_by = BOT }
+		EVO = { has_war_with = BOT }
+		NOT = { has_global_flag = fall_of_fellette_evo }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_fellette_evo
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.50.a
+		trigger = {
+			NOT = {
+				TAG = EVO
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.50.b
+		trigger = {
+			TAG = EVO
+		}
+	}
+	option = {
+		name = mithrasnews.50.c
+		trigger = { TAG = BOT }
+	}
+}
+# The Fall of Fellette (Polonia) 
+news_event = {
+	id = mithrasnews.51
+	title = mithrasnews.51.t
+	desc = mithrasnews.51.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		268 = { is_controlled_by = POL }
+		268 = { is_owned_by = BOT }
+		POL = { has_war_with = BOT }
+		NOT = { has_global_flag = fall_of_fellette_pol }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_fellette_pol
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.50.a
+		trigger = {
+			NOT = {
+				TAG = POL
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.51.b
+		trigger = {
+			TAG = POL
+		}
+	}
+	option = {
+		name = mithrasnews.51.c
+		trigger = { TAG = BOT }
+	}
+}
+# The Fall of Fellette (Eurada) 
+news_event = {
+	id = mithrasnews.52
+	title = mithrasnews.52.t
+	desc = mithrasnews.52.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		268 = { is_controlled_by = EUR }
+		268 = { is_owned_by = BOT }
+		EUR = { has_war_with = BOT }
+		NOT = { has_global_flag = fall_of_fellette_eur }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_fellette_eur
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = mithrasnews.52.a
+		trigger = {
+			NOT = {
+				TAG = EUR
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.52.b
+		trigger = {
+			TAG = EUR
+		}
+	}
+	option = {
+		name = mithrasnews.52.c
+		trigger = { TAG = BOT }
+	}
+}
+
+news_event = {
+	id = mithrasnews.53
+	title = mithrasnews.53.t
+	desc = mithrasnews.53.d
+	picture = GFX_news_event_generic_research_lab
+	
+	major = yes
+
+	is_triggered_only = yes
+
+
+
+	option = {
+		name = mithrasnews.53.a
+		trigger = {
+			NOT = {
+				TAG = BOT
+			}
+		}
+	}
+	option = {
+		name = mithrasnews.53.b
+		trigger = {
+			TAG = BOT
+		}
+	}
+}

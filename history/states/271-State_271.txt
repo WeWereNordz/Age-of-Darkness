@@ -1,0 +1,23 @@
+state={
+	id=271
+	name="STATE_271"
+	provinces={
+		46 323 574 1299 1305 1657 1848 2090 2508 2530 2547 
+	}
+	manpower=3525338
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	resources={
+		aluminium=18
+	}
+	
+	history={
+		owner = GES
+
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GES
+	}
+}

@@ -1,0 +1,140 @@
+ideas = {
+
+	country = {
+		desunionese_spirit = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+				attrition = -0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+	}
+
+	#MINISTERS
+	theorist = {
+		kominisha = {
+			ledger = air
+			
+			allowed = {
+				original_tag = DES
+			}
+			
+			research_bonus = {
+				rocketry = 0.1
+			}
+			
+			traits = { rocket_scientist }
+		}
+
+		utezaki = {
+			ledger = air
+			
+			allowed = {
+				original_tag = DES
+			}
+			
+			research_bonus = {
+				nuclear = 0.1
+			}
+			
+			traits = { nuclear_scientist }
+		}
+	}
+
+	#MILITARY
+	army_chief = {
+		
+		mirishuka = {
+			
+			
+			allowed = {
+				original_tag = DES
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+		
+		ishimako = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = DES
+			}
+
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		jumo = {
+			ledger = army
+
+			allowed = {
+				original_tag = DES
+			}
+	
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		herikae = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = DES
+			}
+			
+
+			
+			traits = { army_concealment_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		akagi = {
+			ledger = army
+
+			allowed = {
+				original_tag = DES
+			}
+	
+			traits = { army_commando_3 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+}

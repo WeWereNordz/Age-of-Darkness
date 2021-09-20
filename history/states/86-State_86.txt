@@ -1,0 +1,21 @@
+state={
+	id=86
+	name="STATE_86"
+	provinces={
+		2082 
+	}
+	manpower=123
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = LEG
+		buildings = {
+			infrastructure = 1
+			2082 = {
+                naval_base = 3
+            }
+		}
+		add_core_of = LEG
+	}
+}

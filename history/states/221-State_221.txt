@@ -1,0 +1,24 @@
+state={
+	id=221
+	name="STATE_221"
+	provinces={
+		169 338 340 710 724 1035 1264 1282 1540 1564 1650 1700 1857 
+	}
+	manpower=3525338
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DES
+		victory_points = {
+			724 8
+		}
+		victory_points = {
+			169 5
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = DES
+	}
+}

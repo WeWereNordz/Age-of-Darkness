@@ -1,0 +1,16 @@
+﻿units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Coastal Fleet"
+		naval_base = 1269
+		task_force = {				
+			name = "Destroyer Flotilla"
+			location = 1269 # Danzig
+			ship = { name = "DD-1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FED } } }	
+			ship = { name = "DD-2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FED } } }
+			ship = { name = "DD-3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FED } } }
+			ship = { name = "DD-4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FED } } }	
+		}		
+	}
+}

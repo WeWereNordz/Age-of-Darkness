@@ -1,0 +1,24 @@
+state={
+	id=307
+	name="STATE_307"
+	provinces={
+		376 448 810 1209 1228 1816 2232 2617 2618 2621 
+	}
+	manpower=3620150
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EUR
+		victory_points = { 376 30 }
+		victory_points = { 448 20 }
+		victory_points = { 2232 5 }
+		
+		buildings = {
+			infrastructure = 8
+			air_base = 8
+			industrial_complex = 12
+		}
+		add_core_of = EUR
+	}
+}

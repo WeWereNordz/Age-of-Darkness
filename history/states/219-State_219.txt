@@ -1,0 +1,27 @@
+state={
+	id=219
+	name="STATE_219"
+	provinces={
+		245 400 1030 1080 1601 1605 1977 2345 2347 2367 
+	}
+	manpower=1728879
+	state_category = town
+	buildings_max_level_factor=1.000
+
+	resources={
+		aluminium=12
+	}
+
+	
+	history={
+		owner = ALA
+		victory_points = {
+			1080 12
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+		}
+		add_core_of = ALA
+	}
+}

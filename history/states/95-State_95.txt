@@ -1,0 +1,22 @@
+state={
+	id=95
+	name="STATE_95"
+	provinces={
+		647 747 762 893 1164 1537 1677 1792 1826 2157 
+	}
+	manpower=1062650
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			1537 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = POL
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=75
+	name="STATE_75"
+	provinces={
+		928 1326 1980 2008 2044 
+	}
+	manpower=3525338
+	state_category = city
+	buildings_max_level_factor=1.000
+
+	resources={
+		rubber=24
+	}
+	
+	history={
+		owner = HEY
+		victory_points = {
+			2044 30
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 4
+		}
+		add_core_of = HEY
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=248
+	name="STATE_248"
+	provinces={
+		227 428 610 720 813 934 955 991 1088 1237 1324 1500 1575 1639 1779 1836 1891 1984 2200 2393 2396 2399 2400 2415 2416 2419 2438 2820 2821 
+	}
+	manpower=3156456
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+		victory_points = {
+			1891 20
+		}
+		victory_points = {
+			1779 12
+		}
+		buildings = {
+			infrastructure = 5
+			2438 = {
+                naval_base = 5
+
+            }
+		}
+		add_core_of = EVO
+	}
+}

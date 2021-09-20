@@ -1,0 +1,146 @@
+division_template = {
+	name = "Óglaigh na Éireann"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	support = {
+        engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Briogáid Marcra"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1655
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.25
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1655
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.25
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 871
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 871
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 249
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.02
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 249
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.02
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 857
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 857
+		division_template = "Óglaigh na Éireann"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Briogáid Marcra"
+		location = 1985
+		division_template = "Briogáid Marcra"
+		start_experience_factor = 0.27
+	}
+}
+
+air_wings = {
+	213 = {
+		fighter_equipment_0 = {
+			owner = "HER"
+			amount = 25
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HER"
+		}
+		requested_factories = 1
+		progress = 0.11
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HER"
+		}
+		requested_factories = 1
+		progress = 0.62
+		efficiency = 70
+	}
+}

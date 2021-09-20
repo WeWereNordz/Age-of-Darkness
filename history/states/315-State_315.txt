@@ -1,0 +1,31 @@
+state={
+	id=315
+	name="STATE_315"
+	provinces={
+		689 953 1070 1915 2629 
+	}
+	manpower=3620150
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil=90
+	}
+
+	history={
+		owner = EUR
+		victory_points = {
+			1070 20
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			dockyard = 7
+			1915 = {
+                naval_base = 10
+
+            }
+		}
+		add_core_of = EUR
+	}
+}

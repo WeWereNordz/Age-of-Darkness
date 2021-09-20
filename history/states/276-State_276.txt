@@ -1,0 +1,26 @@
+state={
+	id=276
+	name="STATE_276"
+	provinces={
+		43 412 1023 1074 1357 1478 1558 2111 
+	}
+	manpower=3303970
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium=4
+	}
+
+	history={
+		owner = BOT
+		victory_points = {
+			2111 20
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 12
+		}
+		add_core_of = BOT
+	}
+}

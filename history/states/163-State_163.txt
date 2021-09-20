@@ -1,0 +1,19 @@
+state={
+	id=163
+	name="STATE_163"
+	provinces={
+		2809 
+	}
+	manpower=64
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = POL
+	}
+}

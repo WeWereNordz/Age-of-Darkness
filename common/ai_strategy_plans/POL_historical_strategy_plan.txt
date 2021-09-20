@@ -1,0 +1,86 @@
+POL_historical_plan = {
+	name = "Polonia Historical Plan"
+	desc = "Historical Polonia"
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = democratic
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		POL_ducttape_economy
+		POL_core_industries
+		POL_conciliate_the_north
+		POL_cult_of_personality
+		POL_second_conference
+		POL_examples_of_the_traitors
+		POL_heavy_occupation
+		POL_develop_the_country
+		POL_catching_up
+		POL_a_good_enough_rifle
+		POL_a_good_enough_staff
+		POL_supply_the_armies
+		POL_a_good_enough_tank
+		POL_the_rusty_colonial
+		POL_time_for_mransk
+		POL_time_for_rolow
+		POL_railworks
+		POL_develop_the_antarctic
+		POL_hidden_factories
+		POL_ice_sheet_fuel_deposits
+		POL_war_profiteering
+		POL_guns_to_evolia
+		POL_guns_to_botrelia
+		POL_guns_to_befglorta
+		POL_expanding_the_empire
+		POL_creeping_expansion
+		POL_a_true_chernaria
+		POL_pithia_at_both_poles
+		POL_its_not_enough
+		POL_secrets_of_the_antarctic
+		POL_western_isles
+		POL_nerjo_expedition
+		POL_a_cure
+		POL_deal_devil
+		POL_arctic_frontier
+		POL_a_port_in_eirie
+		POL_frontier_bases
+		POL_antarctic_labworks
+		POL_antarctic_rail
+		POL_augusts_research
+		POL_the_pride_of_pithia
+		POL_national_dockyards
+		POL_carriers
+		POL_wings_on_our_decks
+		POL_fleet_escorts
+		POL_not_enough_dockyards
+		POL_our_dream_realized
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

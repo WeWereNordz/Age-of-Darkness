@@ -1,0 +1,28 @@
+state={
+	id=323
+	name="STATE_323"
+	provinces={
+		81 329 344 405 563 688 783 1053 1462 1685 1765 1989 2658 2662 
+	}
+	manpower=3842674
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = NEV
+		victory_points = {
+			1989 25
+		}
+		victory_points = {
+			81 3
+		}
+		buildings = {
+			infrastructure = 3
+			405 = {
+                naval_base = 5
+
+            }
+		}
+		add_core_of = NEV
+	}
+}

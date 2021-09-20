@@ -1,0 +1,310 @@
+units = {
+	### BOTLY ###
+	fleet = {
+		name = "Commando Blottomorto"
+		naval_base = 1684 # Taranto, BOTly
+
+		task_force = {
+			name = "I Squadra Navale" # Dipartimento MilBOTre Marittimo 'Ionio e Basso Adriatico' / I Squadra
+			location = 1684 # Taranto, BOTly
+
+			# V Divisione Corazzate
+			ship = { name = "BN Johtantro" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Befglowtus" definition = battleship equipment = { battleship_1 = { amount = 1 owner = BOT } } }
+			# I Divisione Incrociatori
+			ship = { name = "BN Zara" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Gorizia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Fiume" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT  } } }
+			# IV Divisione Incrociatori
+			ship = { name = "BN Luigi Cadorna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Armando Diaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Alberico da Barbiano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Alberto da Giussano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			# Gruppo Incrociatori (Obsoleti)
+			ship = { name = "BN San Giorgio" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Bari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT } } }
+			# Gruppo Esploratori Leggeri (Obsoleti)
+			ship = { name = "BN Carlo Mirabello" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Augusto Riboty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# II Squadriglia Cacciatorpediniere
+			ship = { name = "BN Espero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Borea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Zeffiro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Ostro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			# VI Squadriglia Cacciatorpediniere
+			ship = { name = "BN Bettino Ricasoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Giovanni Nicotera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# VI Squadriglia Torpediniere
+			ship = { name = "BN Rosolino Pilo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Giuseppe Missori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Francesco Stocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Giuseppe Sirtori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# VII Squadriglia Cacciatorpediniere
+			ship = { name = "BN Dardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Freccia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Saetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Strale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			# VII Squadriglia Torpediniere
+			ship = { name = "BN Angelo Bassini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Enrico Cosenz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Giacomo Medici" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Nicola Fabrizi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# VIII Squadriglia Cacciatorpediniere
+			ship = { name = "BN Baleno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Folgore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Fulmine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "BN Lampo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# IX Squadriglia Cacciatorpediniere
+			ship = { name = "BN Nicoloso da Recco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Emanuele Pessagno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Luca Tarigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "BN Antoniotto Usodimare" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+		}
+
+		task_force = {
+			name = "II Gruppo Distruttore"
+			location = 2330 # Taranto, BOTly
+
+			# XLI Squadriglia Sommergibili
+			ship = { name = "RSmg Balilla" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Antonio Sciesa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Enrico Toti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Domenico Millelire" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+		}
+	}
+
+	fleet = {
+		name = "Commando Befglorta"
+		naval_base = 696 # La Spezia, BOTly
+
+		task_force = {
+			name = "II Squadra Navale" # Dipartimento MilBOTre Marittimo 'Alto Tirreno' / II Squadra
+			location = 696 # La Spezia, BOTly
+
+			# Comando di Squadra
+			ship = { name = "RI Pola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT  } } }
+			# II Divisione Incrociatori
+			ship = { name = "RI Giovanni dalle Bande Nere" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "RI Bartolomeo Colleoni" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT  } } }
+			# III Divisione Incrociatori
+			ship = { name = "RI Bolzano" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "RI Trento" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RI Trieste" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = BOT } } }
+			# VI Divisione Incrociatori
+			ship = { name = "RI Emanuele Filiberto Duca d'Aosta" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RI Muzio Attendolo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RI Raimondo Montecuccoli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = BOT } } }
+			# X Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Maestrale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "RCT Grecale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Libeccio" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Scirocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# XI Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Antonio da Noli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Ugolino Vivaldi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Lanzerotto Malocello" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Leone Pancaldo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# XII Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Antonio Pigafetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Alvise da Mosto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Giovanni da Verrazzano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Nicolò Zeno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+		}
+
+		task_force = {
+			name = "I Gruppo Distruttore"
+			location = 696 # La Spezia, BOTly
+
+			# XI Squadriglia Sommergibili
+			ship = { name = "RSmg Pietro Calvi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Giuseppe Finzi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Ettore Fieramosca" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			# XII Squadriglia Sommergibili
+			ship = { name = "RSmg Glauco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Otaria" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			# XIII Squadriglia Sommergibili
+			ship = { name = "RSmg Rubino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Ondina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			# XIV Squadriglia Sommergibili
+			ship = { name = "RSmg H 1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg H 2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg H 4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg H 6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg H 8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+		}
+	}
+
+	fleet = {
+		name = "Comando Navale Basso Rebiltro"
+		naval_base = 2019 # Naples, BOTly
+
+		task_force = {
+			name = "Squadra di Seliro" # Dipartimento MilBOTre Marittimo 'Basso Tirreno'
+			location = 2019 # Naples, BOTly
+
+			# III Squadriglia Torpediniere
+			ship = { name = "RCT Generale Marcello Prestinari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Generale Antonio Cantore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Giuseppe La Masa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Giacinto Carini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# IV Squadriglia Torpediniere
+			ship = { name = "RCT Calatafimi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Castelfidardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Curtatone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Monzambano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+		}
+
+		task_force = {
+			name = "II Gruppo Distruttore"
+			location = 2019 # Naples, BOTly
+
+			# XXI Squadriglia Sommergibili
+			ship = { name = "RSmg Jalea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Jantina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Ametista" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Zaffiro" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			# XXII Squadriglia Sommergibili
+			ship = { name = "RSmg Diamante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Topazio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Galatea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Nereide" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+		}
+	}
+
+	fleet = {
+		name = "Comando Corridorio"
+		naval_base = 1603 # La Maddalena, Sardinia
+
+		task_force = {
+			name = "Squadra di Feglito" # Comando MilBOTre Marittimo 'Sardegna'
+			location = 1603 # La Maddalena, Sardinia
+
+			# II Squadriglia Torpediniere
+			ship = { name = "RCT Generale Achille Papa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Generale Carlo Montanari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Generale Antonino Cascino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Generale Antonio Chinotto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			# IX Squadriglia Torpediniere
+			ship = { name = "RCT Antonio Mosto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Ippolito Nievo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Fratelli Cairoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+		}
+
+		task_force = {
+			name = "III Gruppo Distruttore"
+			location = 2451 # La Maddalena, Sardinia
+
+			# LXXI Squadriglia Sommergibili
+			ship = { name = "RSmg 1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg 2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg 3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg 4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg 5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg 6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+		}
+	}
+
+
+	### SOUTH ###
+	fleet = {
+		name = "Comando Navale Fellette"
+		naval_base = 1052 # Tobruk, Libya
+
+		task_force = {
+			name = "Squadra di Fellette"
+			location = 1052 # Tobruk, Libya
+
+			# I Squadriglia Cacciatorpediniere
+			ship = { name = "RCT Aquilone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Euro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Nembo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RCT Turbine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BOT } } }
+		}
+
+		task_force = {
+			name = "IV Gruppo Distruttore"
+			location = 1885 # Tobruk, Libya
+
+			# LI Squadriglia Sommergibili
+			ship = { name = "RSmg Delfino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Narvalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+			ship = { name = "RSmg Squalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT  } } }
+			ship = { name = "RSmg Tricheco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = BOT } } }
+		}
+	}
+}
+#######################
+
+##### STARTING PRODUCTION #####
+instant_effect = {
+	if = {
+		limit = { is_tutorial = no }
+
+		# BB: "RN Conte di Cavour" (Refitted & Recommissioned: 1-Jun, 1937)
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2 # Caio Duilio Class
+				creator = "BOT"
+			}
+			requested_factories = 2
+			progress = 0.20
+			amount = 1
+		}
+
+		# BB: "RN Giulio Cesare" (Refitted & Recommissioned: 3-Jun, 1937)
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2 # Caio Duilio Class
+				creator = "BOT"
+			}
+			requested_factories = 2
+			progress = 0.20
+			amount = 1
+		}
+
+		# CL: "RI Eugenio di Savoia" (Recommissioned: 16-Jan, 1936)
+		add_equipment_production = {
+			equipment = {
+				type = light_cruiser_1
+				creator = "BOT"
+			}
+			requested_factories = 1
+			progress = 0.95
+			amount = 1
+		}
+
+		# DD: "RCT Perseo"
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_1
+				creator = "BOT"
+			}
+			requested_factories = 1
+			progress = 0.70
+			amount = 1
+		}
+
+		# DD: "RCT Sirio"
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_1
+				creator = "BOT"
+			}
+			requested_factories = 1
+			progress = 0.60
+			amount = 1
+		}
+
+		# SS: "RSmg Enrico Tazzoli"
+		add_equipment_production = {
+			equipment = {
+				type = submarine_1
+				creator = "BOT"
+			}
+			requested_factories = 1
+			progress = 0.50
+			amount = 1
+		}
+	}
+}

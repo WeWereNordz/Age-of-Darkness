@@ -1,0 +1,39 @@
+spriteTypes = {	
+
+	#evolian equipment
+
+	SpriteType = {
+		name = "GFX_airship1_medium"
+		texturefile = "gfx/interface/technologies/air/airship_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_airship2_medium"
+		texturefile = "gfx/interface/technologies/air/airship_2.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_EVO_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/warmachine.dds"
+	}
+	SpriteType = {
+		name = "GFX_EVO_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/prowler.dds"
+	}
+	SpriteType = {
+		name = "GFX_EVO_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/type32.dds"
+	}
+	SpriteType = {
+		name = "GFX_EVO_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/type36.dds"
+	}
+	SpriteType = {
+		name = "GFX_EVO_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/reimu.dds"
+	}
+	SpriteType = {
+		name = "GFX_EVO_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/sabretooth.dds"
+	}
+}

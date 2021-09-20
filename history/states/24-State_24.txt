@@ -1,0 +1,25 @@
+state={
+	id=24
+	name="STATE_24"
+	provinces={
+		238 573 1024 2246 2290 
+	}
+	manpower=124535
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GEN
+		victory_points = {
+			573 30
+		}
+		buildings = {
+			infrastructure = 7
+			air_base = 2
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 1
+		}
+		add_core_of = GEN
+	}
+}

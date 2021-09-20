@@ -1,0 +1,21 @@
+state={
+	id=256
+	name="STATE_256"
+	provinces={
+		39 244 611 1067 1159 1194 1456 1468 2468 2492 2501 
+	}
+	manpower=3303970
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = BOT
+	}
+}

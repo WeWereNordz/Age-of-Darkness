@@ -1,0 +1,101 @@
+﻿###########################
+# Pestfriland events
+###########################
+
+add_namespace = pestfriland
+
+# Evolia Invites Us
+country_event = {
+	id = pestfriland.1
+	title = pestfriland.1.t
+	desc = pestfriland.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Join
+		name = pestfriland.1.a
+		ai_chance = { factor = 90 }
+		EVO = { add_to_faction = PES }
+		news_event = { id = mithrasnews.5 days = 1 }
+	}
+	option = { # Decline
+		name = pestfriland.1.b
+		ai_chance = { factor = 10 }
+		EVO = { country_event = { id = evolia.4 days = 1 } }
+	}
+}
+
+country_event = {
+	id = pestfriland.2
+	title = pestfriland.2.t
+	desc = pestfriland.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = {
+		name = pestfriland.2.a
+	}
+}
+
+country_event = {
+	id = pestfriland.3
+	title = pestfriland.3.t
+	desc = pestfriland.3.d
+	picture = GFX_kor_faction_invite
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = PES
+		NOT = { has_completed_focus = PES_OCORPS }
+		focus_progress = {
+			focus = PES_OCORPS
+			progress > 0.35
+		}
+	}
+
+
+	option = {
+		name = pestfriland.3.a
+		hidden_effect = {
+			swap_ideas = { 
+				remove_idea = crippled_officer_corps_1
+				add_idea = crippled_officer_corps_2
+			  }
+		}
+	}
+}
+
+country_event = {
+	id = pestfriland.4
+	title = pestfriland.4.t
+	desc = pestfriland.4.d
+	picture = GFX_kor_faction_invite
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = PES
+		NOT = { has_completed_focus = PES_OCORPS }
+		focus_progress = {
+			focus = PES_OCORPS
+			progress > 0.90
+		}
+	}
+
+
+	option = {
+		name = pestfriland.4.a
+		hidden_effect = {
+			swap_ideas = { 
+				remove_idea = crippled_officer_corps_2
+				add_idea = crippled_officer_corps_3
+			  }
+		}
+	}
+}

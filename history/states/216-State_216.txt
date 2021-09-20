@@ -1,0 +1,24 @@
+state={
+	id=216
+	name="STATE_216"
+	provinces={
+		66 127 202 203 223 226 379 485 549 665 693 699 815 817 819 1005 1033 1039 1258 1304 1313 1390 1791 1994 2215 2341 2348 2365 
+	}
+	manpower=3156456
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 6
+			dockyard = 6
+			665 = {
+                naval_base = 8
+
+            }
+		}
+		add_core_of = EVO
+	}
+}

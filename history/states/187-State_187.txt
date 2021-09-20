@@ -1,0 +1,21 @@
+state={
+	id=187
+	name="STATE_187"
+	provinces={
+		240 462 520 613 1437 1463 1638 1717 2080 2712 
+	}
+	manpower=46
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EUR
+		victory_points = {
+			1717 2
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = EUR
+	}
+}

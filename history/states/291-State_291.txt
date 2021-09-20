@@ -1,0 +1,24 @@
+state={
+	id=291
+	name="STATE_291"
+	provinces={
+		45 308 421 422 460 492 891 915 994 999 1127 1589 1658 1688 1743 2210 2211 2557 
+	}
+	manpower=1062650
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			999 27
+		}
+		victory_points = {
+			492 5
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+}

@@ -1,0 +1,41 @@
+state={
+	id=146
+	name="STATE_146"
+	manpower = 3028511
+	state_category = town
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			1659 30
+		}
+		victory_points = {
+			816 9
+		}
+		victory_points = {
+			1010 20
+		}
+		owner = LIK
+		
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 2
+			2133 = {
+                naval_base = 3
+
+            }
+			1045 = {
+                naval_base = 3
+
+            }
+		}
+		add_core_of = LIK
+	}
+
+	provinces={
+		72 146 168 510 535 606 629 758 816 826 1010 1011 1045 1140 1169 1389 1659 1701 1820 1825 1834 1926 2024 2035 2072 2083 2115 2133 2182 2188 2226 2673 2675 2681 2689 2692 2705 
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=220
+	name="STATE_220"
+	provinces={
+		528 1363 1635 1670 1781 2077 2180 2376 
+	}
+	manpower=1728879
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=8
+	}
+
+	history={
+		owner = ALA
+
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+		}
+		add_core_of = ALA
+	}
+}

@@ -1,0 +1,25 @@
+state={
+	id=298
+	name="STATE_298"
+	provinces={
+		198 367 381 440 709 735 1346 1809 1866 2006 2059 2216 2560 2571 
+	}
+	manpower=1062650
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil=12
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			381 24
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = POL
+	}
+}

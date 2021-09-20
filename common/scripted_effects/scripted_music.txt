@@ -1,0 +1,3 @@
+play_age_of_darkness_effect = {
+	hidden_effect = { play_song = "general_peace_17" }
+}

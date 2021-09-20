@@ -1,0 +1,24 @@
+state={
+	id=215
+	name="STATE_215"
+	provinces={
+		183 406 449 554 746 973 1210 1338 1699 1725 2103 2327 
+	}
+	manpower=3303970
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		tungsten=4
+	}
+
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
+		add_core_of = BOT
+	}
+}

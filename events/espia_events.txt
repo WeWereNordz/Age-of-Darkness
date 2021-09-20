@@ -1,0 +1,28 @@
+﻿###########################
+# Espia events
+###########################
+
+add_namespace = espia
+
+# Korvenia invited to Eirian Faction
+country_event = {
+	id = espia.1
+	title = espia.1.t
+	desc = espia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # The Workers Unite.
+		name = espia.1.a
+		ai_chance = { factor = 80 }
+		EIR = { add_to_faction = KOR }
+		news_event = { mithrasnews.10 days = 1 }
+	}
+	option = { # We reject Eirian Unionism.
+		name = espia.1.b
+		ai_chance = { factor = 20 }
+		EIR = { country_event = { id = eirie.3 days = 1 } }
+	}
+}

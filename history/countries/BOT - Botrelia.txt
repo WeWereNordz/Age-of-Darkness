@@ -1,0 +1,247 @@
+﻿capital = 268
+
+oob = "BOT_1934"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "BOT_1934_naval"
+	else = {
+		set_naval_oob = "BOT_1934_naval"
+	}
+}
+
+# Starting tech
+set_technology = {
+	fuel_silos = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	mobile_warfare = 1
+	gwtank = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	support_weapons = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_submarine = 1
+	tech_recon = 1
+	early_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	motorised_infantry = 1
+	early_battleship = 1
+	early_heavy_cruiser = 1
+	basic_battleship = 1
+}
+add_ideas = {
+	birthplace_of_beltrism
+	rampant_hedonism
+	equestrian_army
+}
+
+set_research_slots = 4
+set_war_support = 0.6
+set_stability = 0.6
+
+puppet = BEF
+puppet = CHE
+
+
+add_opinion_modifier = { 
+	target = EVO
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = EVO
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = PES
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = EUR
+	modifier = small_increase
+}
+add_opinion_modifier = { 
+	target = PES
+	modifier = large_decrease
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.6.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 76
+	communism = 0
+	neutrality = 24
+}
+
+create_faction = "Beltrist Union"
+add_to_faction = BEF
+add_to_faction = CHE
+
+	create_country_leader = {
+		name = "Johtan Zuiani"
+		desc = "johtan_desc"
+		picture = "gfx/leaders/Zuiani.dds"
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {
+			hedonist
+		}
+	}
+
+	create_country_leader = {
+		name = "Josta Bentito"
+		desc = "johtan_desc"
+		picture = "gfx/leaders/Zuiani.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			generallissimo
+		}
+	}
+
+	create_field_marshal = {
+		name = "Josta Bentito"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { media_personality harsh_leader defensive_doctrine }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Joshua Zenebino"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { war_hero infantry_officer }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Gervin Velikensen"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { armor_officer }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Jonn Dubois"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { infantry_officer jungle_rat }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Jalizo Lentero"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { infantry_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Beatriz Vorster"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { winter_specialist }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+
+	create_corps_commander = {
+		name = "Heritz Saln"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { trait_cautious }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Kejilo Sunil"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { career_officer }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Netilo Benvin"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard cavalry_officer }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Massimo Nentile"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { caustic_personality }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Achille Baresi"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard_navy }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Ulderico Giovinco"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { craven }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		maneuvering_skill = 3
+		coordination_skill = 1
+	}

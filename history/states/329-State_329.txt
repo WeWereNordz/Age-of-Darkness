@@ -1,0 +1,27 @@
+state={
+	id=329
+	name="STATE_329"
+	manpower = 650834
+	state_category = large_town
+	buildings_max_level_factor=1.000
+
+	history={
+		owner = BAT
+		victory_points = {
+			1831 5
+		}
+		victory_points = {
+			152 21
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		add_core_of = CHE
+		add_core_of = BAT
+	}
+
+	provinces={
+		152 214 949 1252 1831 
+	}
+}

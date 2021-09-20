@@ -1,0 +1,24 @@
+state={
+	id=211
+	name="STATE_211"
+	provinces={
+		204 375 468 926 1917 2030 2205 2331 
+	}
+	manpower=3156456
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=120
+	}
+
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 10
+		}
+		add_core_of = EVO
+	}
+}

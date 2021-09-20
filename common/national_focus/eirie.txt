@@ -1,0 +1,1541 @@
+focus_tree = {
+	id = eiriefocus
+	continuous_focus_position = { x = 50 y = 1100 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EIR
+		}
+	}
+
+	default = no
+
+	####################
+	###POLITICAL TREE###
+	####################
+
+	#Form the United Front
+	focus = {
+		id = EIR_form_the_united_front
+		icon = GFX_unitedfront
+		x = 3
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		mutually_exclusive = {
+			focus = EIR_democratic_order
+		}
+		completion_reward = {
+			custom_effect_tooltip = civil_war_tooltip
+			add_stability = 0.1
+		}
+	}
+
+	#Our Southern Neighbors
+	focus = {
+		id = EIR_our_southern_neighbors
+		icon = GFX_goal_generic_territory_or_war
+		x = 7
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		will_lead_to_war_with = NAB
+		completion_reward = {
+			create_wargoal = {
+				target = NAB
+				type = annex_everything
+				
+			}
+		}
+		prerequisite = { focus = EIR_one_eirie_policy focus = EIR_the_landreger_trials }
+	}
+
+	#Repair the Island
+	focus = {
+		id = EIR_repair_the_island
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 7
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EIR_our_southern_neighbors }
+		available = {
+			36 =  { is_controlled_by = EIR }
+			231 =  { is_controlled_by = EIR }
+			227 =  { is_controlled_by = EIR }
+		}
+		completion_reward = {
+			36 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+		231 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+			}
+	}
+	227 = {
+		add_building_construction = {
+			type = infrastructure
+			level = 4
+			instant_build = yes
+		}
+}
+		}
+	}
+
+	#War of Resistance
+	focus = {
+		id = EIR_war_of_resistance
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = EIR_one_island_one_nation }
+		available = {
+			has_defensive_war = yes
+		}
+		completion_reward = {
+			add_war_support = 0.4
+			add_ideas = the_eirian_struggle
+		}
+	}
+
+	#One Island, One Nation
+	focus = {
+		id = EIR_one_island_one_nation
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EIR_repair_the_island }
+		available = {
+			213 =  { is_controlled_by = EIR }
+			27 =  { is_controlled_by = EIR }
+			222 =  { is_controlled_by = EIR }
+			36 =  { is_controlled_by = EIR }
+			227 =  { is_controlled_by = EIR }
+			231 =  { is_controlled_by = EIR }
+		}
+		completion_reward = {
+			remove_ideas = factionalism
+			add_state_core = 213
+			add_state_core = 27
+			add_state_core = 222
+			add_state_core = 36
+			add_state_core = 227
+			add_state_core = 231
+		}
+	}
+
+	#The Landreger Trials
+	focus = {
+		id = EIR_the_landreger_trials
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 11
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EIR_the_war_of_democracy }
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = unionist_sympathizers
+				add_idea = unstable_cabinet
+			  }
+		}
+	}
+
+	#The War of Democracy
+	focus = {
+		id = EIR_the_war_of_democracy
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 11
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = EIR_democratic_order  }
+		completion_reward = {
+			 add_timed_idea = { idea = our_idealogical_struggle days = 1095 }
+			 custom_effect_tooltip = dem_volunteers_tooltip
+			 hidden_effect = {
+				 load_oob = EIR_democratic_volunteers
+			 }
+		}
+	}
+
+	#Across the Pond
+	focus = {
+		id = EIR_across_the_pond
+		icon = GFX_goal_generic_improve_relations
+		x = 13
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+		 focus = EIR_democratic_idealism
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = GES modifier = medium_increase }
+				reverse_add_opinion_modifier = { target = EIR modifier = medium_increase }
+		}
+	}
+
+	#Democratic Order
+	focus = {
+		id = EIR_democratic_order
+		icon = GFX_goal_support_democracy
+		x = 11
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		will_lead_to_war_with = HER
+		mutually_exclusive = { focus = EIR_form_the_united_front  }
+		completion_reward = {
+			custom_effect_tooltip = civil_war_tooltip
+			declare_war_on = { type = annex_everything    target = HER }
+			news_event = { id = mithrasnews.24 days = 1 }
+		}
+	}
+
+	#Pardon the Unionists
+	focus = {
+		id = EIR_pardon_the_unionists
+		icon = GFX_pardonunionists
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EIR_form_the_united_front  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unionist_sympathizers
+				add_idea = unionism_supported
+			}
+		}
+	}
+
+	#Leftist Foreign Policy
+	focus = {
+		id = EIR_leftist_foreign_policy
+		icon = GFX_focus_ger_great_red_menace
+		x = 3
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_world_brigades
+		}
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		completion_reward = {
+				LEG = {
+					add_timed_idea = { idea = communist_revolutionaries days = 1095 }
+				}
+				REG = {
+					add_timed_idea = { idea = communist_revolutionaries days = 1095 }
+				}
+			
+		}
+	}
+
+	#World Brigades
+	focus = {
+		id = EIR_world_brigades
+		icon = GFX_focus_generic_manpower
+		x = 3
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = EIR_one_eirie_policy
+		}
+		completion_reward = {
+		custom_effect_tooltip = union_militias_tooltip
+		hidden_effect = { load_oob = EIR_unionist_militias }
+		}
+	}
+
+	#Lead the Revolution
+	focus = {
+		id = EIR_lead_the_revolution
+		icon = GFX_leadrev
+		x = 1
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_leftist_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = EIR_one_unionist_path
+		}
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Tromlaich Union"
+		}
+	}
+
+	#Radicalize the Working Class
+	focus = {
+		id = EIR_radicalize_the_working_class
+		icon = GFX_focus_por_workers_of_iberia
+		x = 1
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_invite_espia
+		}
+
+		prerequisite = {
+			focus = EIR_invite_korvenia
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unionism_supported
+				add_idea = birthplace_of_unionism
+			}
+		}
+	}
+
+	#Invite Korvenia
+	focus = {
+		id = EIR_invite_korvenia
+		icon = GFX_invitekorvenia
+		x = 0
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_lead_the_revolution
+		}
+		bypass = {
+            is_in_faction_with = KOR
+        }
+		completion_reward = {
+			KOR = { country_event = { id = korvenia.1 days = 1 } }
+		}
+	}
+
+	#Invite Espia
+	focus = {
+		id = EIR_invite_espia
+		icon = GFX_inviteespia
+		x = 2
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_lead_the_revolution
+		}
+		bypass = {
+            is_in_faction_with = ESP
+        }
+		completion_reward = {
+			ESP = { country_event = { id = espia.1 days = 1 } }
+		}
+	}
+
+	#One Unionist Path
+	focus = {
+		id = EIR_one_unionist_path
+		icon = GFX_unionistpath
+		x = 5
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = EIR_leftist_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = EIR_lead_the_revolution
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = PES
+				type = annex_everything
+			}
+		}
+	}
+
+	#Globalist Rhetoric
+	focus = {
+		id = EIR_globalist_rhetoric
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 5
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = EIR_one_unionist_path
+		}
+		completion_reward = {
+			add_ideas = globalist_rhetoric
+		}
+	}
+
+	#Monarchial Alignment
+	focus = {
+		id = EIR_monarchial_alignment
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 9
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_restore_the_throne
+		}
+		completion_reward = {
+			 add_opinion_modifier = { target = LEG modifier = huge_increase }
+			 add_opinion_modifier = { target = REG modifier = huge_increase }
+			 LEG = { add_opinion_modifier = { target = EIR modifier = huge_increase } }
+			REG = { add_opinion_modifier = { target = EIR modifier = huge_increase } }
+		}
+	}
+
+	#New Bronz Age
+	focus = {
+		id = EIR_new_bronz_age
+		icon = GFX_focus_eng_god_save_the_king
+		x = 9
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_monarchial_alignment
+		}
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			add_ideas = the_peoples_king
+		}
+	}
+
+	#Restore the Throne
+	focus = {
+		id = EIR_restore_the_throne
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 9
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_the_landreger_trials
+		}
+		mutually_exclusive = {
+			focus = EIR_democratic_idealism
+		}
+		completion_reward = {
+			add_timed_idea = { idea = monarchists_on_the_rise days = 1095 }
+		}
+	}
+
+	#Democratic Idealism
+	focus = {
+		id = EIR_democratic_idealism
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 13
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_the_landreger_trials
+		}
+		mutually_exclusive = {
+			focus = EIR_restore_the_throne
+		}
+		completion_reward = {
+			add_stability = 0.2
+			swap_ideas = {
+				remove_idea = unstable_cabinet
+				add_idea = moderate_cabinet
+			}
+		}
+	}
+	
+	#One Eirie Policy
+	focus = {
+		id = EIR_one_eirie_policy
+		icon = GFX_goal_generic_war_with_comintern
+		x = 3
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			has_government = communism
+		}
+		prerequisite = { focus = EIR_pardon_the_unionists }
+		will_lead_to_war_with = HER
+		completion_reward = {
+			declare_war_on = { type = annex_everything    target = HER }
+			news_event = { id = mithrasnews.24 days = 1 }
+		}
+	}
+
+	#The Pyrrhus Mission
+	focus = {
+		id = EIR_the_pyrrhus_mission
+		icon = GFX_evoliarelations
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_across_the_pond
+		}
+		available = {
+			EVO = { is_faction_leader = yes }
+		}
+		bypass = {
+            is_in_faction_with = EVO
+        }
+		mutually_exclusive = {
+			focus = EIR_democratic_union
+		}
+		completion_reward = {
+			EVO = { country_event = { id = evolia.1 days = 1 } }
+		}
+	}
+
+	#Democratic Union
+	focus = {
+		id = EIR_democratic_union
+		icon = GFX_euradarelations
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EIR_across_the_pond
+		}
+		available = {
+			has_government = democratic
+			EUR = { is_faction_leader = yes }
+		}
+		bypass = {
+            is_in_faction_with = EUR
+        }
+		mutually_exclusive = {
+			focus = EIR_the_pyrrhus_mission
+		}
+		completion_reward = {
+			EUR = { country_event = { id = eurada.1 days = 1 } }
+		}
+	}
+
+	####################
+	###INDUSTRY TREE####
+	####################
+
+		#Vitalize Industrial Ability
+		focus = {
+			id = EIR_industrial_vitalization
+			icon = GFX_goal_generic_production
+			x = 18
+			y = 0
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_industrial_vitalization
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+			}
+		}
+
+		#Draining the Swamp
+		focus = {
+			id = EIR_draining_the_swamp
+			icon = GFX_goal_generic_construct_civilian
+			x = 18
+			y = 1
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_industrial_vitalization
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						ROOT = { has_full_control_of_state = PREV } 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						ROOT = { has_full_control_of_state = PREV } 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						ROOT = { has_full_control_of_state = PREV } 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+
+		#Domestic Investments
+		focus = {
+			id = EIR_domestic_investments
+			icon = GFX_goal_generic_consumer_goods
+			x = 16
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_draining_the_swamp
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {									
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		#Domestic Armament
+		focus = {
+			id = EIR_domestic_armament
+			icon = GFX_goal_generic_small_arms
+			x = 16
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_domestic_investments
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}			
+			}
+		}
+
+		#Prioritize Civilian Industry
+		focus = {
+			id = EIR_priortize_civilian_industry
+			icon = GFX_goal_generic_construct_civ_factory
+			x = 15
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_domestic_armament
+			}
+			mutually_exclusive = {
+				focus = EIR_priortize_arms_industry
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {									
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		#Prioritize Arms Industry
+		focus = {
+			id = EIR_priortize_arms_industry
+			icon = GFX_goal_generic_construct_mil_factory
+			x = 17
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_domestic_armament
+			}
+			mutually_exclusive = {
+				focus = EIR_priortize_civilian_industry
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}			
+			}
+		}
+
+		#Goldcrest Technical Instuitute
+		focus = {
+			id = EIR_goldcrest_technical_instuitute
+			icon = GFX_goal_generic_scientific_exchange
+			x = 16
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_RESEARCH
+			}
+			prerequisite = {
+				focus = EIR_priortize_arms_industry focus = EIR_priortize_civilian_industry
+			}
+			completion_reward = {
+				add_research_slot = 1
+			}
+		}
+
+		#Urbanization
+		focus = {
+			id = EIR_urbanization
+			icon = GFX_goal_generic_construct_infrastructure
+			x = 20
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_draining_the_swamp
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+	}
+			}
+		}
+
+		#Prospecting Initiative
+		focus = {
+			id = EIR_prospecting_initiative
+			icon = GFX_goal_generic_construction2
+			x = 20
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_urbanization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_prospecting_initiative
+					bonus = 1.0
+					uses = 2
+					technology = excavation1
+					technology = excavation2
+					technology = excavation3
+					technology = excavation4
+					technology = excavation5
+				}
+			}
+		}
+
+		#Expand the Steel Mills
+		focus = {
+			id = EIR_expand_steel_industry
+			icon = GFX_focus_generic_steel
+			x = 19
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_prospecting_initiative
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						ROOT = { has_full_control_of_state = PREV } 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 12
+					}
+				}
+			}
+		}
+
+		#Expand the Steel Mills
+		focus = {
+			id = EIR_expand_aluminium_industry
+			icon = GFX_focus_generic_aluminum
+			x = 19
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_expand_steel_industry
+			}
+			completion_reward = {
+				190 = {
+					add_resource = {
+						type = aluminium
+						amount = 16
+					}
+				}
+			}
+		}
+
+		#Oil Substitution
+		focus = {
+			id = EIR_oil_substitution
+			icon = GFX_goal_generic_oil_refinery
+			x = 21
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_synthetic_autarky
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+		#autarky
+		focus = {
+			id = EIR_synthetic_autarky
+			icon = GFX_goal_generic_construction
+			x = 21
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = EIR_prospecting_initiative
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_synthetic_autarky
+					bonus = 3.0
+					uses = 1
+					category = synth_resources
+				}
+			}
+		}
+
+	####################
+	###MILITARY TREE####
+	####################
+
+		#A Full-Time Army
+		focus = {
+			id = EIR_full_time_army
+			icon = GFX_focus_generic_little_entente
+			x = 29
+			y = 0
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			completion_reward = {
+				army_experience = 20
+			}
+
+		}
+
+		#Equipment Standardization
+		focus = {
+			id = EIR_equipment_standardization
+			icon = GFX_goal_generic_army_doctrines
+			x = 25
+			y = 1
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_full_time_army
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_equipment_standardization
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+		#Cavalry Modernization
+		focus = {
+			id = EIR_cavalry_modernization
+			icon = GFX_goal_generic_cavalry
+			x = 25
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_equipment_standardization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_cavalry_modernization
+					bonus = 3.0
+					uses = 1
+					category = armor
+				}
+				#75% research bonus for Motorised
+			}
+		}
+
+		#The King of Battle
+		focus = {
+			id = EIR_the_king_of_battle
+			icon = GFX_goal_generic_army_artillery
+			x = 23
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_equipment_standardization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_the_king_of_battle
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+				#1 x 50% for Artillery Equipment
+			}
+		}
+
+		#Anti-Tank Guns
+		focus = {
+			id = EIR_anti_tank_guns
+			icon = GFX_goal_generic_army_artillery2
+			x = 23
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_the_king_of_battle
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_anti_tank_guns
+					bonus = 1.0
+					uses = 1
+					category = cat_anti_tank
+				}
+				#1x 50% bonus for Anti-Tank guns
+			}
+		}
+
+		#Anti-Air Defenses
+		focus = {
+			id = EIR_anti_air_defenses
+			icon = GFX_goal_generic_CAS
+			x = 23
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_anti_tank_guns
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_anti_air_defenses
+					bonus = 1
+					uses = 1
+					technology = antiair1
+					technology = antiair2
+				}
+			}
+			
+		}
+
+		#The Queen of Battle
+		focus = {
+			id = EIR_the_queen_of_battle
+			icon = GFX_goal_generic_allies_build_infantry
+			x = 27
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_equipment_standardization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_the_queen_of_battle
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+				#1x 50% cost reduction for one land doctrine research
+			}
+		}
+
+		#The King of Battle
+		focus = {
+			id = EIR_infantry_motorization
+			icon = GFX_goal_generic_army_motorized
+			x = 27
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_the_queen_of_battle
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_infantry_motorization
+					bonus = 3.0
+					uses = 1
+					category = motorized_equipment
+				}
+				#75% research bonus for Motorised
+			}
+		}
+
+		#The Eirian Marines
+		focus = {
+			id = EIR_eirian_marines
+			icon = GFX_goal_generic_amphibious_assault
+			x = 27
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_infantry_motorization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_eirian_marines
+					bonus = 1.0
+					uses = 2
+					category = marine_tech
+					category = tp_tech
+				}
+				#50% armor research
+			}
+			
+		}
+
+		#Study Tank Doctrine
+		focus = {
+			id = EIR_study_tank_doctrine
+			icon = GFX_goal_generic_build_tank
+			x = 25
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_cavalry_modernization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_study_tank_doctrine
+					bonus = 1.0
+					uses = 1
+					category = armor
+				}
+				#50% armor research
+			}
+		}
+
+		#Domestic Tank Experiments
+		focus = {
+			id = EIR_domestic_tank_experiments
+			icon = GFX_goal_generic_army_tanks
+			x = 25
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_study_tank_doctrine
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_domestic_tank_experiments
+					bonus = 1.0
+					uses = 1
+					technology = basic_medium_tank
+				}
+				#1x 50% reduction on research for medium tanks
+			}
+		}
+
+		#Air Base Expansion
+		focus = {
+			id = EIR_air_base_expansion
+			icon = GFX_goal_generic_air_production
+			x = 30
+			y = 1
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_full_time_army
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+			}
+		}
+
+		#Fighter Modernization
+		focus = {
+			id = EIR_fighter_modernization
+			icon = GFX_goal_generic_air_fighter
+			x = 31
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_air_base_expansion
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_fighter_modernization
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+				}
+				add_tech_bonus = {
+					name = EIR_fighter_modernization
+					bonus = 1.0
+					uses = 1				
+					category = cat_heavy_fighter
+				}
+				#1x50% research bonus to fighter models
+			}
+		}
+
+		#Aerial Innovations
+		focus = {
+			id = EIR_aerial_innovations
+			icon = GFX_goal_generic_build_airforce
+			x = 29
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_air_base_expansion
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = POL_air_innovations
+					bonus = 1.0
+					uses = 1
+					category = air_doctrine
+				}
+				#1x50% research bonus to Air Doctrine Research
+			}
+		}
+
+		#A Bomber Fleet
+		focus = {
+			id = EIR_a_bomber_fleet
+			icon = GFX_goal_generic_air_bomber
+			x = 30
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_aerial_innovations
+			}
+			prerequisite = {
+				focus = EIR_fighter_modernization
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_a_bomber_fleet
+					bonus = 1
+					uses = 1
+					category = cat_strategic_bomber
+					category = tactical_bomber
+				}
+			}
+		}
+
+		#Develop Aerial Tactics
+		focus = {
+			id = EIR_develop_aerial_tactics
+			icon = GFX_goal_generic_air_fighter2
+			x = 30
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_a_bomber_fleet
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_develop_aerial_tactics
+					bonus = 1
+					uses = 1
+					category = air_doctrine
+				}
+			}
+		}
+
+		#Develop Eirian Shipyards
+		focus = {
+			id = EIR_develop_eirian_shipyards
+			icon = GFX_goal_generic_construct_naval_dockyard
+			x = 33
+			y = 1
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_full_time_army
+			}
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		#study_foreign_ship_designs
+		focus = {
+			id = EIR_foreign_ship_designs
+			icon = GFX_focus_generic_navy_battleship2
+			x = 33
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_develop_eirian_shipyards
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_foreign_ship_designs
+					bonus = 1.0
+					uses = 1
+					category = dd_tech
+				}
+				#1x 50% research bonus for Destroyers
+			}
+			
+		}
+
+		#Strike Force
+		focus = {
+			id = EIR_strike_force
+			icon = GFX_goal_generic_occupy_states_coastal
+			x = 32
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_foreign_ship_designs
+			}
+			mutually_exclusive = {
+				focus = EIR_coastal_defense
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_strike_force
+					bonus = 1.0
+					uses = 1
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					name = EIR_strike_force
+					bonus = 1.0
+					uses = 1
+					category = ca_tech
+				}
+				#1x50% research bonus to Light Cruisers & 1x50% bonus to Heavy Cruisers
+			}
+		}
+
+		#Coastal Defense
+		focus = {
+			id = EIR_coastal_defense
+			icon = GFX_goal_generic_navy_cruiser
+			x = 34
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_foreign_ship_designs
+			}
+			mutually_exclusive = {
+				focus = EIR_strike_force
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = EIR_coastal_defense
+					bonus = 1.0
+					uses = 1
+					category = ss_tech
+				}
+				add_tech_bonus = {
+					name = EIR_coastal_defense
+					bonus = 1.0
+					uses = 1
+					category = dd_tech
+				}
+				#1x50% research bonus to destroyers & 1 x50% bonus to Submarines
+			}
+		}
+
+		#The Modern Eirian Army
+		focus = {
+			id = EIR_the_modern_eirian_army
+			icon = GFX_focus_generic_combined_arms
+			x = 25
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = EIR_anti_air_defenses
+			}
+			prerequisite = {
+				focus = EIR_domestic_tank_experiments
+			}
+			prerequisite = {
+				focus = EIR_eirian_marines
+			}
+			completion_reward = {
+				add_war_support = 0.2
+				add_tech_bonus = {
+					name = EIR_the_modern_eirian_army
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+				}
+				#1 x 50% for Infantry Equipment
+			}
+		}
+}

@@ -1,0 +1,41 @@
+state={
+	id=124
+	name="STATE_124"
+	manpower = 3872500
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil = 3
+	}
+
+	history={
+		victory_points = {
+			1311 30
+		}
+		victory_points = {
+			539 25
+		}
+		victory_points = {
+			1388 10
+		}
+		owner = OYO
+		
+		buildings = {
+			infrastructure = 7
+			air_base = 5
+			arms_factory = 2
+			dockyard = 3
+			industrial_complex = 5
+			2637 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = OYO
+	}
+
+	provinces={
+		154 218 342 539 616 782 1081 1096 1177 1311 1388 1486 1493 1539 1553 1637 1768 1864 2061 2183 2207 2627 2630 2634 2637 2641 2649 
+	}
+}

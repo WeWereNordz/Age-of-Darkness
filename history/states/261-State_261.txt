@@ -1,0 +1,28 @@
+state={
+	id=261
+	name="STATE_261"
+	provinces={
+		28 98 292 326 470 741 749 1025 1186 2017 2119 2144 2221 2222 2473 2512 
+	}
+	manpower=1062650
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			28 5
+		}
+		victory_points = {
+			2222 10
+		}
+		buildings = {
+			infrastructure = 3
+			326 = {
+                naval_base = 10
+
+            }
+		}
+		add_core_of = POL
+	}
+}

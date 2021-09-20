@@ -1,0 +1,849 @@
+ideas = {
+
+	country = {
+		EVO_focus_victory_or_death = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 0.8
+			}
+		}
+
+		civilwarmemories = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.40
+				war_support_factor = -0.40
+				political_power_gain = -0.07
+			}
+		}
+
+		weak_foreign_policy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.3
+				trade_opinion_factor = -0.3
+			}
+		}
+
+		EVO_focus_foreign_policy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.3
+			}
+		}
+
+		intercorps_rivalry = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = -0.2
+				army_org_factor = -0.2
+				training_time_factor = 0.35
+			}
+		}
+
+		wissen = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		statesd = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				drift_defence_factor = 0.20
+			}
+		}
+
+		chancellor = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.20
+			}
+		}
+
+		education_re = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+
+		agriculture_mech = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.30
+				line_change_production_efficiency_factor = 0.30
+			}
+		}
+
+		realm_industrial_act = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.2
+			}
+		}
+
+		recruitment_propaganda = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		industrial_mobilization = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		g_projekt_synthesis = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+
+		EVO_focus_unified_realm = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				war_support_factor = 0.10
+			}
+		}
+
+		EVO_focus_dignity_and_purpose = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.10
+			}
+		}
+	
+	}
+
+	political_advisor = {
+		
+		windhelm = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		antonin = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
+		connie = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { democratic_reformer }
+		}
+
+		philip = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
+		antons = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { war_industrialist }
+		}
+		dom = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { captain_of_industry }
+		}
+		hansw = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { silent_workhorse }
+		}
+	}
+	#TECHNOLOGY
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		diestelstrasser = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+		
+		richterforge = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		northshore = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+		}
+		
+		mnsc = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+		}
+
+		richterassembly = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { naval_manufacturer }
+			
+		}
+	}
+
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		lorelei = { 
+			allowed = {
+				original_tag = EVO
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		colditz = { 
+			allowed = {
+				original_tag = EVO
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		hacylon = { 
+			allowed = {
+				original_tag = EVO
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+
+		marisakaden = { 
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		magiekomet = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	industrial_concern = {
+		suljeva = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		strasser = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+		volksmann = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+
+		schirmer = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		diestel = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		mako = {
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	#MINISTERS
+	theorist = {
+		krieger = {
+			ledger = air
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				rocketry = 0.15
+			}
+			
+			traits = { rocket_scientist }
+		}
+
+		richter = {
+			ledger = air
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		holderbaum = {
+			ledger = army
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		ratzinger = {
+			ledger = air
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		bruckmann = {
+			ledger = navy
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	#MILITARY
+	army_chief = {
+		ggiovalia = {
+
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_chief_organizational_2 }			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		niklas = {
+
+			allowed = {
+				original_tag = EVO
+			}
+						
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		edward = {
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+						
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+
+	high_command = {
+
+		siegmann = {
+			ledger = army
+
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_infantry_3 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		vahlen = {
+			ledger = army
+
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_armored_3 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		hitzig = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		
+		eichenwald = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+
+		mire = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+
+		pelt = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = EVO
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+	}
+}

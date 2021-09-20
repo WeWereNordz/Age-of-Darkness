@@ -1,0 +1,13 @@
+units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Defense Fleet"
+		naval_base = 2011
+		task_force = {				
+			name = "Destroyer Flotilla"
+			location = 2011 # Danzig
+			ship = { name = "ESS Battlemaiden" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ESP } } }	
+		}		
+	}
+}

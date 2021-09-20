@@ -1,0 +1,19 @@
+state={
+	id=80
+	name="STATE_80"
+	provinces={
+		2058 
+	}
+	manpower=203
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BEF
+		buildings = {
+			infrastructure = 3
+			dockyard = 2
+		}
+		add_core_of = BEF
+	}
+}

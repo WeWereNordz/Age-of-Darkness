@@ -1,0 +1,23 @@
+state={
+	id=254
+	name="STATE_254"
+	provinces={
+		210 445 655 743 864 1115 1230 1407 1440 1745 1953 2081 2195 2489 2494 2496 
+	}
+	manpower=1728879
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = REG
+		victory_points = {
+			1407 22
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 4
+		}
+		add_core_of = REG
+	}
+}

@@ -1,0 +1,2011 @@
+focus_tree = {
+	id = legatiafocus
+	continuous_focus_position = { x = 50 y = 950 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LEG
+		}
+	}
+
+	default = no
+
+
+	#Spying on our neighbors
+	focus = {
+		id = LEG_SPYING
+		icon = GFX_network_overhaul
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = LEG_RADAR }
+		completion_reward = {
+			add_ideas = legatian_intelligence_service
+		}
+
+	}
+
+    #Reach out to Draenica
+	focus = {
+		id = LEG_REACH_OUT_DRAENICA
+		icon = GFX_euradarelations
+		prerequisite = { focus = LEG_SPYING }
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			EUR = {
+				add_opinion_modifier = { target = LEG modifier = huge_increase }
+			}
+		}
+
+	}
+
+    #The Walker Committee
+	focus = {
+		id = LEG_WALKER
+		icon = GFX_walker
+		prerequisite = { focus = LEG_REACH_OUT_DRAENICA }
+		x = 0
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = legatian_steel
+		}
+
+	}
+
+    #The Secret Weapons
+	focus = {
+		id = LEG_SECRET_WEAPONS
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = LEG_WALKER }
+		x = 1
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_SECRET_WEAPONS
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = LEG_SECRET_WEAPONS
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
+			add_tech_bonus = {
+				name = LEG_SECRET_WEAPONS
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+
+	}
+
+    #Rearming the Empire
+	focus = {
+		id = LEG_REARMING
+		icon = GFX_goal_generic_build_tank
+		x = 6
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_REARMING
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+	}
+
+    #Northern Defense
+	focus = {
+		id = LEG_NORTHERN_DEF
+		icon = GFX_goal_generic_production2
+        prerequisite = { focus = LEG_REARMING }
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_NORTHERN_DEF
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+
+	}
+
+    #Radar
+	focus = {
+		id = LEG_RADAR
+		icon = GFX_goal_generic_radar
+        prerequisite = { focus = LEG_NORTHERN_DEF }
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_RADAR
+				bonus = 1.0
+				uses = 3
+				category = radar_tech
+			}
+		}
+
+	}
+
+    #Reworking the Budget
+	focus = {
+		id = LEG_REWORKING_BUDGET
+		icon = GFX_focus_hol_abandon_the_gold_standard
+        prerequisite = { focus = LEG_REARMING }
+		x = 4
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = unbalanced_checkbooks
+			add_timed_idea = {
+				idea = industrial_mobilization
+				days = 1095
+			}
+		}
+
+	}
+
+    #Industry Overhaul
+	focus = {
+		id = LEG_INDUSTRY_OVERHAUL
+		icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = LEG_REWORKING_BUDGET }
+		x = 4
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_INDUSTRY_OVERHAUL
+				bonus = 0.5
+				uses = 2
+				category = industry
+				}
+			265 = {
+				add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+								type = industrial_complex
+								level = 3
+								instant_build = yes
+							}
+						}
+		}
+
+	}
+
+    #Research Grants
+	focus = {
+		id = LEG_RESEARCH_GRANTS
+		icon = GFX_focus_research
+        prerequisite = { focus = LEG_INDUSTRY_OVERHAUL }
+		x = 3
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+
+    #Ordianance Factories
+	focus = {
+		id = LEG_ORD_FACTORIES
+		icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = LEG_RESEARCH_GRANTS }
+		x = 3
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			265 = {
+				add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+								type = arms_factory
+								level = 3
+								instant_build = yes
+							}
+						}
+		}
+
+	}
+
+    #LSA Company
+	focus = {
+		id = LEG_LSA_COMPANY
+		icon = GFX_goal_generic_allies_build_infantry
+        prerequisite = { focus = LEG_ORD_FACTORIES }
+        prerequisite = { focus = LEG_WALKER }
+		x = 3
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_ideas = small_arms_shortcuts
+		}
+
+	}
+
+    #Motorization of the Cavalry
+	focus = {
+		id = LEG_MOTOR_CAV
+		icon = GFX_goal_generic_cavalry
+        prerequisite = { focus = LEG_REARMING }
+		x = 6
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_MOTOR_CAV
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+
+	}
+
+    #Royal Walker Regiments
+	focus = {
+		id = LEG_ROYAL_WALKER
+		icon = GFX_focus_generic_army_tanks2
+        prerequisite = { focus = LEG_MOTOR_CAV }
+		x = 6
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			has_completed_focus = LEG_WALKER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_ROYAL_WALKER
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+
+	}
+
+    #Continue the rearmament
+	focus = {
+		id = LEG_CON_REARMAMENT
+		icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = LEG_REARMING }
+		x = 10
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+
+	}
+
+    #Reinforce the Air Force
+	focus = {
+		id = LEG_REINFORCE_AF
+		icon = GFX_goal_generic_air_doctrine
+        prerequisite = { focus = LEG_CON_REARMAMENT }
+		x = 8
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			 type = fighter_equipment_0
+			amount = 50
+			producer = LEG
+			}
+			add_equipment_to_stockpile = {
+			 type = tac_bomber_equipment_0
+			amount = 50
+			producer = LEG
+			}
+			add_equipment_to_stockpile = {
+			 type = transport_plane_equipment_1
+			amount = 50
+			producer = LEG
+			}
+		}
+
+	}
+
+    #Costal Command
+	focus = {
+		id = LEG_COSTAL_COMMAND
+		icon = GFX_goal_generic_air_naval_bomber
+        prerequisite = { focus = LEG_CON_REARMAMENT }
+		x = 8
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_COSTAL_COMMAND
+				bonus = 1.0
+				uses = 2
+				category = naval_bomber
+				category = cas_bomber
+			}
+		}
+
+	}
+
+    #Bomber Command
+	focus = {
+		id = LEG_BOMBER_COMMAND
+		icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = LEG_REINFORCE_AF }
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_BOMBER_COMMAND
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+
+	}
+
+    #Fighter Command
+	focus = {
+		id = LEG_FIGHTER_COMM
+		icon = GFX_goal_generic_air_fighter2
+        prerequisite = { focus = LEG_REINFORCE_AF }
+		x = 5
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_FIGHTER_COMM
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+
+	}
+
+    #Aircraft Production
+	focus = {
+		id = LEG_AIR_PRODUCTION
+		icon = GFX_goal_generic_air_production
+        prerequisite = { 
+        focus = LEG_COSTAL_COMMAND
+        focus = LEG_FIGHTER_COMM
+        focus = LEG_BOMBER_COMMAND }
+		x = 7
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = aerial_production_committee
+		}
+
+	}
+
+    #Build up the AA Battries
+	focus = {
+		id = LEG_BUILD_UP_AA
+		icon = GFX_focus_generic_air_defense
+        prerequisite = { focus = LEG_AIR_PRODUCTION }
+		x = 7
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			265 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+			285 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+    #Empower the Armies
+	focus = {
+		id = LEG_EMPOWER_ARMY
+		icon = GFX_focus_generic_manpower
+        prerequisite = { focus = LEG_REINFORCE_AF }
+        prerequisite = { focus = LEG_REARM_NAVY }
+		x = 10
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_EMPOWER_ARMY
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+	}
+
+    #His Royal Commandos
+	focus = {
+		id = LEG_HRC
+		icon = GFX_focus_generic_paratrooper
+        prerequisite = { focus = LEG_CON_REARMAMENT }
+		x = 10
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = royal_commandos
+		}
+
+	}
+
+    #Rearming the Navy
+	focus = {
+		id = LEG_REARM_NAVY
+		icon = GFX_goal_generic_construct_naval_dockyard
+        prerequisite = { focus = LEG_CON_REARMAMENT }
+		x = 12
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			293 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 3
+							province = 1292
+							instant_build = yes
+						}
+				}
+			}
+			267 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 1464
+							instant_build = yes
+						}
+				}
+			}
+		}
+
+	}
+
+    #Amphibious battles
+	focus = {
+		id = LEG_AMPH_BATTLES
+		icon = GFX_goal_generic_amphibious_assault
+        prerequisite = { focus = LEG_CON_REARMAMENT }
+		x = 12
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_AMPH_BATTLES
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = LEG_AMPH_BATTLES
+				bonus = 1.0
+				uses = 2
+				category = tp_tech
+			}
+		}
+
+	}
+
+    #Destroyer Fleets
+	focus = {
+		id = LEG_DESTROYER_FLEETS
+		icon = GFX_focus_generic_destroyer
+        prerequisite = { focus = LEG_REARM_NAVY }
+		x = 11
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_DESTROYER_FLEETS
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+		}
+
+	}
+
+    #Convoy Escort Fleets
+	focus = {
+		id = LEG_CONVOY_FLEETS
+		icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = LEG_DESTROYER_FLEETS }
+		x = 10
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_CONVOY_FLEETS
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+			}
+		}
+
+	}
+
+    #Anti Submarine Training
+	focus = {
+		id = LEG_ANTI_SUB
+		icon = GFX_goal_generic_navy_anti_submarine
+        prerequisite = { focus = LEG_CONVOY_FLEETS }
+		x = 10
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_ANTI_SUB
+				bonus = 1.0
+				uses = 2
+				category = convoy_defense_tree
+			}
+		}
+
+	}
+
+    #Retake Naval Supremacy
+	focus = {
+		id = LEG_NAVAL_SUP
+		icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = LEG_REARM_NAVY }
+		x = 13
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_NAVAL_SUP
+				bonus = 1.0
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+
+	}
+
+    #Carrier Focus
+	focus = {
+		id = LEG_CARRIER_FOCUS
+		icon = GFX_goal_generic_navy_carrier
+        prerequisite = { focus = LEG_NAVAL_SUP }
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = {
+            focus = LEG_BATTLESHIP_FOCUS
+        }
+		completion_reward = {
+			add_tech_bonus = {
+				name = LEG_CARRIER_FOCUS
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+			
+		}
+
+	}
+
+    #Battleship Focus
+	focus = {
+		id = LEG_BATTLESHIP_FOCUS
+		icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = LEG_NAVAL_SUP }
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = {
+            focus = LEG_CARRIER_FOCUS
+        }
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = uk_battleship_focus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+
+	}
+
+    #Secure the Shipping Routes
+	focus = {
+		id = LEG_SECURE_SHIPPING
+		icon = GFX_focus_generic_cruiser2
+        prerequisite = { focus = LEG_REARM_NAVY }
+        prerequisite = { focus = LEG_EVERY_HOUSE }
+		x = 15
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = shipping_route_defense
+		}
+
+	}
+
+    #Stop the Collapse
+	focus = {
+		id = LEG_STOP_COLLAPSE
+		icon = GFX_goal_generic_neutrality_focus
+		x = 25
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+	}
+
+    #Every House Serves
+	focus = {
+		id = LEG_EVERY_HOUSE
+		icon = GFX_focus_generic_self_management
+        prerequisite = { focus = LEG_STOP_COLLAPSE }
+		x = 25
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+	}
+
+    #Encourage the Noble Elite
+	focus = {
+		id = LEG_NOBLE_ELITE
+		icon = GFX_focus_BUL_form_a_regency_council
+        prerequisite = { focus = LEG_EVERY_HOUSE }
+		x = 22
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+	}
+
+    #The Five Houses
+	focus = {
+		id = LEG_FIVE_HOUSES
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+        prerequisite = { focus = LEG_NOBLE_ELITE }
+		x = 26
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Legitius' Cabinet"
+				desc = "legitius_cabinet_desc"
+				picture = "gfx/leaders/LEG/legitius_cabinet.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+				}
+			}
+		}
+
+	}
+
+    #Pacify House Tombrand
+	focus = {
+		id = LEG_PACIFY_TOMBRAND
+		icon = GFX_tombrand
+        prerequisite = { focus = LEG_FIVE_HOUSES }
+		x = 22
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = fivehouses_tooltip
+		}
+
+	}
+
+    #Tombrand Mining Co.
+	focus = {
+		id = LEG_TOMBRAND_MINING
+		icon = GFX_goal_generic_construction2
+        prerequisite = { focus = LEG_PACIFY_TOMBRAND }
+		x = 22
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			267 = {
+				add_resource = {
+					type = tungsten
+					amount = 14
+				}
+			}
+				273 = {
+					add_resource = {
+						type = aluminium
+						amount = 31
+					}
+			}
+		}
+
+	}
+
+    #Crackdown on House Copperburn
+	focus = {
+		id = LEG_CRACKDOWN_COPPERBURN
+		icon = GFX_copperburn
+        prerequisite = { focus = LEG_FIVE_HOUSES }
+		x = 24
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = fivehouses_copperburn_tooltip
+			add_stability = 0.05
+		}
+
+	}
+
+    #House Buckmar's Proposition
+	focus = {
+		id = LEG_HOUSE_BUCKMAR
+		icon = GFX_buckmar
+        prerequisite = { focus = LEG_FIVE_HOUSES }
+		x = 26
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = fivehouses_buckmar_tooltip
+		}
+
+	}
+
+    #Buckmar Farming Monopoly
+	focus = {
+		id = LEG_BUCKMAR_FARMING
+		icon = GFX_farming
+        prerequisite = { focus = LEG_HOUSE_BUCKMAR }
+		x = 26
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			65 = {
+				add_extra_state_shared_building_slots = 5
+						}
+						260 = {
+							add_extra_state_shared_building_slots = 5
+									}
+									265 = {
+										add_extra_state_shared_building_slots = 5
+									}
+										266 = {
+											add_extra_state_shared_building_slots = 5
+													}
+													267 = {
+														add_extra_state_shared_building_slots = 5
+																}
+																273 = {
+																	add_extra_state_shared_building_slots = 5
+																			}
+																			285 = {
+																				add_extra_state_shared_building_slots = 5
+																						}
+																						289 = {
+																							add_extra_state_shared_building_slots = 5
+																									}
+																									293 = {
+																										add_extra_state_shared_building_slots = 5
+																												}
+		}
+
+	}
+
+    #The House Gilmour Media Circuit
+	focus = {
+		id = LEG_HOUSE_GILMOUR
+		icon = GFX_gilmour
+        prerequisite = { focus = LEG_FIVE_HOUSES }
+		x = 28
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = fivehouses_gilmour_tooltip
+		}
+
+	}
+
+    #House Townway Motors
+	focus = {
+		id = LEG_HOUSE_TOWNWAY
+		icon = GFX_townway
+        prerequisite = { focus = LEG_FIVE_HOUSES }
+		x = 30
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = fivehouses_townway_tooltip
+		}
+
+	}
+
+    #Legitius Returns
+	focus = {
+		id = LEG_LEGITIUS_RETURNS
+		icon = GFX_focus_rom_royal_dictatorship
+        prerequisite = { focus = LEG_TOMBRAND_MINING }
+		prerequisite = { focus = LEG_CRACKDOWN_COPPERBURN }
+		prerequisite = { focus = LEG_BUCKMAR_FARMING }
+		prerequisite = { focus = LEG_HOUSE_GILMOUR }
+		prerequisite = { focus = LEG_HOUSE_TOWNWAY }
+		x = 26
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			news_event = { id = mithrasnews.35 days = 1 }
+			remove_ideas = nonfunctioning_government
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Legitius I"
+				desc = "legitius_desc"
+				picture = "gfx/leaders/Legitius.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					the_legitimist
+				}
+			}
+		}
+
+	}
+
+    #Fortify the North
+	focus = {
+		id = LEG_FORTIFY_NORTH
+		icon = GFX_goal_generic_construction
+        prerequisite = { focus = LEG_NOBLE_ELITE }
+		x = 18
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = defensive_priorities
+				days = 1095
+			}
+		}
+
+	}
+
+    #Northern Highways
+	focus = {
+		id = LEG_NORTHERN_HIGHWAYS
+		icon = GFX_focus_generic_rubber
+        prerequisite = { focus = LEG_FORTIFY_NORTH }
+		x = 16
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+		289 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		266 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		293 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+
+	}
+
+    #Sanction Pestfriland
+	focus = {
+		id = LEG_SANCTION_PESTFRILAND
+		icon = GFX_sanctionpes
+        prerequisite = { focus = LEG_CAPITAL_FORTIFICATION }
+		x = 16
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			PES = {
+				add_opinion_modifier = { target = LEG modifier = embargo }
+				add_opinion_modifier = { target = LEG modifier = sanctions_relations }  
+			}
+		}
+
+	}
+
+    #Coastal Defense Initiative
+	focus = {
+		id = LEG_COASTAL_DEFENSE
+		icon = GFX_focus_generic_coastal_fort
+        prerequisite = { focus = LEG_FORTIFY_NORTH }
+		x = 18
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			293 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 1292
+							instant_build = yes
+						}
+
+				}
+			}
+			285 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 1003
+							instant_build = yes
+						}
+
+				}
+			}
+			267 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 1464
+							instant_build = yes
+						}
+
+				}
+			}
+		}
+
+	}
+
+    #Land Fortification
+	focus = {
+		id = LEG_BORDERWALL
+		icon = GFX_legatiawall
+        prerequisite = { focus = LEG_COASTAL_DEFENSE }
+		x = 18
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			260 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 1058
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 1622
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 2461
+							instant_build = yes
+						}
+				}
+			}
+			265 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 88
+							instant_build = yes
+						}
+
+				}
+			}
+			266 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 1300
+							instant_build = yes
+						}
+
+				}
+			}
+		}
+
+	}
+
+    #Central Fortifcation Initiative
+	focus = {
+		id = LEG_CENTRAL_FORT
+		icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = LEG_BORDERWALL }
+		x = 18
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			289 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 163
+							instant_build = yes
+						}
+
+				}
+			}
+		}
+
+	}
+
+    #Reinforce the East
+	focus = {
+		id = LEG_REINFORCE_EAST
+		icon = GFX_seal
+        prerequisite = { focus = LEG_FORTIFY_NORTH }
+		x = 20
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			76 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 5
+							province = 2758
+							instant_build = yes
+						}
+				}
+			}
+			84 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 5
+							province = 1972
+							instant_build = yes
+						}
+				}
+				
+			}
+			86 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 2082
+							instant_build = yes
+						}
+				}
+			}
+	
+		}
+
+	}
+
+    #Capital Fortification
+	focus = {
+		id = LEG_CAPITAL_FORTIFICATION
+		icon = GFX_goal_generic_fortify_city
+        prerequisite = { focus = LEG_NORTHERN_HIGHWAYS }
+		x = 16
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			65 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1829
+							instant_build = yes
+						}
+				}
+			}
+		}
+
+	}
+
+    #Central Air Defenses
+	focus = {
+		id = LEG_CENTRAL_AIR_DEFENSES
+		icon = GFX_air_eagle
+        prerequisite = { focus = LEG_REINFORCE_EAST }
+		x = 20
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			285 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+	
+		}
+		
+
+	}
+
+    #Influence Alamania
+	focus = {
+		id = LEG_INFLUENCE_ALAMANIA
+		icon = GFX_alamaniastep
+        prerequisite = { focus = LEG_CENTRAL_AIR_DEFENSES }
+		x = 20
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = ALA
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = ALA
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = ALA
+
+	}
+
+    #Defensive Warfare
+	focus = {
+		id = LEG_DEFENSIVE_WARFARE
+		icon = GFX_defensive
+		prerequisite = { focus = LEG_SANCTION_PESTFRILAND }
+		prerequisite = { focus = LEG_CENTRAL_FORT }
+		prerequisite = { focus = LEG_INFLUENCE_ALAMANIA }
+		x = 18
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = defensive_doctrine
+		}
+
+	}
+
+    #Regian Defense Initiative
+	focus = {
+		id = LEG_REGIAN_DEF
+		icon = GFX_goal_generic_attack_allies
+        prerequisite = { focus = LEG_EVERY_HOUSE }
+		x = 35
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = REG modifier = medium_decrease }
+			reverse_add_opinion_modifier = { target = LEG modifier = medium_decrease }
+		}
+
+	}
+
+    #Fortify the West
+	focus = {
+		id = LEG_FORT_WEST
+		icon = GFX_goal_generic_construct_military
+        prerequisite = { focus = LEG_REGIAN_DEF }
+		x = 32
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		mutually_exclusive = {
+            focus = LEG_COERCE_REGIAN_KING
+        }
+		completion_reward = {
+			266 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 1300
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 2491
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 1599
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 832
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 453
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 2531
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 2543
+							instant_build = yes
+						}
+				}
+			}
+		}
+
+	}
+
+    #Coerce the Regian King
+	focus = {
+		id = LEG_COERCE_REGIAN_KING
+		icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = LEG_REGIAN_DEF }
+		x = 34
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = {
+            focus = LEG_FORT_WEST
+        }
+		completion_reward = {
+			CHE = {
+				add_opinion_modifier = { target = REG modifier = medium_increase }
+			}
+		}
+
+	}
+
+    #Protect the Southwestern Border
+	focus = {
+		id = LEG_PROTECT_SOUTH
+		icon = GFX_goal_generic_major_war
+        prerequisite = { focus = LEG_REGIAN_DEF }
+		x = 35
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_state_claim = 297
+		}
+
+	}
+
+    
+    #Fortify the Northwestern Border
+	focus = {
+		id = LEG_FORTIFY_NORTHWEST
+		icon = GFX_goal_generic_major_war
+        prerequisite = { focus = LEG_REGIAN_DEF }
+		x = 37
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_state_claim = 264
+			add_state_claim = 270
+		}
+
+	}
+
+    #Coerce the Merchant Guilds
+	focus = {
+		id = LEG_COERCE_MERCHANTS
+		icon = GFX_goal_support_fascism
+        prerequisite = { focus = LEG_PROTECT_SOUTH }
+        prerequisite = { focus = LEG_FORTIFY_NORTHWEST }
+		x = 32
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = {
+            focus = LEG_COERCE_PEASANTS
+        }
+		completion_reward = {
+			REG = {
+				add_opinion_modifier = { target = LEG modifier = medium_decrease }
+				if = {
+					limit = {
+						LEG = {
+							has_government = neutrality
+						}
+					}
+					add_timed_idea = { idea = fascist_revolutionaries days = 1095 }
+				}
+				country_event = { id = generic.1 }
+			}
+		}
+
+	}
+
+    #Coerce the Peasant Rabble
+	focus = {
+		id = LEG_COERCE_PEASANTS
+		icon = GFX_goal_support_communism
+        prerequisite = { focus = LEG_PROTECT_SOUTH }
+        prerequisite = { focus = LEG_FORTIFY_NORTHWEST }
+		x = 34
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = {
+            focus = LEG_COERCE_MERCHANTS
+        }
+		completion_reward = {
+			REG = {
+				add_opinion_modifier = { target = LEG modifier = medium_decrease }
+				if = {
+					limit = {
+						LEG = {
+							has_government = neutrality
+						}
+					}
+					add_timed_idea = { idea = communist_revolutionaries days = 1095 }
+				}
+				country_event = { id = generic.1 }
+			}
+		}
+
+	}
+
+    #Regian Strategy
+	focus = {
+		id = LEG_REGIAN_STRATEGY
+		icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = LEG_PROTECT_SOUTH }
+        prerequisite = { focus = LEG_FORTIFY_NORTHWEST }
+		x = 36
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = auroran_expansionism
+		}
+
+	}
+
+    #Sanction Regia
+	focus = {
+		id = LEG_SANCTION_REGIA
+		icon = GFX_sanctionreg
+        prerequisite = { focus = LEG_REGIAN_STRATEGY }
+		x = 36
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			REG = {
+				add_opinion_modifier = { target = LEG modifier = embargo }
+				add_opinion_modifier = { target = LEG modifier = sanctions_relations }  
+			}
+		}
+
+	}
+
+    #War with Regia
+	focus = {
+		id = LEG_WAR_WITH_REGIA
+		icon = GFX_warregia
+        prerequisite = { focus = LEG_SANCTION_REGIA }
+		x = 36
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = REG
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = REG
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = REG
+
+	}
+
+    #Stop the Rot
+	focus = {
+		id = LEG_STOP_THE_ROT
+		icon = GFX_focus_rom_parties_end
+		x = 44
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+
+    #Crackdown on Corruption
+	focus = {
+		id = LEG_CRACKDOWN_CORRUP
+		icon = GFX_focus_generic_strike_at_democracy1
+        prerequisite = { focus = LEG_STOP_THE_ROT }
+		x = 44
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = widespread_corruption
+		}
+
+	}
+
+    #Prepare for the inevitable
+	focus = {
+		id = LEG_PREPARE_FOR_INEVITABLE
+		icon = GFX_warforaurora
+        prerequisite = { focus = LEG_CRACKDOWN_CORRUP }
+		x = 44
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+
+	}
+
+    #Influence Chernaria
+	focus = {
+		id = LEG_INFLUENCE_CHERNARIA
+		icon = GFX_deal_che
+        prerequisite = { focus = LEG_CRACKDOWN_CORRUP }
+		x = 39
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			CHE = {
+				add_opinion_modifier = { target = LEG modifier = huge_increase }
+			}
+		}
+
+	}
+
+    #Influence Nagijix
+	focus = {
+		id = LEG_INFLUENCE_NAGIJIX
+		icon = GFX_deal_nag
+        prerequisite = { focus = LEG_INFLUENCE_CHERNARIA }
+		x = 39
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			NAG = {
+				add_opinion_modifier = { target = LEG modifier = huge_increase }
+			}
+		}
+
+	}
+
+    #Embargo Desunion
+	focus = {
+		id = LEG_EMBARGO_DESUNION
+		icon = GFX_sanctiondes
+        prerequisite = { focus = LEG_INFLUENCE_NAGIJIX }
+		x = 39
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			DES = {
+				add_opinion_modifier = { target = LEG modifier = embargo }
+				add_opinion_modifier = { target = LEG modifier = sanctions_relations }  
+			}
+		}
+
+	}
+
+    #War with Desunion
+	focus = {
+		id = LEG_WAR_WITH_DESUNION
+		icon = GFX_wardesunion
+        prerequisite = { focus = LEG_EMBARGO_DESUNION }
+		x = 39
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = DES
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = DES
+				type = puppet_wargoal_focus
+			}
+		}
+		will_lead_to_war_with = DES
+
+	}
+
+    #Botrelian Intervention
+	focus = {
+		id = LEG_BOTRELIAN_INTERVENTION
+		icon = GFX_gunstowardsbotrelia
+        prerequisite = { focus = LEG_CRACKDOWN_CORRUP }
+		x = 42
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			has_war_with = BOT
+		}
+		available = {
+            BOT = { has_war_with = EVO }
+			BOT = { has_war_with = POL }
+        }
+		completion_reward = {
+			create_wargoal = {
+				target = BOT
+				type = topple_government
+			}
+		}
+		will_lead_to_war_with = BOT
+
+	}
+
+    #Full Scale War
+	focus = {
+		id = LEG_FULL_SCALE_WAR
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = LEG_BOTRELIAN_INTERVENTION }
+		x = 41
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+
+	}
+
+    #Volunteer Divisions
+	focus = {
+		id = LEG_VOLUNTEER_DIVISIONS
+		icon = GFX_leg_volunteers
+        prerequisite = { focus = LEG_BOTRELIAN_INTERVENTION }
+		x = 43
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_manpower = 30000
+		}
+
+	}
+
+    #Euradan Non Aggression Pact
+	focus = {
+		id = LEG_EURADAN_PACT
+		icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = LEG_BOTRELIAN_INTERVENTION }
+		x = 42
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = { has_war_with = EUR }
+		}
+		completion_reward = {
+			EUR = { country_event = { id = eurada.9 days = 1 } }
+		}
+
+	}
+
+    #Disband the House of Commons
+	focus = {
+		id = LEG_DISBAND_COMMONS
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+        prerequisite = { focus = LEG_CRACKDOWN_CORRUP }
+		x = 46
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_completed_focus = LEG_LEGITIUS_RETURNS
+		}
+		completion_reward = {
+			remove_ideas = house_of_commons
+			add_ideas = political_turbulence
+		}
+
+	}
+
+    #Disavow the Mitras
+	focus = {
+		id = LEG_DISBAND_MITRAS
+		icon = GFX_focus_generic_concessions
+        prerequisite = { focus = LEG_DISBAND_COMMONS }
+		x = 45
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+
+    #Crackdown on Revolutionary Spirit
+	focus = {
+		id = LEG_CRACKDOWN_SPIRIT
+		icon = GFX_focus_spr_crush_the_revolution
+        prerequisite = { focus = LEG_DISBAND_COMMONS }
+		x = 47
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = political_turbulence
+		}
+
+	}
+
+    #Issue Gasmasks
+	focus = {
+		id = LEG_ISSUE_GASMASKS
+		icon = GFX_goal_generic_small_arms
+        prerequisite = { focus = LEG_CRACKDOWN_CORRUP }
+		x = 49
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.05
+			add_ideas = civil_defense_corps
+		}
+
+	}
+
+    #Retrain the Military
+	focus = {
+		id = LEG_RETRAIN_MILITARY
+		icon = GFX_focus_generic_commonwealth_build_infantry
+        prerequisite = { focus = LEG_ISSUE_GASMASKS }
+		x = 49
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+
+	}
+
+    #Embargo Evolia
+	focus = {
+		id = LEG_EMBARGO_EVOLIA
+		icon = GFX_sanctionevo
+        prerequisite = { focus = LEG_RETRAIN_MILITARY }
+		x = 49
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			EVO = {
+				add_opinion_modifier = { target = LEG modifier = embargo }
+				add_opinion_modifier = { target = LEG modifier = sanctions_relations }  
+			}
+		}
+
+	}
+
+    #The Incident
+	focus = {
+		id = LEG_THE_INCIDENT
+		icon = GFX_sinkingship
+        prerequisite = { focus = LEG_EMBARGO_EVOLIA }
+		x = 49
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = EVO
+		}
+		completion_reward = {
+			news_event = { id = mithrasnews.20 days = 1 } 
+		}
+		will_lead_to_war_with = EVO
+
+	}
+
+    
+
+
+
+}

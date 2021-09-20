@@ -1,0 +1,22 @@
+state={
+	id=71
+	name="STATE_71"
+	provinces={
+		293 673 755 1514 1667 1909 2049 2469 2472 2484 
+	}
+	manpower=1062650
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=15
+	}
+
+	history={
+		owner = RSL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=208
+	name="STATE_208"
+	provinces={
+		751 764 1288 1473 1498 1737 2314 2329 
+	}
+	manpower=3156456
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	resources={
+		tungsten=4
+	}
+
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 8
+		}
+		add_core_of = EVO
+	}
+}

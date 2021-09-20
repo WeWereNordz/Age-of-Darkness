@@ -1,0 +1,28 @@
+state={
+	id=27
+	name="STATE_27"
+	manpower = 1122265
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			111 9
+		}
+		owner = HER
+		
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			721 = {
+                naval_base = 4
+
+            }
+		}
+		add_core_of = HER
+	}
+
+	provinces={
+		100 111 698 721 
+	}
+}

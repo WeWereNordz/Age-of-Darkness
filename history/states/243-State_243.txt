@@ -1,0 +1,20 @@
+state={
+	id=243
+	name="STATE_243"
+	provinces={
+		215 296 386 512 850 1780 2209 2442 2450 2460 
+	}
+	manpower=1728879
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = ALA
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		add_core_of = ALA
+	}
+}

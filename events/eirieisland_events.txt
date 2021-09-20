@@ -1,0 +1,29 @@
+﻿###########################
+# eirieisland events
+###########################
+
+add_namespace = eirieisland
+
+# Pithia Offers Annexation
+country_event = {
+	id = eirieisland.1
+	title = eirieisland.1.t
+	desc = eirieisland.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Handover Davenport
+		name = eirieisland.1.a
+		ai_chance = { factor = 99 }
+		POL = { transfer_state = 27 }
+		news_event = { id = mithrasnews.27 days = 1 }
+	}
+	option = { # Reject Demands
+		name = eirieisland.1.b
+		ai_chance = { factor = 1 }
+		POL = { country_event = { id = pithia.11 days = 1 } }
+	}
+}

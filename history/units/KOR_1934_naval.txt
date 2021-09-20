@@ -1,0 +1,19 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "People's Navy"			
+		naval_base = 313  # 
+		task_force = {				
+			name = "1st Fleet"
+			location = 313  # 
+			ship = { name = "Inmin Kongpouibae" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = KOR } } }
+			ship = { name = "Koruwo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = KOR } } } 		
+			ship = { name = "Huyui" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = KOR } } }		
+			ship = { name = "D1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KOR } } }
+			ship = { name = "D2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KOR } } }
+			ship = { name = "D3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KOR } } }
+			ship = { name = "D4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KOR } } }
+		}
+	}
+}
+

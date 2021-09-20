@@ -1,0 +1,25 @@
+state={
+	id=47
+	name="STATE_47"
+	provinces={
+		1623 
+	}
+	manpower=63
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = PES
+		victory_points = {
+			1623 2
+		}
+		buildings = {
+			infrastructure = 1
+			dockyard = 2
+			1623 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = PES
+	}
+}

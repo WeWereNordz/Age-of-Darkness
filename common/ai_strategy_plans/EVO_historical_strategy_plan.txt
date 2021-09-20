@@ -1,0 +1,90 @@
+EVO_historical_plan = {
+	name = "Evolia Historical Plan"
+	desc = "Historical Evolia"
+
+	allowed = {
+		original_tag = EVO
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = neutrality
+			has_government = democratic
+		}
+	}
+
+	ai_national_focuses = {
+		EVO_the_chancellors_speech
+		EVO_unify_the_party
+		EVO_gensokyo
+		EVO_reconstruction
+		EVO_government_reforms
+		EVO_march_of_the_youth
+		EVO_industrial_mobilization
+		EVO_expand_the_ssd
+		EVO_empower_the_chancellery
+		EVO_corridor_railroad
+		EVO_flandrenian_industry
+		EVO_tuuran_highway
+		EVO_pyrrhus_river_factories
+		EVO_the_populist_army
+		EVO_diplomatic_efforts
+		EVO_old_allies
+		EVO_alliance_with_regia
+		EVO_recruitment_propaganda
+		EVO_tuuranian_oil
+		EVO_agriculture_mechanization
+		EVO_army_expansion
+		EVO_death_korps
+		EVO_move_industry_to_starke
+		EVO_heavy_tank_focus
+		EVO_motorized_infantry
+		EVO_education_reform
+		EVO_dignity_and_purpose
+		EVO_unified_realm
+		EVO_crush_intercorps_rivalry
+		EVO_assault_tactics
+		EVO_massive_effort
+		EVO_realm_industrial_act
+		EVO_total_autarky
+		EVO_complete_the_10_year_plan
+		EVO_the_chancellor_wolf_society
+		EVO_why_we_fight
+		EVO_victory_or_death
+		EVO_kriegers_theory
+		EVO_through_the_gap
+		EVO_wissenschaftabteilung
+		EVO_gprojekt_energy
+		EVO_super_soldiers
+		EVO_air_armament
+		EVO_aircraft_conversions
+		EVO_luftstreitkrafte
+		EVO_light_aircraft_priority
+		EVO_radio_guided_bombs
+		EVO_fairy_corps
+		EVO_escort_zeppelins
+		EVO_battle_zeppelins
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

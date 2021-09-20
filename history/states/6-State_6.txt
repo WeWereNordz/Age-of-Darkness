@@ -1,0 +1,19 @@
+state={
+	id=6
+	name="STATE_6"
+	provinces={
+		2723 
+	}
+	manpower=63
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = EVO
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=121
+	name="STATE_121"
+	manpower = 890
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			859 2
+		}
+		owner = OYO
+		
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = OYO
+	}
+
+	provinces={
+		859 
+	}
+}

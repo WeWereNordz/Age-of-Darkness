@@ -1,0 +1,23 @@
+state={
+	id=283
+	name="STATE_283"
+	provinces={
+		33 40 182 288 301 320 566 632 768 910 968 1162 1217 1628 1715 1753 1788 1842 1883 1913 1988 2168 2196 2503 2507 2533 2559 2565 
+	}
+	manpower=3156456
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 3
+			1988 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = EVO
+	}
+}

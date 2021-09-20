@@ -1,0 +1,116 @@
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Presidential Navy"			
+		naval_base = 1915  # PROVINCE NUMBER
+		task_force = {
+			name = "I. Prime Fleet"
+			location = 1915  # PROVINCE NUMBER
+			ship = { name = "ESS Compathia" pride_of_the_fleet = yes definition = battleship  equipment = { battleship_1 = { amount = 1 owner = EUR } } }	
+			ship = { name = "ESS Gormouth"  definition = battleship equipment = { battleship_1 = { amount = 1 owner = EUR } } }		
+			ship = { name = "ESS Corinthia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EUR } } }	
+			ship = { name = "ESS Foundrie" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }			
+			ship = { name = "ESS Elwick's Revenge" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }	
+			ship = { name = "ESS St. Errock" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }			
+			ship = { name = "ESS Lobatium" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }
+			# 1. Escort Fleet
+			ship = { name = "DD 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "DD 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "DD 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "DD 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+		}
+		task_force = {
+			name = "II. Eastern Fleet"
+			location = 1915  # PROVINCE NUMBER
+			ship = { name = "ESS Evergreen" definition = carrier equipment = { carrier_1 = { amount = 1 owner = EUR } }
+			air_wings = {
+				cv_fighter_equipment_0 =  { owner = "EUR" amount = 9 }
+				cv_nav_bomber_equipment_1 =  { owner = "EUR" amount = 12 }
+			}
+		}
+			ship = { name = "ESS Jambarie" definition = battleship equipment = { battleship_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "ESS Mitra" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "ESS Memorial" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "ESS Legatia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "ESS Celestial" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EUR } } }			
+			# 2. Escort Fleet
+			ship = { name = "DD 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+			ship = { name = "DD 6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EUR } } }
+		}
+	}
+			
+	fleet = {
+		name = "Vanoxian Protection Fleet"			
+		naval_base = 25  # PROVINCE NUMBER
+		task_force = {
+			name = "I. Submarine Fleet"
+			location = 25  # PROVINCE NUMBER
+			# 1. Submarine Fleet
+			ship = { name = "S-1" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EUR } } }
+			ship = { name = "S-2" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EUR } } }
+			ship = { name = "S-3" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EUR } } }
+			ship = { name = "S-4" definition = submarine equipment = { submarine_2 = { amount = 1 owner = EUR } } }
+		}
+	}
+}
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	### Ships Under Contruction ###
+	# CA: "ESS Richardson"
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.80
+		amount = 1
+	}
+	# CA: "ESS Katanga"
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.75
+		amount = 1
+	}
+	# CA: "ESS Angie's Revenge"
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.35
+		amount = 2
+	}
+	# CA: "ESS X`Cassius"
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "EUR"
+		}
+		requested_factories = 2
+		progress = 0.25
+		amount = 2
+	}
+	# DD: 1934 class
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "EUR"
+		}
+		requested_factories = 1
+		progress = 0.75
+		amount = 4
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id=202
+	name="STATE_202"
+	provinces={
+		34 167 395 416 442 587 642 756 769 807 1143 1167 1259 1284 1315 1401 1443 1467 1491 1513 1598 1718 1729 1973 2039 2064 2065 2145 2186 2296 2305 2320 2332 2356 
+	}
+	manpower=3156456
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+
+	resources={
+		aluminium=26
+	}
+
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 7
+			arms_factory = 10
+			2186 = {
+                naval_base = 9
+
+            }
+		}
+		add_core_of = EVO
+	}
+}

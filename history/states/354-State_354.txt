@@ -1,0 +1,19 @@
+state={
+	id=354
+	name="STATE_354"
+	provinces={
+		179 525 1309 
+	}
+	manpower=46
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EUR
+
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = EUR
+	}
+}

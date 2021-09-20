@@ -1,0 +1,22 @@
+state={
+	id=50
+	name="STATE_50"
+	provinces={
+		2739 
+	}
+	manpower=45
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = PES
+		buildings = {
+			infrastructure = 1
+			dockyard = 2
+			2739 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = PES
+	}
+}

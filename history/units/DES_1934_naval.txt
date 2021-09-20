@@ -1,0 +1,22 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Teikoku Kaigun"			
+		naval_base = 160  # 
+		task_force = {				
+			name = "1st Kantai"
+			location = 160  # 
+			ship = { name = "IDN Kotei" definition = battleship equipment = { battleship_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Kogo" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Kimini" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Urake" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DES } } } 		
+			ship = { name = "IDN Yogan Keki" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Shori" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = DES } } }		
+			ship = { name = "IDN Kaba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Kashiwa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Sakaki" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Katsura" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DES } } }
+			ship = { name = "IDN Sugi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DES } } }
+		}
+	}
+}

@@ -1,0 +1,2367 @@
+﻿focus_tree = {
+	id = poloniafocus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1750 }
+
+	#Ducttape Economy
+	focus = {
+		id = POL_ducttape_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 6
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	#Expand Colonial Industries
+	focus = {
+		id = POL_colonial_industries
+		icon = GFX_nerjoindustry
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_ducttape_economy
+		}
+		completion_reward = {
+			NER = {
+			add_tech_bonus = {
+			name = POL_colonial_industries
+			bonus = 0.5
+			uses = 2
+			category = industry
+			}
+			}
+		}
+	}
+
+	#Expand Core Industries
+	focus = {
+		id = POL_core_industries
+		icon = GFX_goal_generic_production
+		x = 11
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_ducttape_economy
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = POL_core_industries
+			bonus = 0.5
+			uses = 2
+			category = industry
+			}
+		}
+
+	}
+
+	#A Worthy Defense
+	focus = {
+		id = POL_worthy_defense
+		icon = GFX_goal_generic_defence
+		x = 5
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_core_industries
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = industrial_mobilization
+				days = 1095
+			}
+		}
+	}
+
+	#Catching Up Our Forces
+	focus = {
+		id = POL_catching_up
+		icon = GFX_focus_generic_combined_arms
+		x = 9
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_core_industries
+		}
+		completion_reward = {
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+		}
+	}
+
+	#A Good-Enough Rifle
+	focus = {
+		id = POL_a_good_enough_rifle
+		icon = GFX_focus_focus_fra_maquis
+		x = 9
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_catching_up
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_a_good_enough_rifle
+				bonus = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	#A Good-Enough Tank
+	focus = {
+		id = POL_a_good_enough_tank
+		icon = GFX_goal_generic_build_tank
+		x = 7
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_rifle
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_a_good_enough_tank
+				bonus = 2
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	#The Rusty Colonial
+	focus = {
+		id = POL_the_rusty_colonial
+		icon = GFX_focus_generic_manpower
+		x = 7
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_tank
+		}
+		completion_reward = {
+			remove_ideas = disjointed_army
+		}
+	}
+
+	#A Good-Enough Staff
+	focus = {
+		id = POL_a_good_enough_staff
+		icon = GFX_focus_generic_military_mission
+		x = 9
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_rifle
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_a_good_enough_staff
+				bonus = 1
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	#Supply the Armies
+	focus = {
+		id = POL_supply_the_armies
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 9
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_staff
+		}
+		completion_reward = {
+			add_ideas = empire_logistics
+		}
+	}
+
+	#A Navy to be proud of
+	focus = {
+		id = POL_the_pride_of_pithia
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 9
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_supply_the_armies
+		}
+		prerequisite = {
+			focus = POL_the_rusty_colonial
+		}
+		prerequisite = {
+			focus = POL_piston_engines
+		}
+		completion_reward = {
+			custom_effect_tooltip = pride_of_pithia_tooltip
+			hidden_effect = {
+			add_ideas = pithian_dream_idea }
+		}
+	}
+
+	#National Dockyards
+	focus = {
+		id = POL_national_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_the_pride_of_pithia
+		}
+		completion_reward = {
+			286 = {
+					 add_extra_state_shared_building_slots = 10
+					 add_building_construction = {
+						 type = dockyard
+						 level = 10
+						 instant_build = yes
+					 }
+				 }
+				 298 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				303 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			 }
+	}
+
+	#Battlecruisers
+	focus = {
+		id = POL_battlecruisers
+		icon = GFX_focus_generic_cruiser2
+		x = 8
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = {
+			focus = POL_carriers
+		}
+		prerequisite = {
+			focus = POL_national_dockyards
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_battlecruisers
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+
+	#The Ultimate Battleship
+	focus = {
+		id = POL_ultimate_battleship
+		icon = GFX_goal_generic_navy_battleship
+		x = 8
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_battlecruisers
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_ultimate_battleship
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	#Carriers
+	focus = {
+		id = POL_carriers
+		icon = GFX_goal_generic_navy_carrier
+		x = 10
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = {
+			focus = POL_battlecruisers
+		}
+		prerequisite = {
+			focus = POL_national_dockyards
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_carriers
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	#Wings on our Decks
+	focus = {
+		id = POL_wings_on_our_decks
+		icon = GFX_goal_generic_air_fighter2
+		x = 10
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_carriers
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_wings_on_our_decks
+				bonus = 1
+				ahead_reduction = 1
+				uses = 4
+				category = naval_air
+			}
+		}
+	}
+
+	#Fleet Escorts
+	focus = {
+		id = POL_fleet_escorts
+		icon = GFX_goal_generic_navy_cruiser
+		x = 9
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_ultimate_battleship focus = POL_wings_on_our_decks
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_fleet_escorts
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	#Expand Naval Reach
+	focus = {
+		id = POL_not_enough_dockyards
+		icon = GFX_bot_patrol
+		x = 9
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_fleet_escorts
+		}
+		completion_reward = {
+			180 = {
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 2706
+							instant_build = yes
+						}
+			}
+			178 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 2218
+					instant_build = yes
+				}
+			}		
+			326 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 1484
+					instant_build = yes
+				}
+			}
+			176 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 2698
+					instant_build = yes
+				}
+			}
+			133 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 1275
+					instant_build = yes
+				}
+			}
+			116 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 1446
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Our Dream Realized
+	focus = {
+		id = POL_our_dream_realized
+		icon = GFX_pol_dream
+		x = 9
+		y = 12
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_not_enough_dockyards
+		}
+		completion_reward = {
+			add_ideas = pax_pithias
+		}
+
+	}
+
+	#A Good-Enough Air Force
+	focus = {
+		id = POL_a_good_enough_air_force
+		icon = GFX_goal_generic_build_airforce
+		x = 11
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_rifle
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_a_good_enough_air_force
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+	}
+
+	#Piston Engines
+	focus = {
+		id = POL_piston_engines
+		icon = GFX_goal_generic_air_fighter
+		x = 11
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = POL_a_good_enough_air_force
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_piston_engines
+				bonus = 1
+				uses = 3
+				category = light_air
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#Coastal Guns
+	focus = {
+		id = POL_coastal_guns
+		icon = GFX_goal_generic_army_artillery
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_worthy_defense
+		}
+		completion_reward = {
+			305 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1028
+					instant_build = yes
+				}
+	}		
+			286 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 2153
+					instant_build = yes
+				}
+	}		
+			317 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 2201
+					instant_build = yes
+				}
+	}		
+			301 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 2615
+					instant_build = yes
+				}
+	}		
+			295 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1485
+					instant_build = yes
+				}
+	}		
+			261 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 326
+							instant_build = yes
+						}
+			}		
+		}
+	}
+
+	#Mransk Must Hold
+	focus = {
+		id = POL_mransk_must_hold
+		icon = GFX_goal_generic_fortify_city
+		x = 5
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_coastal_guns focus = POL_crown_line
+		}
+		completion_reward = {
+			58 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 658
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1021
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 1995
+							instant_build = yes
+						}
+			}		
+		}
+	}
+
+	#Standardized Defense
+	focus = {
+		id = POL_standardized_defense
+		icon = GFX_goal_generic_small_arms
+		x = 5
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_mransk_must_hold
+		}
+		completion_reward = {
+			add_ideas = mass_production_rifles
+		}
+	}
+
+	#Crown Line
+	focus = {
+		id = POL_crown_line
+		icon = GFX_goal_generic_construct_military
+		x = 6
+		y = 3
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			surrender_progress > 0.4
+		}
+		prerequisite = {
+			focus = POL_worthy_defense
+		}
+		completion_reward = {
+			304 = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1724
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1516
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 2120
+							instant_build = yes
+						}
+			}		
+			312 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 704
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 2107
+					instant_build = yes
+				}
+	}	
+		}
+	}
+
+	#Mugol Infrastructure
+	focus = {
+		id = POL_cure_seliro
+		icon = GFX_rail
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_colonial_industries
+		}
+		completion_reward = {
+			338 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+			}
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+			}
+	}
+
+	#Eastern Coal
+	focus = {
+		id = POL_eastern_coal
+		icon = GFX_nerjo_oil
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_colonial_industries
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 23
+				state = 156
+			}
+		}
+	}
+
+	#Overseas Industry
+	focus = {
+		id = POL_astovian_favoritism
+		icon = GFX_nerjofac
+		x = 1
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_colonial_industries
+		}
+		completion_reward = {
+			338 = {
+					 add_extra_state_shared_building_slots = 4
+					 add_building_construction = {
+						 type = arms_factory
+						 level = 2
+						 instant_build = yes
+					 }
+					 add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				 }
+			 }
+	}
+
+	#Develop the Country
+	focus = {
+		id = POL_develop_the_country
+		icon = GFX_goal_generic_construct_civilian
+		x = 13
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_core_industries
+		}
+		completion_reward = {
+			291 = {
+				add_extra_state_shared_building_slots = 10
+			}
+			301 = {
+				add_extra_state_shared_building_slots = 10
+			}
+			295 = {
+				add_extra_state_shared_building_slots = 10
+			}
+			312 = {
+					 add_extra_state_shared_building_slots = 8
+				 }
+				 317 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				306 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				304 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				303 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				309 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				
+				299 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				298 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				
+				261 = {
+					add_extra_state_shared_building_slots = 5
+				}
+			 }
+	}
+
+	#Time for Rolow
+	focus = {
+		id = POL_time_for_rolow
+		icon = GFX_focus_generic_rubber
+		x = 12
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_develop_the_country
+		}
+		completion_reward = {
+			295 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+			}
+			}
+	}
+	
+	#Time for Mransk
+	focus = {
+		id = POL_time_for_mransk
+		icon = GFX_focus_generic_rubber
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_develop_the_country
+		}
+		completion_reward = {
+			58 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+			}
+			}
+	}
+
+	#Hardsteel Railworks
+	focus = {
+		id = POL_railworks
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 13
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_time_for_mransk
+		}
+		prerequisite = {
+			focus = POL_time_for_rolow
+		}
+		completion_reward = {
+			314 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			291 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+		299 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		301 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		303 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+	}
+	306 = {
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+}
+			304 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+			}
+			
+
+
+			}
+	}
+
+	#Develop the antarctic
+	focus = {
+		id = POL_develop_the_antarctic
+		icon = GFX_goal_generic_construction
+		x = 17
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_core_industries
+		}
+		completion_reward = {
+			349 = {
+					 add_extra_state_shared_building_slots = 10
+				 }
+				 346 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				351 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				350 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				352 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				186 = {
+					add_extra_state_shared_building_slots = 4
+				}
+				353 = {
+					add_extra_state_shared_building_slots = 2
+				}
+				355 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			 }
+	}
+
+	#Hidden Factories
+	focus = {
+		id = POL_hidden_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 16
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_develop_the_antarctic
+		}
+		completion_reward = {
+			349 = {
+					 add_extra_state_shared_building_slots = 6
+					 add_building_construction = {
+						 type = arms_factory
+						 level = 6
+						 instant_build = yes
+					 }
+				 }
+			 }
+	}
+
+	#Antarctic Labworks
+	focus = {
+		id = POL_antarctic_labworks
+		icon = GFX_focus_research
+		x = 17
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = POL_hidden_factories
+		}
+		prerequisite = {
+			focus = POL_ice_sheet_fuel_deposits
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Ice Sheet Fuel Deposits
+	focus = {
+		id = POL_ice_sheet_fuel_deposits
+		icon = GFX_goal_generic_oil_refinery
+		x = 18
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_develop_the_antarctic
+		}
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 63
+				state = 347
+			}
+			add_resource = {
+				type = oil
+				amount = 85
+				state = 345
+			}
+			add_resource = {
+				type = oil
+				amount = 49
+				state = 348
+			}
+		}
+	}
+
+	#Concilate the North
+	focus = {
+		id = POL_conciliate_the_north
+		icon = GFX_goal_generic_territory_or_war
+		x = 30
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = {
+				country_exists = RSL
+			}
+		}
+		completion_reward = {
+			add_ideas = unionist_sympathizers
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	#Cult of Personality
+	focus = {
+		id = POL_cult_of_personality
+		icon = GFX_goal_generic_propaganda
+		x = 30
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_conciliate_the_north
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	#Secrets of the Antarctic
+	focus = {
+		id = POL_secrets_of_the_antarctic
+		icon = GFX_secretsarctic
+		x = 20
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_cult_of_personality
+		}
+	}
+
+	#War Profiteering
+	focus = {
+		id = POL_war_profiteering
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 26
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_cult_of_personality
+		}
+		completion_reward = {
+			add_ideas = wartime_trade_deals
+		}
+	}
+
+	#Guns to Evolia
+	focus = {
+		id = POL_guns_to_evolia
+		icon = GFX_gunsevolia
+		x = 24
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_war_profiteering
+		}
+		available = {
+			EVO = { has_war = yes }
+		}
+		completion_reward = {
+			EVO = { country_event = { id = evolia.8 days = 1 } }
+		}
+	}
+
+	#Guns to Botrelia
+	focus = {
+		id = POL_guns_to_botrelia
+		icon = GFX_gunsbotrelia
+		x = 28
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_war_profiteering
+		}
+		available = {
+			BOT = { has_war = yes }
+		}
+		completion_reward = {
+			BOT = { country_event = { id = botrelia.12 days = 1 } }
+		}
+	}
+
+	#Guns to Befglorta
+	focus = {
+		id = POL_guns_to_befglorta
+		icon = GFX_gunsbefglorta
+		x = 28
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_guns_to_botrelia
+		}
+		available = {
+			BEF = { has_war = yes }
+		}
+		completion_reward = {
+			BEF = { country_event = { id = befglorta.1 days = 1 } }
+		}
+	}
+
+	#It's Not Enough
+	focus = {
+		id = POL_its_not_enough
+		icon = GFX_focus_generic_concessions
+		x = 28
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			BEF = { has_war_with = EVO }
+		}
+		prerequisite = {
+			focus = POL_guns_to_befglorta
+		}
+		completion_reward = {
+			BOT = { country_event = { id = botrelia.13 days = 1 } }
+		}
+	}
+
+	#A Cure For Botrelia
+	focus = {
+		id = POL_a_cure
+		icon = GFX_heavywater
+		x = 28
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			BOT = { has_war_with = EVO }
+		}
+		bypass = {
+			has_war_with = BEF
+		}
+		prerequisite = {
+			focus = POL_its_not_enough
+		}
+		completion_reward = {
+			BEF = { country_event = { id =befglorta.2 days = 1 } }
+		}
+	}
+
+	#Pithia at both poles
+	focus = {
+		id = POL_pithia_at_both_poles
+		icon = GFX_bothpoles
+		x = 24
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_guns_to_evolia
+		}
+		completion_reward = {
+			3 = {
+						add_building_construction = {
+							type = naval_base
+							level = 2
+							province = 1983
+							instant_build = yes
+						}
+			}
+		}
+	}
+
+	#Evolian Pithian Pact
+	focus = {
+		id = POL_evolian_pithian_pact
+		icon = GFX_evoliapact
+		x = 23
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_pithia_at_both_poles
+		}
+		mutually_exclusive = {
+			focus = POL_betray_the_evolians
+		}
+		available = {
+			EVO = { is_faction_leader = yes }
+		}
+		bypass = {
+			is_in_faction_with = EVO
+		}
+		completion_reward = {
+			EVO = { country_event = { id = evolia.9 days = 1 } }
+		}
+	}
+
+	#Betray the Evolians
+	focus = {
+		id = POL_betray_the_evolians
+		icon = GFX_goal_generic_attack_allies
+		x = 25
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = POL_pithia_at_both_poles
+		}
+		mutually_exclusive = {
+			focus = POL_evolian_pithian_pact
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = EVO
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = secret_deployment_tooltip
+			hidden_effect = {
+			create_wargoal = {
+				target = EVO
+				type = annex_everything
+			}
+		}
+		}
+	}
+
+	#Nerjo Expedition
+	focus = {
+		id = POL_nerjo_expedition
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 20
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_secrets_of_the_antarctic
+		}
+	}
+
+	#Arctic Frontier
+	focus = {
+		id = POL_arctic_frontier
+		icon = GFX_frontier
+		x = 19
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_nerjo_expedition
+		}
+		completion_reward = {
+			347 = {
+				add_manpower = 5224
+			}
+			345 = {
+				add_manpower = 1192
+			}
+			348 = {
+				add_manpower = 3352
+			}
+			349 = {
+				add_manpower = 952
+			}
+			346 = {
+				add_manpower = 4234
+			}
+			351 = {
+				add_manpower = 752
+			}
+			350 = {
+				add_manpower = 863
+			}
+			352 = {
+				add_manpower = 1366
+			}
+			186 = {
+				add_manpower = 794
+			}
+			353 = {
+				add_manpower = 794295
+			}
+			355 = {
+				add_manpower = 1269639
+			}
+		}
+	}
+
+	#Safety of Nerjo
+	focus = {
+		id = POL_safety_of_nerjo
+		icon = GFX_nerjosafety
+		x = 21
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_nerjo_expedition
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = FED
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LIK
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = FED
+		will_lead_to_war_with = LIK
+	}
+
+	#Frontier Bases
+	focus = {
+		id = POL_frontier_bases
+		icon = GFX_bases
+		x = 19
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_arctic_frontier
+		}
+		completion_reward = {
+			186 = {
+					 add_building_construction = {
+						 type = radar_station
+						 level = 6
+						 instant_build = yes
+					 }
+				 }
+				 347 = {
+					add_building_construction = {
+						type = radar_station
+						level = 6
+						instant_build = yes
+					}
+				}
+			 }
+	}
+
+	#Antarctic Rail
+	focus = {
+		id = POL_antarctic_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 18
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_frontier_bases
+		}
+		prerequisite = {
+			focus = POL_antarctic_labworks
+		}
+		completion_reward = {
+			355 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			353 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			186 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			352 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			350 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			351 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			346 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+		}
+			349 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+			}
+			}
+	}
+
+	#August's Research
+	focus = {
+		id = POL_augusts_research
+		icon = GFX_focus_research2
+		x = 18
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = POL_antarctic_rail
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_augusts_research
+				bonus = 2
+				uses = 1
+				category = infantry_tech
+			}
+		}
+	}
+
+	#Railgun Research
+	focus = {
+		id = POL_railgun_research
+		icon = GFX_railgun
+		x = 18
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = POL_augusts_research
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = POL_railgun_research
+			bonus = 1
+			uses = 1
+			technology = infantry_at
+			}
+		}
+	}
+
+	#Antarctic Defenses
+	focus = {
+		id = POL_antarctic_defenses
+		icon = GFX_arcticdefense
+		x = 18
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_railgun_research
+		}
+		completion_reward = {
+			347 = {
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 1943
+							instant_build = yes
+						}
+
+			}		
+			348 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 1727
+					instant_build = yes
+				}
+
+			}
+			346 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 265
+					instant_build = yes
+				}
+
+	}		
+		}
+	}
+
+	#Expanding the Empire
+	focus = {
+		id = POL_expanding_the_empire
+		icon = GFX_goal_generic_position_armies
+		x = 34
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = {
+			focus = POL_cult_of_personality
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+
+	#Influence Astovia
+	focus = {
+		id = POL_influence_astovia
+		icon = GFX_influenceasto
+		x = 32
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_expanding_the_empire
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = OYO modifier = huge_increase }
+			reverse_add_opinion_modifier = { target = POL modifier = huge_increase }
+		}
+	}
+
+	#Influence Durtie
+	focus = {
+		id = POL_influence_durtie
+		icon = GFX_influencedur
+		x = 32
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_influence_astovia
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = DUR modifier = huge_increase }
+			reverse_add_opinion_modifier = { target = POL modifier = huge_increase }
+		}
+	}
+
+	#Creeping Expansion
+	focus = {
+		id = POL_creeping_expansion
+		icon = GFX_expansion_pol
+		x = 36
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = {
+			focus = POL_expanding_the_empire
+		}
+		completion_reward = {
+			remove_ideas = anti_war_sentiment
+		}
+	}
+
+	#A True Chernaria
+	focus = {
+		id = POL_a_true_chernaria
+		icon = GFX_truechern
+		x = 34
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			has_army_manpower = {
+				size > 150000
+			}
+		}
+		prerequisite = {
+			focus = POL_creeping_expansion
+		}
+		completion_reward = {
+			NAG = { country_event = { id = nagijix.1 days = 1 } }
+		}
+	}
+
+	#Pestfrilandic Threat
+	focus = {
+		id = POL_pestfrilandic_threat
+		icon = GFX_sanctionpes
+		x = 36
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		prerequisite = {
+			focus = POL_creeping_expansion
+		}
+		completion_reward = {
+			PES = {
+				add_opinion_modifier = { target = POL modifier = embargo }
+				add_opinion_modifier = { target = POL modifier = sanctions_relations }  
+			}
+		}
+	}
+
+	#Union Against Plague
+	focus = {
+		id = POL_union_against_plague
+		icon = GFX_pest
+		x = 36
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			has_army_manpower = {
+				size > 1000000
+			}
+		}
+		prerequisite = {
+			focus = POL_pestfrilandic_threat
+		}
+		bypass = {
+			has_war_with = PES
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = PES
+				generator = { 9 }
+			}
+		}
+	}
+
+	#The Last Island
+	focus = {
+		id = POL_forcing_their_hand
+		icon = GFX_takingkor
+		x = 34
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = POL_a_true_chernaria
+		}
+		completion_reward = {
+			KOR = { country_event = { id = korvenia.2 days = 1 } }
+		}
+	}
+
+	#Western Isles
+	focus = {
+		id = POL_western_isles
+		icon = GFX_westernisles
+		x = 38
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			has_army_manpower = {
+				size > 100000
+			}
+		}
+		prerequisite = {
+			focus = POL_creeping_expansion
+		}
+		completion_reward = {
+			HEY = { country_event = { id = heydra.1 days = 1 } }
+		}
+	}
+
+	#A Port in Eirie
+	focus = {
+		id = POL_a_port_in_eirie
+		icon = GFX_eirieport
+		x = 38
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		available = {
+			has_army_manpower = {
+				size > 500000
+			}
+		}
+		prerequisite = {
+			focus = POL_western_isles
+		}
+		completion_reward = {
+			if = {
+				limit = { HER = { controls_state = 27 } }
+				HER = { country_event = { id = eirieisland.1 days = 1 } }
+			}
+			if = {
+				limit = { EIR = { controls_state = 27 } }
+				EIR = { country_event = { id = eirieisland.1 days = 1 } }
+			}
+			if = {
+				limit = { NAB = { controls_state = 27 } }
+				NAB = { country_event = { id = eirieisland.1 days = 1 } }
+			}
+		}
+
+	}
+
+	#The Second Conference
+	focus = {
+		id = POL_second_conference
+		icon = GFX_goal_generic_forceful_treaty
+		x = 41
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_cult_of_personality
+		}
+		completion_reward = {
+			remove_ideas = civil_conflict
+		}
+	}
+
+	#Examples of the Traitors
+	focus = {
+		id = POL_examples_of_the_traitors
+		icon = GFX_focus_CZE_german_puppet
+		x = 41
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = {
+			focus = POL_second_conference
+		}
+		completion_reward = {
+			country_event = { id = pithia.4 days = 1 } 
+		}
+	}
+
+	#Heavy Occupation
+	focus = {
+		id = POL_heavy_occupation
+		icon = GFX_goal_generic_political_pressure
+		x = 40
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_examples_of_the_traitors
+		}
+		mutually_exclusive = {
+			focus = POL_salt_ruslaw
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.2
+		}
+	}
+
+	#Salt Ruslaw
+	focus = {
+		id = POL_salt_ruslaw
+		icon = GFX_salting
+		x = 42
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_examples_of_the_traitors
+		}
+		mutually_exclusive = {
+			focus = POL_heavy_occupation
+		}
+		completion_reward = {
+			286 = {
+				add_extra_state_shared_building_slots = -1
+			}
+			259 = {
+				add_extra_state_shared_building_slots = -1
+			}
+			71 = {
+				add_extra_state_shared_building_slots = -1
+			}
+			 }
+		
+	}
+
+	#A Deal with the Devil
+	focus = {
+		id = POL_deal_devil
+		icon = GFX_goal_generic_dangerous_deal
+		x = 22
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		available = {
+			has_completed_focus = POL_secrets_of_the_antarctic
+		}
+		mutually_exclusive = {
+			focus = POL_wind_of_a_traitor
+		}
+		completion_reward = {
+			custom_effect_tooltip = devil_tooltip
+			hidden_effect = {
+				country_event = { id = pithia.17 days = 1 } 
+			}
+		}
+	}
+
+	#A Shift South
+	focus = {
+		id = POL_a_shift_south
+		icon = GFX_south
+		x = 20
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_deal_devil
+		}
+		completion_reward = {
+			set_capital = 355
+		}
+	}
+
+	#Illegal Experiments
+	focus = {
+		id = POL_illegal_experiments
+		icon = GFX_j_experiment
+		x = 21
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = POL_a_shift_south
+		}
+		completion_reward = {
+			add_ideas = human_experimentation_idea
+		}
+	}
+
+	#Railgun Batteries
+	focus = {
+		id = POL_railgun_batteries
+		icon = GFX_railgunbattery
+		x = 21
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_illegal_experiments
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = POL_railgun_batteries
+			bonus = 1
+			ahead_reduction = 1
+			uses = 3
+			category = cat_anti_tank
+			}
+		}
+	}
+
+	#Phantoms
+	focus = {
+		id = POL_phantoms
+		icon = GFX_phantom
+		x = 24
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		prerequisite = {
+			focus = POL_deal_devil
+		}
+		completion_reward = {
+			custom_effect_tooltip = phantoms_tooltip
+			hidden_effect = {
+
+			}
+		}
+	}
+
+	#Ice Cold Science
+	focus = {
+		id = POL_ice_cold_science
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 19
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = POL_antarctic_defenses
+		}
+		prerequisite = {
+			focus = POL_a_shift_south
+		}
+		completion_reward = {
+			add_ideas = coldweatherequipment
+		}
+	}
+
+	#Arctic Labor
+	focus = {
+		id = POL_arctic_labor
+		icon = GFX_arcticlabor
+		x = 19
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = POL_ice_cold_science
+		}
+		completion_reward = {
+			add_ideas = arctic_laborers
+		}
+	}
+
+	#The Posession
+	focus = {
+		id = POL_posession
+		icon = GFX_posess
+		x = 24
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		prerequisite = {
+			focus = POL_phantoms
+		}
+		completion_reward = {
+			custom_effect_tooltip = posession_tooltip
+			hidden_effect = {
+
+			}
+		}
+	}
+
+	#The Pyrrhrus Incident
+	focus = {
+		id = POL_pyrrhus_incident
+		icon = GFX_incident1
+		x = 23
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_posession
+		}
+		completion_reward = {
+			news_event = { id = mithrasnews.32 days = 2 }
+		hidden_effect = {
+		add_nuclear_bombs = 1
+		launch_nuke = {
+		province = 1161
+		state = 225
+		use_nuke = yes
+		}
+		}
+		}
+	}
+
+	#The Draenica Incident
+	focus = {
+		id = POL_draenica_incident
+		icon = GFX_incident2
+		x = 25
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = POL_posession
+		}
+		completion_reward = {
+			news_event = { id = mithrasnews.33 days = 2 }
+			hidden_effect = {
+				add_nuclear_bombs = 1
+				launch_nuke = {
+				province = 376
+				state = 307
+				use_nuke = yes
+				}
+			}
+		}
+	}
+
+		#Catching wind of a Traitor
+		focus = {
+			id = POL_wind_of_a_traitor
+			icon = GFX_crown
+			x = 29
+			y = 8
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INTERNAL_AFFAIRS
+			}
+			available = {
+				has_completed_focus = POL_secrets_of_the_antarctic
+			}
+			mutually_exclusive = {
+				focus = POL_deal_devil
+			}
+			completion_reward = {
+				news_event = { id = mithrasnews.29 days = 1 } 
+			}
+		}
+
+	#A Humble Crown
+	focus = {
+	id = POL_a_humble_crown
+	icon = GFX_humblecrown
+	x = 29
+	y = 9
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INTERNAL_AFFAIRS
+	}
+	prerequisite = {
+		focus = POL_wind_of_a_traitor
+	}
+	completion_reward = {
+		create_country_leader = {
+			name = "Hellna Paderewska"
+			desc = "hellna_desc"
+			picture = "gfx/leaders/Hellna.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = {
+				headstrong
+			}
+		}
+	}
+	}
+
+	#Seclude the Traitor
+	focus = {
+		id = POL_seclude_the_traitor
+		icon = GFX_traitor
+		x = 27
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		prerequisite = {
+			focus = POL_safety_from_the_cold
+		}
+		completion_reward = {
+			custom_effect_tooltip = legacy_tooltip
+			hidden_effect = {
+
+			}
+		}
+		}
+
+	#Legacy of our Fathers
+	focus = {
+		id = POL_legacy_of_our_fathers
+		icon = GFX_legacy
+		x = 31
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		prerequisite = {
+			focus = POL_reveal_the_truth
+		}
+		completion_reward = {
+			custom_effect_tooltip = legacy_tooltip
+			hidden_effect = {
+
+			}
+		}
+		}
+
+		#Loyal Colonies
+	focus = {
+		id = POL_loyal_colonies
+		icon = GFX_loyalcolonies
+		x = 29
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		mutually_exclusive = {
+			focus = POL_reveal_the_truth
+		}
+		mutually_exclusive = {
+			focus = POL_safety_from_the_cold
+		}
+		prerequisite = {
+			focus = POL_a_humble_crown
+		}
+		}
+
+		#Civilian Technologies
+		focus = {
+			id = POL_civilian_technologies
+			icon = GFX_civtech
+			x = 29
+			y = 11
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INTERNAL_AFFAIRS
+			}
+			prerequisite = {
+				focus = POL_loyal_colonies
+			}
+			completion_reward = {
+				remove_ideas = medieval_nation
+			}
+			}
+
+			#Reveal the Truth
+	focus = {
+		id = POL_reveal_the_truth
+		icon = GFX_truth
+		x = 31
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		mutually_exclusive = {
+			focus = POL_loyal_colonies
+		}
+		mutually_exclusive = {
+			focus = POL_safety_from_the_cold
+		}
+		prerequisite = {
+			focus = POL_a_humble_crown
+		}
+		completion_reward = {
+			news_event = { id = mithrasnews.31 days = 1 } 
+		}
+		}
+
+			#Safety from the Cold
+			focus = {
+				id = POL_safety_from_the_cold
+				icon = GFX_cold
+				x = 27
+				y = 10
+				cost = 10
+				search_filters = {
+					FOCUS_FILTER_INTERNAL_AFFAIRS
+				}
+				mutually_exclusive = {
+					focus = POL_loyal_colonies
+				}
+				mutually_exclusive = {
+					focus = POL_reveal_the_truth
+				}
+				prerequisite = {
+					focus = POL_a_humble_crown
+				}
+				completion_reward = {
+					add_ideas = a_frozen_warmth
+				}
+				}
+	
+
+
+}

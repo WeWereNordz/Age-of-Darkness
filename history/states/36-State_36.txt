@@ -1,0 +1,24 @@
+state={
+	id=36
+	name="STATE_36"
+	manpower = 1122265
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			1293 9
+		}
+		owner = NAB
+		
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+		}
+		add_core_of = NAB
+	}
+
+	provinces={
+		349 426 1129 1231 1293 1306 1544 1904 2234 2323 2338 
+	}
+}

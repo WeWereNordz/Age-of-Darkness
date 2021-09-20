@@ -1,0 +1,89 @@
+PES_historical_plan = {
+	name = "Pestfriland Historical Plan"
+	desc = "Historical Pestfriland"
+
+	allowed = {
+		original_tag = PES
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			is_in_faction_with = EUR
+			has_government = communism
+			has_government = neutrality
+			has_government = democratic
+		}
+	}
+
+	ai_national_focuses = {
+		PES_ARISTOCRACY
+		PES_COP
+		PES_FTP
+		PES_TIYP
+		PES_MD
+		PES_OCORPS
+		PES_OOTF
+		PES_WARC
+		PES_OFFR
+		PES_UNITEDCAUSE
+		PES_PURGEOPPOSITION
+		PES_PUBLICU
+		PES_RE
+		PES_NH
+		PES_CS
+		PES_OGO
+		PES_ACADD
+		PES_WARG
+		PES_EXPANSIONISM
+		PES_CN
+		PES_OF
+		PES_IC
+		PES_AD
+		PES_MECHD
+		PES_IOA
+		PES_REVOLUTION
+		PES_PASTHEROES
+		PES_TRADEUNIONS
+		PES_SELFRELIANCE
+		PES_PUBLICHEALTH
+		PES_WVS
+		PES_VOLKSFANTASIE
+		PES_STRATP
+		PES_OFFP
+		PES_COMBA
+		PES_LCL
+		PES_DIRECTECONOMY
+		PES_OOT
+		PES_FTC
+		PES_SEC
+		PES_MG
+		PES_HPHE
+		PES_EWC
+		PES_TWFP
+		PES_HW
+		PES_ATSP
+		PES_GPEST
+
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

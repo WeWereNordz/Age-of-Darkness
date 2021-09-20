@@ -1,0 +1,25 @@
+state={
+	id=282
+	name="STATE_282"
+	provinces={
+		137 526 1189 1198 1256 1790 2534 2553 
+	}
+	manpower=3525338
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GES
+		victory_points = {
+			2553 20
+		}
+		victory_points = {
+			1256 4
+		}
+		buildings = {
+			infrastructure = 2
+			dockyard = 2
+		}
+		add_core_of = GES
+	}
+}

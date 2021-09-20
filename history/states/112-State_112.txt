@@ -1,0 +1,26 @@
+state={
+	id=112
+	name="STATE_112"
+	provinces={
+		186 1342 1633 1762 
+	}
+	manpower=3620150
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium=18
+	}
+
+	history={
+		owner = EUR
+		victory_points = {
+			186 5
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 12
+		}
+		add_core_of = EUR
+	}
+}

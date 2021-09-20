@@ -1,0 +1,28 @@
+state={
+	id=279
+	name="STATE_279"
+	provinces={
+		24 148 615 731 808 960 1052 1108 1141 1191 1229 1279 1372 1574 1885 1947 2204 2514 2550 2558 
+	}
+	manpower=3303970
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 4
+			dockyard = 4
+			1885 = {
+                naval_base = 10
+
+            }
+			1052 = {
+                naval_base = 10
+
+            }
+		}
+		add_core_of = BOT
+	}
+}

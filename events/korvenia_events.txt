@@ -1,0 +1,53 @@
+﻿###########################
+# Korvenia events
+###########################
+
+add_namespace = korvenia
+
+# Korvenia invited to Eirian Faction
+country_event = {
+	id = korvenia.1
+	title = korvenia.1.t
+	desc = korvenia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # The Workers Unite.
+		name = korvenia.1.a
+		ai_chance = { factor = 80 }
+		EIR = { add_to_faction = KOR }
+		news_event = { id = mithrasnews.9 days = 1 }
+	}
+	option = { # We reject Eirian Unionism.
+		name = korvenia.1.b
+		ai_chance = { factor = 20 }
+		EIR = { country_event = { id = eirie.1 days = 1 } }
+	}
+}
+
+# Pithia Offers Annexation
+country_event = {
+	id = korvenia.2
+	title = korvenia.2.t
+	desc = korvenia.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Accept Pithian Protection
+		name = korvenia.2.a
+		ai_chance = { factor = 2 }
+		POL = { annex_country = { target = KOR transfer_troops = yes } }
+		news_event = { id = mithrasnews.28 days = 1 }
+	}
+	option = { # Remain Independent
+		name = korvenia.2.b
+		ai_chance = { factor = 98 }
+		POL = { country_event = { id = pithia.12  days = 1 } }
+	}
+}

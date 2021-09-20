@@ -1,0 +1,22 @@
+state={
+	id=249
+	name="STATE_249"
+	provinces={
+		142 185 419 423 667 958 995 1077 1089 1287 1371 1374 1503 1556 1734 1787 1887 1965 2088 2097 2219 2411 2435 2463 
+	}
+	manpower=3156456
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+		victory_points = {
+			1734 20
+		}
+		buildings = {
+			infrastructure = 4
+			dockyard = 5
+		}
+		add_core_of = EVO
+	}
+}

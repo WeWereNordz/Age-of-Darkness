@@ -1,0 +1,21 @@
+units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Königliche Flotte"
+		naval_base = 219
+		task_force = {				
+			name = "Mundflotte"
+			location = 219 # Danzig
+			ship = { name = "KS Steisen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ALA } } }	
+			ship = { name = "KS Nordland" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ALA } } }	
+		}		
+		task_force = {
+			name = "U-Boot-Flotte"
+			location = 1102 # Danzig
+			ship = { name = "KS Verteidiger" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }					
+			ship = { name = "KS Wal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }					
+			ship = { name = "KS Durst" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }			
+		}
+	}
+}

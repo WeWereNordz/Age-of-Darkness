@@ -1,0 +1,30 @@
+state={
+	id=275
+	name="STATE_275"
+	provinces={
+		207 282 500 534 681 753 790 981 1137 1470 1521 1678 1683 1906 2010 2244 2520 2538 
+	}
+	manpower=3525338
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = HEY
+		victory_points = {
+			534 8
+		}
+		victory_points = {
+			207 4
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			industrial_complex = 1
+			753 = {
+                naval_base = 3
+
+            }
+		}
+		add_core_of = HEY
+	}
+}

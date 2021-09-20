@@ -1,0 +1,25 @@
+state={
+	id=260
+	name="STATE_260"
+	provinces={
+		192 411 457 800 1058 1121 1545 1622 1709 2461 
+	}
+	manpower=1728879
+	state_category = large_city
+	buildings_max_level_factor=1.000
+
+	resources={
+		steel=40
+	}
+
+	
+	history={
+		owner = LEG
+
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 8
+		}
+		add_core_of = LEG
+	}
+}

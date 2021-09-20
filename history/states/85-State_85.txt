@@ -1,0 +1,20 @@
+state={
+	id=85
+	name="STATE_85"
+	provinces={
+		450 1002 1403 1496 1925 1942 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+		buildings = {
+			air_base = 6
+			infrastructure = 3
+			dockyard = 2
+		}
+		add_core_of = BOT
+	}
+}

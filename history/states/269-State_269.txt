@@ -1,0 +1,30 @@
+state={
+	id=269
+	name="STATE_269"
+	provinces={
+		125 438 556 767 1200 1384 1714 1916 2493 2505 2518 
+	}
+	manpower=1728879
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = REG
+		victory_points = {
+			125 20
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 10
+			1384 = {
+                naval_base = 10
+
+            }
+			2493 = {
+                naval_base = 6
+
+            }
+		}
+		add_core_of = REG
+	}
+}

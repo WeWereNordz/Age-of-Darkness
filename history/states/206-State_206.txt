@@ -1,0 +1,33 @@
+state={
+	id=206
+	name="STATE_206"
+	provinces={
+		76 109 506 901 1061 1097 1174 1395 1419 1607 2184 2242 
+	}
+	manpower=1890300
+	state_category = large_city
+	buildings_max_level_factor=1.000
+
+	resources={
+		steel=28
+	}
+
+	
+	history={
+		owner = GEL
+		victory_points = {
+			2184 20
+		}
+		victory_points = {
+			1419 30
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 4
+			arms_factory = 2
+			industrial_complex = 3
+		}
+		add_core_of = GEL
+		add_core_of = BOT
+	}
+}

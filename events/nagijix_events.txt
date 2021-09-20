@@ -1,0 +1,28 @@
+﻿###########################
+# Nagijix events
+###########################
+
+add_namespace = nagijix
+
+# Pithia Offers Annexation
+country_event = {
+	id = nagijix.1
+	title = nagijix.1.t
+	desc = nagijix.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Accept Pithian Protection
+		name = nagijix.1.a
+		ai_chance = { factor = 99 }
+		POL = { annex_country = { target = NAG transfer_troops = yes } }
+		news_event = { id = mithrasnews.25 days = 1 }
+	}
+	option = { # Remain Independent
+		name = nagijix.1.b
+		ai_chance = { factor = 1 }
+		POL = { country_event = { id = pithia.2 days = 1 } }
+	}
+}

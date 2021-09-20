@@ -1,0 +1,87 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_felikscrash"
+		texturefile = "gfx/event_pictures/felikscrash.dds"
+	}
+
+	spriteType = {
+		name = "GFX_wepdino"
+		texturefile = "gfx/event_pictures/wepdino.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dinosaurs"
+		texturefile = "gfx/event_pictures/dinosaurs.dds"
+	}
+
+	spriteType = {
+		name = "GFX_guns_to_everyone"
+		texturefile = "gfx/event_pictures/guns_to_everyone.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_firstsummit"
+		texturefile = "gfx/event_pictures/firstsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_evo_g_projekt"
+		texturefile = "gfx/event_pictures/evo_g_projekt.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_evo_faction_news"
+		texturefile = "gfx/event_pictures/evo_faction_news.dds"
+	}
+
+	spriteType = {
+		name = "GFX_union_faction_news"
+		texturefile = "gfx/event_pictures/union_faction_news.dds"
+	}
+
+	spriteType = {
+		name = "GFX_eur_faction_join"
+		texturefile = "gfx/event_pictures/eur_faction_join.dds"
+	}
+
+	spriteType = {
+		name = "GFX_evo_faction_news_2"
+		texturefile = "gfx/event_pictures/evo_faction_news_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kor_faction_invite"
+		texturefile = "gfx/event_pictures/kor_faction_invite.dds"
+	}
+
+	spriteType = {
+		name = "GFX_secondsummit"
+		texturefile = "gfx/event_pictures/secondsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_thirdsummit"
+		texturefile = "gfx/event_pictures/thirdsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_fourthsummit"
+		texturefile = "gfx/event_pictures/fourthsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_fifthsummit"
+		texturefile = "gfx/event_pictures/fifthsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sixthsummit"
+		texturefile = "gfx/event_pictures/sixthsummit.dds"
+	}
+
+	spriteType = {
+		name = "GFX_gensokyo_invasion"
+		texturefile = "gfx/event_pictures/gensokyo_invasion.dds"
+	}
+}

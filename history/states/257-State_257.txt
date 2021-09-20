@@ -1,0 +1,26 @@
+state={
+	id=257
+	name="STATE_257"
+	provinces={
+		309 315 354 881 917 1085 1180 1197 1208 1234 1843 2000 2169 2462 2513 
+	}
+	manpower=3525338
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GES
+		victory_points = {
+			1843 22
+		}
+		victory_points = {
+			1085 4
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = GES
+	}
+}

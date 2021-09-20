@@ -1,0 +1,19 @@
+state={
+	id=10
+	name="STATE_10"
+	provinces={
+		2225 
+	}
+	manpower=23
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+	
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = EVO
+	}
+}

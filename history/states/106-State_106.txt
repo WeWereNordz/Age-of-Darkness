@@ -1,0 +1,18 @@
+state={
+	id=106
+	name="STATE_106"
+	provinces={
+		2776 
+	}
+	manpower=63
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GES
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GES
+	}
+}

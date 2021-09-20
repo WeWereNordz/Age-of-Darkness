@@ -1,0 +1,370 @@
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+
+	support = {
+        engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armoured Brigade"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armoured Brigade"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Royal Marines"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+        marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+		marine = { x = 3 y = 0 }
+		marine = { x = 3 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Mountaineers Brigade"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+        mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1829	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 163	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 729
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 729
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 299	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2543	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1599
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 364	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2082	
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2535
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {
+			division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 108
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 	237
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 	1914
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 	1747
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 	128
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 	676
+			division_template = "Cavalry Brigade"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}	
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 676
+			division_template = "Royal Marines"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+			}
+			location = 676
+			division_template = "Royal Marines"
+			start_experience_factor = 0.23
+			start_equipment_factor = 0.7
+		}	
+}
+
+air_wings = {
+	65 = {
+		fighter_equipment_0 = {
+			owner = "LEG"
+			amount = 300
+		}
+		nav_bomber_equipment_1 = {
+			owner = "LEG"
+			amount = 100
+		}
+		tac_bomber_equipment_0 = {
+			owner = "LEG"
+			amount = 100
+		}
+	}
+	266 = {
+		fighter_equipment_0 = {
+			owner = "LEG"
+			amount = 550
+		}
+		tac_bomber_equipment_0 = {
+			owner = "LEG"
+			amount = 200
+		}
+	}
+	293 = {
+		fighter_equipment_0 = {
+			owner = "LEG"
+			amount = 200
+		}
+		tac_bomber_equipment_0 = {
+			owner = "LEG"
+			amount = 50
+		}
+		nav_bomber_equipment_1 = {
+			owner = "LEG"
+			amount = 100
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LEG"
+		}
+		requested_factories = 2
+		progress = 0.9
+		efficiency = 90
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "LEG"
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 80
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "LEG"
+		}
+		requested_factories = 3
+		progress = 0.9
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "LEG"
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 70
+	}
+}

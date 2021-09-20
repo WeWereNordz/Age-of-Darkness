@@ -1,0 +1,221 @@
+﻿###########################
+# Evolia events
+###########################
+
+add_namespace = evolia
+
+# Eirie Wishes to Join Our Faction
+country_event = {
+	id = evolia.1
+	title = evolia.1.t
+	desc = evolia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Let Eirie Join
+		name = evolia.1.a
+		ai_chance = { factor = 80 }
+		add_to_faction = EIR
+		news_event = { id = mithrasnews.7 days = 1 }
+	}
+	option = { # Deny membership
+		name = evolia.1.b
+		ai_chance = { factor = 20 }
+		EIR = { country_event = { id = eirie.6  days = 1} }
+	}
+}
+
+# Eurada Declines Invitation
+country_event = {
+	id = evolia.2
+	title = evolia.2.t
+	desc = evolia.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # A shame.
+		name = evolia.2.a
+	}
+}
+
+# Regia Declines Invitation
+country_event = {
+	id = evolia.3
+	title = evolia.3.t
+	desc = evolia.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # A shame.
+		name = evolia.3.a
+	}
+}
+# Pestfriland Declines Invitation
+country_event = {
+	id = evolia.4
+	title = evolia.4.t
+	desc = evolia.4.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # A shame.
+		name = evolia.4.a
+	}
+}
+
+# Eurada Wishes to Join the Coalition
+country_event = {
+	id = evolia.5
+	title = evolia.5.t
+	desc = evolia.5.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Grant membership
+		name = evolia.5.a
+		ai_chance = { factor = 80 }
+		add_to_faction = EIR
+		news_event = { id = mithrasnews.11 days = 1 }
+	}
+	option = { # Deny membership
+		name = evolia.5.b
+		ai_chance = { factor = 20 }
+		EIR = { country_event = { id = eurada.3 days = 1 } }
+	}
+}
+
+# Regia Wishes to Join the Coalition
+country_event = {
+	id = evolia.6
+	title = evolia.6.t
+	desc = evolia.6.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Grant membership
+		name = evolia.6.a
+		ai_chance = { factor = 80 }
+		add_to_faction = REG
+		news_event = { id = mithrasnews.4 days = 1 }
+	}
+	option = { # Deny membership
+		name = evolia.6.b
+		ai_chance = { factor = 20 }
+		REG = { country_event = { id = regia.4 days = 1 } }
+	}
+}
+
+# Radolfsburg or War
+country_event = {
+	id = evolia.7
+	title = evolia.7.t
+	desc = evolia.7.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { #Over our Dead Bodies.
+		name = evolia.7.a
+		ai_chance = { factor = 99 }
+		BOT = { country_event = { id = botrelia.9 days = 1 } }
+	}
+	option = { #Submit
+		name = evolia.7.b
+		ai_chance = { factor = 1 }
+		BOT = {
+			transfer_state = 48
+		}
+		BOT = { country_event = { id = botrelia.10 days = 1 } }
+	}
+}
+
+# Guns to Evolia
+country_event = {
+	id = evolia.8
+	title = evolia.8.t
+	desc = evolia.8.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Accept Deal
+		name = evolia.8.a
+		ai_chance = { factor = 90 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		diplomatic_relation = {
+			country = POL
+			relation = non_aggression_pact
+			active = yes
+		}
+		POL = { country_event = { id = pithia.5 days = 1 } }
+	}
+	option = { # Reject Deal
+		name = evolia.8.b
+		ai_chance = { factor = 10 }
+		POL = { country_event = { id = pithia.6 days = 1 } }
+	}
+}
+
+# Pithia Wishes to Join the Coalition
+country_event = {
+	id = evolia.9
+	title = evolia.9.t
+	desc = evolia.9.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Grant membership
+		name = evolia.9.a
+		ai_chance = { factor = 90 }
+		add_to_faction = POL
+		news_event = { id = mithrasnews.30 days = 1 }
+	}
+	option = { # Deny membership
+		name = evolia.9.b
+		ai_chance = { factor = 10 }
+		POL = { country_event = { id = pithia.18 days = 1 } }
+	}
+}

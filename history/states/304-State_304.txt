@@ -1,0 +1,27 @@
+state={
+	id=304
+	name="STATE_304"
+	provinces={
+		366 384 521 1066 1118 1331 1352 1516 1724 1785 1865 2116 2120 2598 2599 2611 
+	}
+	manpower=1062650
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			1352 30
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 8
+			arms_factory = 2
+			industrial_complex = 8
+			1352 = {
+				naval_base = 10
+			}
+		}
+		add_core_of = POL
+	}
+}

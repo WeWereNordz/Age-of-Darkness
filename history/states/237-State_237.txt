@@ -1,0 +1,24 @@
+state={
+	id=237
+	name="STATE_237"
+	provinces={
+		302 327 454 874 1325 1666 1868 2053 2377 
+	}
+	manpower=3525338
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=18
+	}
+
+	history={
+		owner = DES
+
+		buildings = {
+			infrastructure = 3
+			dockyard = 2
+		}
+		add_core_of = DES
+	}
+}

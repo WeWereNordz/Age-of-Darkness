@@ -1,0 +1,50 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_bot"
+		modifier = diff_strong_ai_generic
+		countries = { BOT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_evo"
+		modifier = diff_strong_ai_generic
+		countries = { EVO }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_leg"
+		modifier = diff_strong_ai_generic
+		countries = { LEG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_pol"
+		modifier = diff_strong_ai_generic
+		countries = { POL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_eur"
+		modifier = diff_strong_ai_generic
+		countries = { EUR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_pes"
+		modifier = diff_strong_ai_generic
+		countries = { PES }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_reg"
+		modifier = diff_strong_ai_generic
+		countries = { REG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_kor"
+		modifier = diff_strong_ai_generic
+		countries = { KOR }
+		multiplier = 2.0
+	}
+}

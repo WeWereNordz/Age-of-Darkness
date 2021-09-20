@@ -1,0 +1,240 @@
+﻿units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "Fleet Command"			
+		naval_base = 1464 # Wilnisaw
+		task_force = {
+			name = "Home Fleet"
+			location = 1464 # Wilnisaw
+			ship = { name = "HMS Thunderchild" pride_of_the_fleet = yes definition = carrier equipment = { carrier_1 = { amount = 1 owner = LEG } }
+					air_wings = {
+					cv_fighter_equipment_0 =  { owner = "LEG" amount = 9 }
+					cv_nav_bomber_equipment_1 =  { owner = "LEG" amount = 12 }
+					}
+			}
+			ship = { name = "HMS New Legacy" definition = battleship equipment = { battleship_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Paladin" definition = battleship equipment = { battleship_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Indivisible" definition = battleship equipment = { battleship_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Unconquerable" definition = battleship equipment = { battleship_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Eurada" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Desunion" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Boltshead" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Reaper" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			# Destroyer Division 11
+			ship = { name = "HMS Beluga" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Kryptoria" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Condor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Memory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			# Destroyer Division 12
+			ship = { name = "HMS Messenger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Cordoba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Judgment" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Pelican" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+		}
+		task_force = {
+			name = "Befglorta Channel Force"
+			location = 1292 # Scapa Flow
+			# 7th Cruiser Squadron
+			ship = { name = "HMS Glorious" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Undertaker" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			# 12th Cruiser Squadron
+			ship = { name = "HMS Gallant" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Chivalrous" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Vengeance" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Victorious" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+		}
+		task_force = {
+			name = "North Arctic Fleet"
+			location = 1464 # Gibraltar
+			ship = { name = "HMS Centurion" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Lightning" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Jester" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }	
+			# 13th Destroyer Flotilla
+			ship = { name = "HMS Hera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Wintershall" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Artoria" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Saber" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Aurora" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }
+		}
+		task_force = {
+			name = "1st Submarine Flotilla"
+			location = 1292 # Scapa Flow
+			# Submarine Division 21
+			ship = { name = "L1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			# Submarine Division 22
+			ship = { name = "L6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L7" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+		}
+	}
+
+	### MEDITERRANIAN FLEET ###			
+	fleet = {
+		name = "Golden Sea Command"
+		naval_base = 1003 # Alexandria
+		task_force = {
+			name = "Golden Sea Fleet"
+			location = 1003 # Alexandria
+			ship = { name = "HMS Freedom" definition = carrier equipment = { carrier_1 = { amount = 1 owner = LEG } }
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "LEG" amount = 6 } #historical 9
+					cv_nav_bomber_equipment_1 =  { owner = "LEG" amount = 24 } #historical 36
+				}
+			}
+			ship = { name = "HMS Starfall" definition = battleship equipment = { battleship_1 = { amount = 1 owner = LEG } } }					
+			ship = { name = "HMS Nirvana" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Cydonia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Inferno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "HMS Independence" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+			# Destroyer Division 1
+			ship = { name = "HMS Reaver" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }			# to RCN as Restigouche, 1938
+			ship = { name = "HMS Yucatan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }			# to RCN as Ottawa, 1938	
+			ship = { name = "HMS Visitor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }			# to RCN as St Laurent, 1937
+			ship = { name = "HMS Twilight" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }			# to RCN as Fraser, 1937				
+		}
+		task_force = {
+			name = "2nd Submarine Flotilla"			
+			location = 1003 # Alexandria	
+			# Submarine Division 12
+			ship = { name = "L9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "L10" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "L11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }			
+			}				
+		}
+	### FAR EAST ###			
+	fleet = {
+		name = "Athen Command"
+		naval_base = 1464 # Singapore		
+		task_force = {
+			name = "Desunion Fleet"
+			location = 1464 # Hong Kong			
+			ship = { name = "HMS Nebuchadnezzar" definition = carrier equipment = { carrier_1 = { amount = 1 owner = LEG } }
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "LEG" amount = 18 }
+					cv_nav_bomber_equipment_1 =  { owner = "LEG" amount = 18 }
+				}
+			}
+			ship = { name = "HMS Crocodile" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "HMS Termite" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "HMS Globetrotter" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = LEG } }	}
+			ship = { name = "HMS Corsair" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "HMS Priestess" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = LEG } } }
+			# Singapore & Hong Kong Division
+			ship = { name = "HMS Polaris" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+			ship = { name = "HMS Infineon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+			ship = { name = "HMS Phalanx" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+			ship = { name = "HMS Badger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LEG } } }		
+		}
+		task_force = {				
+			name = "3rd Submarine Flotilla"			
+			location = 1464 # Singapore
+			# Submarine Division 41
+			ship = { name = "L12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }
+			ship = { name = "L13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "L14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "L15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }	
+			ship = { name = "L16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LEG } } }		
+		}				
+	}
+}
+
+
+instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
+	# DD: G/H class (x9) ("HMS Gallant" "HMS Garland" "HMS Gipsy" "HMS Glowworm" "HMS Grafton" "HMS Grenade" "HMS Grenville" "HMS Greyhound" "HMS Griffin")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 1
+	}
+	# SS: S-class variant (x2) ("HMS Seawolf" "HMS Narwhal")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "LEG" 
+		}
+		requested_factories = 1
+		progress = 0.15
+	}
+}

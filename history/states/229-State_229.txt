@@ -1,0 +1,24 @@
+state={
+	id=229
+	name="STATE_229"
+	provinces={
+		122 178 331 371 491 770 1131 1561 1923 2140 2366 2410 
+	}
+	manpower=3303970
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=200
+	}
+
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 8
+		}
+		add_core_of = BOT
+	}
+}

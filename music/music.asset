@@ -1,0 +1,172 @@
+
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "main.ogg"
+	volume = 0.75
+}
+
+# General Peace:
+music = {
+	name = "general_peace_1"
+	file = "general_peace_1.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_2"
+	file = "general_peace_2.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_3"
+	file = "general_peace_3.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_4"
+	file = "general_peace_4.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_5"
+	file = "general_peace_5.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_6"
+	file = "general_peace_6.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_7"
+	file = "general_peace_7.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_8"
+	file = "general_peace_8.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_9"
+	file = "general_peace_9.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_10"
+	file = "general_peace_10.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_11"
+	file = "general_peace_11.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_12"
+	file = "general_peace_12.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_13"
+	file = "general_peace_13.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_14"
+	file = "general_peace_14.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_15"
+	file = "general_peace_15.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_16"
+	file = "general_peace_16.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_peace_17"
+	file = "general_peace_17.ogg"
+	volume = 0.75
+}
+
+
+# General war:
+music = {
+	name = "general_war_1"
+	file = "general_war_1.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_2"
+	file = "general_war_2.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_3"
+	file = "general_war_3.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_4"
+	file = "general_war_4.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_5"
+	file = "general_war_5.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_6"
+	file = "general_war_6.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_7"
+	file = "general_war_7.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_8"
+	file = "general_war_8.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_9"
+	file = "general_war_9.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_10"
+	file = "general_war_10.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_11"
+	file = "general_war_11.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_12"
+	file = "general_war_12.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_13"
+	file = "general_war_13.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_14"
+	file = "general_war_14.ogg"
+	volume = 0.75
+}
+music = {
+	name = "general_war_15"
+	file = "general_war_15.ogg"
+	volume = 0.75
+}

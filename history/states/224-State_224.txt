@@ -1,0 +1,19 @@
+state={
+	id=224
+	name="STATE_224"
+	provinces={
+		1034 1444 1661 2092 2362 
+	}
+	manpower=3525338
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DES
+
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = DES
+	}
+}

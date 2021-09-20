@@ -1,0 +1,92 @@
+﻿###########################
+# Legatia events
+###########################
+
+add_namespace = legatia
+
+# Eurada Invites us to Faction
+country_event = {
+	id = legatia.1
+	title = legatia.1.t
+	desc = legatia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # There is no other choice.
+		name = legatia.1.a
+		ai_chance = { factor = 40 }
+		EUR = { add_to_faction = LEG }
+		news_event = { id = mithrasnews.12 days = 1 }
+	}
+	option = { # We will not be ruled by our former subjects.
+		name = legatia.1.b
+		ai_chance = { factor = 60 }
+		EUR = { country_event = { id = eurada.4 days = 1 } }
+	}
+}
+
+# Eurada Rejects Non Aggression Pact
+country_event = {
+	id = legatia.2
+	title = legatia.2.t
+	desc = legatia.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Hmph.
+		name = legatia.2.a
+
+	}
+}
+
+# Eurada Accepts Non Aggression Pact
+country_event = {
+	id = legatia.3
+	title = legatia.3.t
+	desc = legatia.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	
+	option = { # Excellent.
+		name = legatia.3.a
+
+	}
+}
+
+# Botrelia Desires Non-Aggression Pact
+country_event = {
+	id = legatia.4
+	title = legatia.4.t
+	desc = legatia.4.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # We accept this peace.
+		name = legatia.4.a
+		ai_chance = { factor = 90 }
+		diplomatic_relation = {
+			country = BOT
+			relation = non_aggression_pact
+			active = yes
+		}
+		BOT = { country_event = { id = botrelia.5 days = 1 } }
+	}
+	option = { # We reject your offer.
+		name = legatia.4.b
+		ai_chance = { factor = 10 }
+		BOT = { country_event = { id = botrelia.6 days = 1 } }
+	}
+}

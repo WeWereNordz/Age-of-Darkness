@@ -1,0 +1,200 @@
+﻿capital = 65
+
+oob = "LEG_1934"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "LEG_1934_naval"
+	else = {
+		set_naval_oob = "LEG_1934_naval"
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	grand_battle_plan = 1
+	gwtank = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	marines = 1
+	tech_mountaineers = 1
+	support_weapons = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_submarine = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_carrier = 1
+	basic_battlecruiser = 1
+	basic_light_cruiser = 1
+	tech_recon = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	basic_destroyer = 1
+	early_battlecruiser = 1
+}
+
+add_ideas = {
+	nonfunctioning_government
+	widespread_corruption
+	unbalanced_checkbooks
+	house_of_commons
+	limited_exports
+}
+
+set_research_slots = 4
+set_war_support = 0.1
+set_stability = 0.35
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.6.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 24
+	neutrality = 76
+}
+
+create_country_leader = {
+	name = "The Five Houses"
+	desc = "fivehouses_desc"
+	picture = "gfx/leaders/LEG/fivehouses.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		divided_interests
+	}
+}
+
+	create_field_marshal = {
+		name = "Warren McBride"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { offensive_doctrine }
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Lance Osborn"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard infantry_officer trait_engineer }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Don Shepherd"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { war_hero trait_reckless trickster }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Clifford Garrison"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { armor_officer }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Jaxon Hayes"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { cavalry_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Aaron Pickett"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = {   }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Lochlan Carter"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = {   }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Kian Richards"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = {  }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Del Ballard"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { caustic_personality }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Sidney Barnett"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard_navy }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Ward Carline"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { craven }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		maneuvering_skill = 3
+		coordination_skill = 1
+	}
+
+

@@ -1,0 +1,2047 @@
+focus_tree = {
+	id = euradafocus
+	continuous_focus_position = { x = 50 y = 1070 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EUR
+		}
+	}
+
+	default = no
+
+	#The President's Speech
+	focus = {
+		id = EUR_the_presidents_speech
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	#Our Euradan Agenda
+	focus = {
+		id = EUR_our_euradan_agenda
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 4
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_the_presidents_speech
+		}
+		completion_reward = {
+			custom_effect_tooltip = euradan_agenda_tooltip
+		}
+		
+	}
+
+	#Foreign Affairs
+	focus = {
+		id = EUR_foreign_affairs
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_our_euradan_agenda
+		}
+		completion_reward = {
+			add_stability = 0.4
+			remove_ideas = low_legitimacy
+		}
+	}
+
+	#The Old Alliance
+	focus = {
+		id = EUR_the_old_alliance
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_foreign_affairs
+		}
+		available = {
+			country_exists = LEG
+		}
+		mutually_exclusive = {
+			focus = EUR_the_new_ways
+		}
+		completion_reward = {
+			LEG = {
+				add_opinion_modifier = { target = EUR modifier = huge_increase }
+			}
+	}
+}
+
+	#Legatian Hegemony
+	focus = {
+		id = EUR_legatian_hegemony
+		icon = GFX_legatiarelations
+		x = 0
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_the_old_alliance
+		}
+		bypass = {
+            is_in_faction_with = LEG
+        }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Auroran Entente"
+			LEG = { country_event = { id = legatia.1 days = 1 } }
+		}
+		
+	}
+
+	#The New Ways
+	focus = {
+		id = EUR_the_new_ways
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_foreign_affairs
+		}
+		mutually_exclusive = {
+			focus = EUR_the_old_alliance
+		}
+		completion_reward = {
+			EVO = {
+				add_opinion_modifier = { target = EUR modifier = huge_increase }
+			}
+	}
+	}
+
+	#Evolian Alliance
+	focus = {
+		id = EUR_evolian_alliance
+		icon = GFX_evoliarelations
+		x = 2
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			EVO = { is_faction_leader = yes }
+		}
+		bypass = {
+			is_in_faction_with = EVO
+		}
+		prerequisite = {
+			focus = EUR_the_new_ways
+		}
+		completion_reward = {
+			EVO = { country_event = { id = evolia.5 days = 1 } }
+		}
+		
+	}
+
+	#Beltrist Crusade
+	focus = {
+		id = EUR_beltrist_crusade
+		icon = GFX_gunstowardsbotrelia
+		x = 7
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = BOT
+		}
+		prerequisite = {
+			focus = EUR_our_euradan_agenda
+		}
+		available = {
+            BOT = { has_war_with = EVO }
+			BOT = { has_war_with = POL }
+        }
+		will_lead_to_war_with = BOT
+		completion_reward = {
+			add_war_support = 0.3
+			create_wargoal = {
+				target = BOT
+				type = topple_government
+			}
+		}
+	}
+
+	#War for Aurora
+	focus = {
+		id = EUR_war_for_aurora
+		icon = GFX_warforaurora
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			ALA = { has_defensive_war_with = PES }
+			LEG = { has_defensive_war_with = PES }
+			REG = { has_defensive_war_with = PES }
+		}
+		prerequisite = {
+			focus = EUR_beltrist_crusade
+		}
+		will_lead_to_war_with = PES
+		completion_reward = {
+			create_wargoal = {
+				target = PES
+				type = liberate_wargoal
+			}
+		}
+	}
+
+	#Foreign Affairs
+	focus = {
+		id = EUR_the_regian_question
+		icon = GFX_regianquestion
+		x = 4
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_war_for_aurora
+		}
+		available = {
+			NOT= { is_in_faction_with = REG }
+		}
+		will_lead_to_war_with = REG
+		completion_reward = {
+			create_wargoal = {
+				target = REG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+	#Beltrism in Bataj
+	focus = {
+		id = EUR_beltrism_in_bataj
+		icon = GFX_beltrismbataj
+		x = 10
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_war_with = BOT
+		}
+		prerequisite = {
+			focus = EUR_beltrist_crusade
+		}
+		
+
+	}
+
+	#Operation Aether Storm
+	focus = {
+		id = EUR_operation_aether_storm
+		icon = GFX_goal_generic_territory_or_war
+		x = 7
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = EUR_beltrism_in_bataj
+		}
+		will_lead_to_war_with = BAT
+		completion_reward = {
+			create_wargoal = {
+				target = BAT
+				type = annex_everything
+			}
+		}
+	}
+
+	#Question of Rulership
+	focus = {
+		id = EUR_question_of_rulership
+		icon = GFX_goal_generic_forceful_treaty
+		x = 7
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_operation_aether_storm
+		}
+	}
+
+	#Support Chernaria
+	focus = {
+		id = EUR_support_chernaria
+		icon = GFX_support_che
+		x = 5
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_question_of_rulership
+		}
+		mutually_exclusive = {
+			focus = EUR_support_nagijix
+		}
+		completion_reward = {
+			CHE = {
+				add_opinion_modifier = { target = EUR modifier = huge_increase }
+			}
+			NAG = {
+				add_opinion_modifier = { target = EUR modifier = large_decrease }
+			}
+		}
+	}
+
+	#Retaliation
+	focus = {
+		id = EUR_retaliation
+		icon = GFX_goal_poland_goal
+		x = 4
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_support_chernaria
+		}
+		mutually_exclusive = {
+			focus = EUR_an_equilist_chernaria
+		}
+		completion_reward = {
+			CHE = {
+				create_wargoal = {
+					target = NAG
+					type = annex_everything
+				}
+				add_opinion_modifier = { target = EUR modifier = small_increase }
+				if = {
+					limit = {
+						EUR = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = { idea = fascist_assault_divisions days = 1095 }
+				}
+				if = {
+					limit = {
+						EUR = {
+							has_government = communism
+						}
+					}
+					add_timed_idea = { idea = communist_partisans_recruiting days = 1095 }
+				}
+				if = {
+					limit = {
+						EUR = {
+							has_government = democratic
+						}
+					}
+					add_timed_idea = { idea = democratic_influence days = 1095 }
+				}
+				country_event = { id = generic.1 }
+				
+			}
+		}
+	}
+
+	#Support Nagijix
+	focus = {
+		id = EUR_support_nagijix
+		icon = GFX_support_nag
+		x = 9
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_question_of_rulership
+		}
+		mutually_exclusive = {
+			focus = EUR_support_chernaria
+		}
+		completion_reward = {
+			NAG = {
+				add_opinion_modifier = { target = EUR modifier = huge_increase }
+			}
+			CHE = {
+				add_opinion_modifier = { target = EUR modifier = large_decrease }
+			}
+		}
+	}
+
+	#Cooperation
+	focus = {
+		id = EUR_cooperation
+		icon = GFX_goal_generic_dangerous_deal
+		x = 9
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_support_nagijix
+		}
+		completion_reward = {
+				NAG = {
+					create_wargoal = {
+						target = CHE
+						type = annex_everything
+					}
+					add_opinion_modifier = { target = EUR modifier = small_increase }
+					if = {
+						limit = {
+							EUR = {
+								has_government = fascism
+							}
+						}
+						add_timed_idea = { idea = fascist_assault_divisions days = 1095 }
+					}
+					if = {
+						limit = {
+							EUR = {
+								has_government = communism
+							}
+						}
+						add_timed_idea = { idea = communist_partisans_recruiting days = 1095 }
+					}
+					if = {
+						limit = {
+							EUR = {
+								has_government = democratic
+							}
+						}
+						add_timed_idea = { idea = democratic_influence days = 1095 }
+					}
+					country_event = { id = generic.1 }
+					
+				}
+			}
+	}
+
+	#An Equilist Chernaria
+	focus = {
+		id = EUR_an_equilist_chernaria
+		icon = GFX_goal_support_democracy
+		x = 6
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_support_chernaria
+		}
+		mutually_exclusive = {
+			focus = EUR_retaliation
+		}
+		completion_reward = {
+			CHE = {
+				create_wargoal = {
+					target = CHE
+					type = annex_everything
+				}
+				add_opinion_modifier = { target = EUR modifier = small_increase }
+				if = {
+					limit = {
+						EUR = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = { idea = fascist_assault_divisions days = 1095 }
+				}
+				if = {
+					limit = {
+						EUR = {
+							has_government = communism
+						}
+					}
+					add_timed_idea = { idea = communist_partisans_recruiting days = 1095 }
+				}
+				if = {
+					limit = {
+						EUR = {
+							has_government = democratic
+						}
+					}
+					add_timed_idea = { idea = democratic_influence days = 1095 }
+				}
+				country_event = { id = generic.1 }
+				
+			}
+		}
+	}
+
+	#Johtan's Experiments
+	focus = {
+		id = EUR_johtans_experiments
+		icon = GFX_j_experiment
+		x = 13
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_completed_focus = EUR_operation_aether_storm
+		}
+		prerequisite = {
+			focus = EUR_beltrism_in_bataj
+		}
+		completion_reward = {
+			country_event = { id = eurada.5 days = 1 }
+		}
+	}
+
+	#The Halvde Question
+	focus = {
+		id = EUR_the_halvde_question
+		icon = GFX_focus_generic_treaty
+		x = 13
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_johtans_experiments
+		}
+		completion_reward = {
+			country_event = { id = eurada.8 days = 1 }
+		}
+	}
+
+	#Halvde Regiments
+	focus = {
+		id = EUR_halvde_regiments
+		icon = GFX_focus_generic_little_entente
+		x = 12
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			has_idea = halvde_immigration
+		}
+		prerequisite = {
+			focus = EUR_the_halvde_question
+		}
+		completion_reward = {
+			hidden_effect = {
+			load_oob = EUR_halvde_regiments }
+			custom_effect_tooltip = halvde_regiment_tooltip
+		}
+
+	}
+
+	#A Science Division
+	focus = {
+		id = EUR_a_science_division
+		icon = GFX_focus_research
+		x = 14
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = EUR_the_halvde_question
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Magitek Weaponry
+	focus = {
+		id = EUR_magitek_weaponry
+		icon = GFX_focus_secret_rearmament
+		x = 14
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_completed_focus = EUR_magitek_theory
+		}
+		prerequisite = {
+			focus = EUR_a_science_division
+		}
+		completion_reward = {
+			add_ideas = magitek_weaponry
+		}
+	}
+
+	#Project Nightrose
+	focus = {
+		id = EUR_project_nightrose
+		icon = GFX_goal_generic_secret_weapon
+		x = 14
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = EUR_magitek_weaponry
+		}
+		completion_reward = {
+			add_ideas = project_nightrose
+		}
+	}
+
+	#The Bottom Feed
+	focus = {
+		id = EUR_the_bottom_feed
+		icon = GFX_focus_generic_industry_3
+		x = 14
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = EUR_project_nightrose
+		}
+		completion_reward = {
+			315 = {
+			add_extra_state_shared_building_slots = 5
+					}
+		}
+	}
+
+	#Modernization
+	focus = {
+		id = EUR_modernization
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 18
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_completed_focus = EUR_our_euradan_agenda
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = population_boom
+				days = 1095
+			}
+		}
+	}
+
+	#Reform the Government
+	focus = {
+		id = EUR_reform_the_government
+		icon = GFX_goal_generic_national_unity
+		x = 16
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_modernization
+		}
+		completion_reward = {
+			add_political_power = 120
+			remove_ideas = legatian_influence
+		}
+	}
+
+#Industrialization
+focus = {
+	id = EUR_industrialization
+	icon = GFX_goal_generic_construction
+	x = 20
+	y = 1
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_modernization
+	}
+	completion_reward = {
+		add_tech_bonus = {
+		name = EUR_industrialization
+		bonus = 0.5
+		uses = 2
+		category = industry
+		}
+	}
+}
+
+	#Intelligence Network Overhaul
+	focus = {
+		id = EUR_intelligence_network_overhaul
+		icon = GFX_network_overhaul
+		x = 15
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_reform_the_government
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = intelligence_agency
+				add_idea = ebi
+			}
+		}
+	}
+
+	#The Mitran Eurada
+	focus = {
+		id = EUR_the_mitran_eurada
+		icon = GFX_mitran_eurada
+		x = 17
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_reform_the_government
+		}
+		completion_reward = {
+			add_ideas = beacon_of_equilism
+		}
+	}
+
+	#Federalization
+	focus = {
+		id = EUR_federalization
+		icon = GFX_federal
+		x = 17
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = {
+			focus = EUR_reform_the_government
+		}
+		mutually_exclusive = {
+			focus = EUR_a_unitary_state
+		}
+		completion_reward = {
+			add_stability = 0.3
+		}
+	}
+
+	#A Unitary State
+	focus = {
+		id = EUR_a_unitary_state
+		icon = GFX_unitary
+		x = 15
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = {
+			focus = EUR_intelligence_network_overhaul
+		}
+		mutually_exclusive = {
+			focus = EUR_federalization
+		}
+		completion_reward = {
+			add_war_support = 0.3
+		}
+	}
+
+	#Technocratic Theory
+	focus = {
+		id = EUR_technocratic_theory
+		icon = GFX_technocratic
+		x = 16
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = EUR_a_unitary_state focus = EUR_federalization
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EUR_technocratic_theory
+				bonus = 0.5
+				uses = 5
+				category = electronics
+			}
+		}
+	}
+
+	#The Euradan Way
+	focus = {
+		id = EUR_the_euradan_way
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 16
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = EUR_technocratic_theory
+		}
+		completion_reward = {
+			add_ideas = the_euradan_way
+		}
+	}
+
+	#A Better Tomorrow
+	focus = {
+		id = EUR_a_better_tomorrow
+		icon = GFX_better_tomorrow
+		x = 16
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = EUR_the_euradan_way
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EUR_a_better_tomorrow
+				bonus = 2
+				uses = 1
+				technology = nuclear_reactor
+			}
+		}
+	}
+
+#High-Speed Rail
+focus = {
+	id = EUR_high_speed_rail
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 19
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_industrialization
+	}
+	completion_reward = {
+		112 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+		307 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 7
+				instant_build = yes
+			}
+		}
+		315 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+}
+
+#Vanoxian Highway
+focus = {
+	id = EUR_vanoxian_highway
+	icon = GFX_focus_generic_rubber
+	x = 19
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_high_speed_rail
+	}
+	completion_reward = {
+		120 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+		}
+		}
+}
+
+#Vanoxian Factories
+focus = {
+	id = EUR_vanoxian_factories
+	icon = GFX_goal_generic_construct_civ_factory
+	x = 20
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_vanoxian_highway
+	}
+	prerequisite = {
+		focus = EUR_expand_the_mineworks
+	}
+	completion_reward = {
+		120 = {
+		add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+	}
+}
+
+#Great Fortification Project
+focus = {
+	id = EUR_great_fortification_project
+	icon = GFX_focus_generic_coastal_fort
+	x = 19
+	y = 7
+	cost = 30
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	available = {
+		has_defensive_war = yes
+	}
+	prerequisite = {
+		focus = EUR_fortress_eurada
+	}
+	completion_reward = {
+		120 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+		}
+		112 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+		}
+		307 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+		}
+		315 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 5
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#A Curious Discovery
+focus = {
+	id = EUR_a_curious_discovery
+	icon = GFX_curious
+	x = 21
+	y = 5
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_vanoxian_factories
+	}
+	completion_reward = {
+		news_event = { id = mithrasnews.15 days = 1 }
+	}
+}
+
+#Ceruleum Deposits
+focus = {
+	id = EUR_ceruleum_deposits
+	icon = GFX_ceruleumdeposits
+	x = 21
+	y = 6
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_a_curious_discovery
+	}
+	completion_reward = {
+		add_ideas = ceruleum_refinement
+		news_event = { id = mithrasnews.14 days = 1 }
+	}
+}
+
+#Magitek Theory
+focus = {
+	id = EUR_magitek_theory
+	icon = GFX_focus_wonderweapons
+	x = 21
+	y = 7
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	prerequisite = {
+		focus = EUR_ceruleum_deposits
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_magitek_theory
+			bonus = 2
+			uses = 1
+			technology = atomic_research
+		}
+	}
+}
+
+#Magitek Engines
+focus = {
+	id = EUR_magitek_engines
+	icon = GFX_magitekengine
+	x = 20
+	y = 8
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_magitek_theory
+		focus = EUR_great_fortification_project
+	}
+	completion_reward = {
+			add_tech_bonus = {
+				name = EUR_magitek_engines
+				bonus = 1
+				uses = 1
+				technology = jet_engines
+			}
+		}
+}
+
+#Airship Supremacy
+focus = {
+	id = EUR_airship_supremacy
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = 20
+	y = 9
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_magitek_engines
+	}
+	prerequisite = {
+		focus = EUR_shock_and_awe
+	}
+	prerequisite = {
+		focus = EUR_a_better_tomorrow
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_airship_supremacy
+			bonus = 0.5
+			uses = 1
+			technology = airship1
+		}
+	}
+}
+
+#Magitek Zeppelins
+focus = {
+	id = EUR_magitek_zeppelins
+	icon = GFX_goal_generic_occupy_start_war
+	x = 20
+	y = 10
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_airship_supremacy
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_magitek_zeppelins
+			bonus = 0.5
+			uses = 1
+			technology = airship2
+		}
+	}
+	
+}
+
+#Fortress Eurada
+focus = {
+	id = EUR_fortress_eurada
+	icon = GFX_goal_generic_fortify_city
+	x = 19
+	y = 6
+	cost = 30
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	available = {
+		has_defensive_war = yes
+	}
+	prerequisite = {
+		focus = EUR_privatize_the_arms_industry
+	}
+	completion_reward = {
+		120 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 228
+						instant_build = yes
+					}
+			}
+		}
+		112 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 186
+						instant_build = yes
+					}
+			}
+			
+		}
+		315 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 1070
+						instant_build = yes
+					}
+			}
+		}
+		307 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 2232
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 376
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 448
+						instant_build = yes
+					}
+			}
+		}
+
+	}
+}
+
+#Privatize the Arms Industry
+focus = {
+	id = EUR_privatize_the_arms_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 19
+	y = 5
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_vanoxian_factories
+	}
+	completion_reward = {
+		112 = {
+		add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+	}
+}
+
+#Expand the Mineworks
+focus = {
+	id = EUR_expand_the_mineworks
+	icon = GFX_focus_generic_aluminum
+	x = 21
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_suham_mineworks
+	}
+	completion_reward = {
+		307 = {
+			add_resource = {
+				type = aluminium
+				amount = 15
+			}
+			add_resource = {
+				type = chromium
+				amount = 6
+			}
+		}
+	}
+}
+
+#Suham Mineworks
+focus = {
+	id = EUR_suham_mineworks
+	icon = GFX_focus_generic_steel
+	x = 21
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
+	}
+	prerequisite = {
+		focus = EUR_industrialization
+	}
+	completion_reward = {
+		307 = {
+			add_resource = {
+				type = steel
+				amount = 21
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+			}
+		}
+	}
+}
+
+	#The Iron Turtle Plan
+	focus = {
+		id = EUR_the_iron_turtle_plan
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = EUR_legatian_hegemony focus = EUR_evolian_alliance
+		}
+		completion_reward = {
+			add_ideas = iron_turtle_plan
+		}
+	}
+
+	#Recruitment Drives
+	focus = {
+		id = EUR_recruitment_drives
+		icon = GFX_focus_generic_manpower
+		x = 24
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = EUR_army_evaluation
+		}
+		completion_reward = {
+			add_timed_idea = { idea = recruitment_drives days = 1095 }
+		}
+	}
+
+	#Army Evaluation
+	focus = {
+		id = EUR_army_evaluation
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 24
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			has_completed_focus = EUR_our_euradan_agenda
+		}
+		completion_reward = {
+			army_experience = 10
+		}
+		
+	}
+
+#Motorized Infantry
+focus = {
+	id = EUR_motorized_infantry
+	icon = GFX_goal_generic_army_motorized
+	x = 23
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_recruitment_drives
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_motorized_infantry
+			bonus = 3.0
+			technology = motorised_infantry
+		}
+	}
+}
+
+#Armor Research
+focus = {
+	id = EUR_armor_research
+	icon = GFX_goal_generic_build_tank
+	x = 23
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_motorized_infantry
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_armor_research
+			bonus = 0.5
+			uses = 2
+			category = cat_medium_armor
+		}
+	}
+}
+
+#Superior Firepower
+focus = {
+	id = EUR_superior_firepower
+	icon = GFX_goal_generic_army_artillery
+	x = 24
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	prerequisite = {
+		focus = EUR_armor_research focus = EUR_amphibious_research
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_superior_firepower
+			bonus = 0.5
+			uses = 2
+			category = artillery
+		}
+	}
+}
+
+#Artillery Tactics
+focus = {
+	id = EUR_artillery_tactics
+	icon = GFX_goal_generic_army_artillery2
+	x = 24
+	y = 6
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	prerequisite = {
+		focus = EUR_superior_firepower
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_artillery_tactics
+			bonus = 1
+			uses = 2
+			technology = advanced_firebases
+			technology = forward_observers
+		}
+	}
+}
+
+#Shock & Awe
+focus = {
+	id = EUR_shock_and_awe
+	icon = GFX_goal_generic_army_doctrines
+	x = 24
+	y = 8
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	prerequisite = {
+		focus = EUR_artillery_tactics
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_shock_and_awe
+			bonus = 1
+			uses = 2
+			technology = shock_and_awe
+		}
+	}
+}
+
+#Marine Corps Funding
+focus = {
+	id = EUR_marine_corps_funding
+	icon = GFX_goal_generic_special_forces
+	x = 25
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_recruitment_drives
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name =  EUR_marine_corps_funding
+			bonus = 1
+			uses = 2
+			category = marine_tech
+		}
+		}
+}
+
+#Amphibious Research
+focus = {
+	id = EUR_amphibious_research
+	icon = GFX_goal_generic_amphibious_assault
+	x = 25
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_marine_corps_funding
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name =  EUR_amphibious_research
+			bonus = 1
+			uses = 2
+			category = marine_tech
+			category = tp_tech
+		}
+		add_tech_bonus = {
+			name =  EUR_amphibious_research
+			bonus = 1
+			uses = 2
+			technology = landing_craft
+			technology = tank_landing_craft
+		}
+		}
+}
+
+#Air Force Evaluation
+focus = {
+	id = EUR_air_force_evaluation
+	icon = GFX_goal_generic_build_airforce
+	x = 28
+	y = 0
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	available = {
+		has_completed_focus = EUR_our_euradan_agenda
+	}
+	completion_reward = {
+		air_experience = 10
+	}
+
+}
+
+#Aircraft Conversions
+focus = {
+	id = EUR_aircraft_conversions
+	icon = GFX_goal_continuous_air_production
+	x = 28
+	y = 1
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_air_force_evaluation
+	}
+	completion_reward = {
+		add_equipment_to_stockpile = {
+
+		 type = fighter_equipment_0
+		amount = 50
+		producer = EUR
+		}
+		add_equipment_to_stockpile = {
+		 type = tac_bomber_equipment_0
+		amount = 50
+		producer = EUR
+		}
+		add_equipment_to_stockpile = {
+		 type = transport_plane_equipment_1
+		amount = 50
+		producer = EUR
+		}
+	}
+}
+
+#Changing Tactics
+focus = {
+	id = EUR_changing_tactics
+	icon = GFX_goal_generic_air_doctrine
+	x = 28
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_aircraft_conversions
+	}
+	completion_reward = {
+			add_tech_bonus = {
+				name =  EUR_changing_tactics
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+			}
+}
+
+#Heavy Fighters
+focus = {
+	id = EUR_heavy_fighters
+	icon = GFX_goal_generic_air_fighter
+	x = 27
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_changing_tactics
+	}
+	mutually_exclusive = {
+		focus = EUR_light_fighters
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_heavy_fighters
+			bonus = 0.5
+			uses = 2
+			technology = heavy_fighter1
+			technology = heavy_fighter2
+			technology = heavy_fighter3
+			category = heavy_air
+
+		}
+	}
+}
+
+#Light Fighters
+focus = {
+	id = EUR_light_fighters
+	icon = GFX_goal_generic_air_fighter2
+	x = 29
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_changing_tactics
+	}
+	mutually_exclusive = {
+		focus = EUR_heavy_fighters
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_light_fighters
+			bonus = 0.5
+			uses = 2
+			technology = early_fighter
+			technology = fighter1
+			technology = fighter2
+			technology = fighter3
+		}
+	}
+}
+
+#Missile Systems
+focus = {
+	id = EUR_missile_systems
+	icon = GFX_focus_rocketry
+	x = 28
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_heavy_fighters focus = EUR_light_fighters
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_light_fighters
+			bonus = 0.5
+			uses = 2
+			technology = experimental_rockets
+			technology = rocket_engines
+			technology = improved_rocket_engines
+			technology = advanced_rocket_engines
+		}
+	}
+}
+
+#The Pilot Corps
+focus = {
+	id = EUR_the_pilot_corps
+	icon = GFX_focus_generic_military_academy
+	x = 27
+	y = 5
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_missile_systems
+	}
+	mutually_exclusive = {
+		focus = EUR_halvde_hawk_aces
+	}
+	completion_reward = {
+		add_ideas = pilot_corps
+	}
+}
+
+#Halvde Hawk Aces
+focus = {
+	id = EUR_halvde_hawk_aces
+	icon = GFX_goal_generic_CAS
+	x = 29
+	y = 5
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_missile_systems
+	}
+	available = {
+		has_completed_focus = EUR_halvde_regiments
+	}
+	mutually_exclusive = {
+		focus = EUR_the_pilot_corps
+	}
+	completion_reward = {
+		add_ideas = halvde_hawk_aces
+	}
+}
+
+#Naval Evaluation
+focus = {
+	id = EUR_naval_evaluation
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	x = 34
+	y = 0
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	available = {
+		has_completed_focus = EUR_our_euradan_agenda
+	}
+	completion_reward = {
+		navy_experience = 10
+	}
+
+}
+
+#The Northern Fleet
+focus = {
+	id = EUR_the_northern_fleet
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = 32
+	y = 1
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_naval_evaluation
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_the_northern_fleet
+			bonus = 1
+			uses = 2
+			category = trade_interdiction_tree
+			}
+	}
+	mutually_exclusive = {
+		focus = EUR_the_southern_fleet
+	}
+}
+
+#Wright's Theory
+focus = {
+	id = EUR_wrights_theory
+	icon = GFX_goal_generic_navy_anti_submarine
+	x = 33
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_the_northern_fleet
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_wrights_theory
+			bonus = 1
+			uses = 2
+			technology = convoy_interdiction
+			technology = unrestricted_submarine_warfare
+			technology = wolfpacks
+			technology = advanced_submarine_warfare
+			technology = combined_operations_raiding
+		}
+	}
+
+}
+
+#Cruiser Designs
+focus = {
+	id = EUR_cruiser_designs
+	icon = GFX_focus_generic_cruiser2
+	x = 33
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_wrights_theory
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EVO_torpedo_boat_production
+			bonus = 0.5
+			ahead_reduction = 2
+			uses = 1
+			category = ca_tech
+			category = cl_tech
+		}
+	}
+}
+
+#Eurada Rules the Waves
+focus = {
+	id = EUR_eurada_rules_the_waves
+	icon = GFX_euradafleet
+	x = 34
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_cruiser_designs focus = EUR_a_supercarrier
+	}
+	completion_reward = {
+		add_ideas = cult_of_the_navy
+	}
+}
+
+#Battleship Production
+focus = {
+	id = EUR_battleship_production
+	icon = GFX_focus_generic_navy_battleship2
+	x = 31
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_the_northern_fleet
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_battleship_production
+			bonus = 0.5
+			ahead_reduction = 2
+			uses = 1
+			category = bc_tech
+			category = bb_tech
+		}
+	}
+}
+
+#The Vanoxian Shipyards
+focus = {
+	id = EUR_the_vanoxian_shipyards
+	icon = GFX_goal_generic_construct_naval_dockyard
+	x = 31
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_battleship_production
+	}
+	completion_reward = {
+		120 = {
+		add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = dockyard
+						level = 5
+						instant_build = yes
+					}
+				}
+	}
+}
+
+#Defense of Discovery
+focus = {
+	id = EUR_defense_of_discovery
+	icon = GFX_goal_generic_navy_cruiser
+	x = 31
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_the_vanoxian_shipyards
+	}
+	completion_reward = {
+		187 = {
+					add_building_construction = {
+						type = naval_base
+						level = 6
+						province = 1717
+						instant_build = yes
+					}
+		}		
+	}
+}
+
+#The Southern Fleet
+focus = {
+	id = EUR_the_southern_fleet
+	icon = GFX_goal_generic_build_navy
+	x = 36
+	y = 1
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_naval_evaluation
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_the_southern_fleet
+			bonus = 1
+			uses = 2
+			category = fleet_in_being_tree
+			category = base_strike_main
+		}
+	}
+	mutually_exclusive = {
+		focus = EUR_the_northern_fleet
+	}
+}
+
+#Destroyer Schools
+focus = {
+	id = EUR_destroyer_schools
+	icon = GFX_focus_generic_destroyer
+	x = 37
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_the_southern_fleet
+	}
+	completion_reward = {
+		add_ideas = vanoxia_naval_academy
+	}
+}
+
+#Submarine Research
+focus = {
+	id = EUR_submarine_research
+	icon = GFX_goal_generic_navy_submarine
+	x = 37
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_destroyer_schools
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_submarine_research
+			bonus = 0.5
+			ahead_reduction = 2
+			uses = 1
+			category = ss_tech
+		}
+	}
+}
+
+#The Euradan Fleet
+focus = {
+	id = EUR_the_euradan_fleet
+	icon = GFX_euradawaves
+	x = 37
+	y = 4
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_submarine_research
+	}
+	completion_reward = {
+		add_ideas = euradan_shipbuilding
+	}
+}
+
+#Carrier Primacy
+focus = {
+	id = EUR_carrier_primacy
+	icon = GFX_goal_generic_navy_carrier
+	x = 35
+	y = 2
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_the_southern_fleet
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_carrier_primacy
+			bonus = 0.5
+			ahead_reduction = 2
+			uses = 1
+			category = cv_tech
+		}
+	}
+}
+
+#A Supercarrier
+focus = {
+	id = EUR_a_supercarrier
+	icon = GFX_goal_generic_navy_carrier
+	x = 35
+	y = 3
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = EUR_carrier_primacy
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = EUR_carrier_primacy
+			bonus = 1
+			ahead_reduction = 1
+			uses = 1
+			technology = advanced_carrier
+		}
+	}
+}
+
+}

@@ -1,0 +1,20 @@
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Cabhlach Cosanta"			
+		naval_base = 1928  # 
+		task_force = {				
+			name = "Cabhlach Lárnach"
+			location = 1928  #
+
+			ship = { name = "HIS Cosantóir" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = EIR } } }
+			ship = { name = "LC 1" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EIR } } } 
+			ship = { name = "LC 2" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = EIR } } } 		
+			ship = { name = "DD 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EIR } } }		
+			ship = { name = "DD 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EIR } } }
+			ship = { name = "S 1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EIR } } } 		
+			ship = { name = "S 2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EIR } } }		
+			ship = { name = "S 3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EIR } } }
+		}
+	}
+}

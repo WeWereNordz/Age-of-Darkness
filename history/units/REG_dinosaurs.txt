@@ -1,0 +1,27 @@
+division_template = {
+	name = "Battaglione Dinosauri"
+
+	regiments = {
+		super_heavy_armor = {
+			x = 0
+			y = 0
+		}
+	}
+
+	support = {
+		recon = {
+			x = 0
+			y = 0
+		}
+	}
+	priority = 2
+}
+
+units = {
+	division= {
+		location = 1407
+		division_template = "Battaglione Dinosauri"
+		start_experience_factor = 0.1
+		
+	}
+}

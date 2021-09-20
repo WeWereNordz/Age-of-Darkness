@@ -1,0 +1,29 @@
+﻿###########################
+# Heydra events
+###########################
+
+add_namespace = heydra
+
+# Pithia Offers Annexation
+country_event = {
+	id = heydra.1
+	title = heydra.1.t
+	desc = heydra.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Accept Pithian Protection
+		name = heydra.1.a
+		ai_chance = { factor = 99 }
+		POL = { annex_country = { target = HEY transfer_troops = yes } }
+		news_event = { id = mithrasnews.26 days = 1 }
+	}
+	option = { # Remain Independent
+		name = heydra.1.b
+		ai_chance = { factor = 1 }
+		POL = { country_event = { id = pithia.3 days = 1 } }
+	}
+}

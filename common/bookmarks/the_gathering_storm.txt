@@ -1,0 +1,169 @@
+bookmarks = {
+	bookmark = {
+		name = "Age of Darkness"
+		desc = "GATHERING_STORM_DESC"
+		date = 1934.1.1.12
+		picture = "select_date_1934"
+		default_country = "EVO"
+		default = yes
+		
+		"BOT"={
+			history = "BOT_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				birthplace_of_beltrism
+				rampant_hedonism
+				equestrian_army
+			}	
+			focuses = {
+				BOT_slave_labor
+				BOT_age_of_darkness
+				BOT_child_soldier_divisions
+			}		
+		}
+		"EVO"={
+			history = "EVO_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				civilwarmemories
+				intercorps_rivalry
+				weak_foreign_policy
+			}	
+			focuses = {
+				EVO_victory_or_death
+				EVO_super_soldiers
+				EVO_fairy_corps
+			}		
+		}
+		"LEG"={
+			history = "LEG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				nonfunctioning_government
+				widespread_corruption
+				unbalanced_checkbooks
+				house_of_commons
+			}	
+			focuses = {
+				LEG_FIVE_HOUSES
+				LEG_WALKER
+				LEG_STOP_THE_ROT
+			}		
+		}
+		"POL"={
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				medieval_nation
+				anti_war_sentiment
+				disjointed_army
+				civil_conflict
+			}	
+			focuses = {
+				POL_war_profiteering
+				POL_secrets_of_the_antarctic
+				POL_phantoms
+			}		
+		}
+		"EUR"={
+			history = "EUR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				low_legitimacy
+				legatian_influence
+				intelligence_agency
+			}	
+			focuses = {
+				EUR_magitek_theory
+				EUR_johtans_experiments
+				EUR_project_nightrose
+			}		
+		}
+		"PES"={
+			history = "PES_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				crippled_officer_corps_1
+				low_literacy
+				weak_economy
+				widespread_disease
+			}	
+			focuses = {
+				PES_VOLKSFANTASIE
+				PES_TWFP
+				PES_GPEST
+			}
+		}
+		"REG"={
+			history = "REG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				international_trade
+			}	
+			focuses = {
+				REG_DECIMA_MAX
+				REG_FUERZA
+				REG_ROARS
+			}		
+		}
+		
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		# minors from DLC ####
+		"DES"={
+			minor = yes
+			history = "DES_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				desunionese_spirit
+			}
+			focuses = {
+				
+			}
+		}
+		"EIR"={
+			minor = yes
+			history = "EIR_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				factionalism
+				unionist_sympathizers
+			}
+			focuses = {
+				EIR_lead_the_revolution
+				EIR_new_bronz_age
+				EIR_democratic_idealism
+			}
+		}
+
+		"HER"={
+			minor = yes
+			history = "EIR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				#
+			}
+			focuses = {
+				
+			}
+		}
+		"NAB"={
+			minor = yes
+			history = "EIR_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				#
+			}
+			focuses = {
+				
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

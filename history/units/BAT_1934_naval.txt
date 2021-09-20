@@ -1,0 +1,14 @@
+units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Albahriat Almuqadasa"
+		naval_base = 219
+		task_force = {				
+			name = "Fawq al'Ustul"
+			location = 219 # Danzig
+			ship = { name = "DD-1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BAT } } }	
+			ship = { name = "DD-2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BAT } } }	
+		}		
+	}
+}

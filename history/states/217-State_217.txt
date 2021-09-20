@@ -1,0 +1,40 @@
+state={
+	id=217
+	name="STATE_217"
+	provinces={
+		254 290 388 433 907 1079 1187 1317 1337 1590 1870 1903 1928 1958 2337 2357 
+	}
+	manpower=1122265
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		rubber=20
+	}
+
+	history={
+		owner = EIR
+		victory_points = {
+			217 23
+		}
+		victory_points = {
+			1903 7
+		}
+		victory_points = {
+			907 12
+		}
+		buildings = {
+			infrastructure = 5
+			dockyard = 2
+			1928 = {
+                naval_base = 5
+
+            }
+			2357 = {
+                naval_base = 5
+
+            }
+		}
+		add_core_of = EIR
+	}
+}

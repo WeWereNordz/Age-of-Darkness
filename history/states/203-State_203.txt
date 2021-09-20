@@ -1,0 +1,22 @@
+state={
+	id=203
+	name="STATE_203"
+	provinces={
+		3 201 529 1291 1900 2192 2280 2291 
+	}
+	manpower=3156456
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+		victory_points = {
+			3 20
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+		}
+		add_core_of = EVO
+	}
+}

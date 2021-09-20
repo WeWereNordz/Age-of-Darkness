@@ -1,0 +1,37 @@
+state={
+	id=143
+	name="STATE_143"
+	manpower = 3028511
+	state_category = large_city
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			347 30
+		}
+		victory_points = {
+			620 10
+		}
+		victory_points = {
+			2694 22
+		}
+		owner = FED
+		
+		buildings = {
+			infrastructure = 4
+			air_base = 2
+			arms_factory = 2
+			dockyard = 2
+			industrial_complex = 2
+			1269 = {
+                naval_base = 4
+
+            }
+		}
+		add_core_of = FED
+	}
+
+	provinces={
+		134 176 261 330 347 373 536 620 777 834 898 1113 1269 1294 1453 1472 1524 1546 1595 1746 1819 1881 1918 2098 2189 2206 2243 2678 2685 2686 2688 2690 2694 
+	}
+}

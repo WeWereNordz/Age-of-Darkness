@@ -1,0 +1,19 @@
+state={
+	id=197
+	name="STATE_197"
+	provinces={
+		1060 1971 2146 
+	}
+	manpower=3525338
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DES
+
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = DES
+	}
+}

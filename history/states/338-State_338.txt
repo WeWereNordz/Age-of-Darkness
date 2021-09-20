@@ -1,0 +1,30 @@
+state={
+	id=338
+	name="STATE_338"
+	manpower = 1514255
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil = 30
+	}
+
+	history={
+		victory_points = {
+			2693 30
+		}
+		owner = NER
+		
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = NER
+	}
+
+	provinces={
+		30 567 695 879 2693 
+	}
+}

@@ -1,0 +1,49 @@
+﻿division_template = {
+	name = "Inmin Haebang-Gun"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	division= {
+		name = "Inmin Haebang-Gun"
+		location = 2600
+		division_template = "Inmin Haebang-Gun"
+		start_experience_factor = 0.09
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Inmin Haebang-Gun"
+		location = 2600
+		division_template = "Inmin Haebang-Gun"
+		start_experience_factor = 0.09
+		start_equipment_factor = 0.6
+	}
+}
+
+air_wings = {
+	104 = {
+		fighter_equipment_0 = {
+			owner = "KOR"
+			amount = 10
+		}
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KOR"
+		}
+		requested_factories = 1
+		progress = 0.79
+		efficiency = 50
+	}
+}

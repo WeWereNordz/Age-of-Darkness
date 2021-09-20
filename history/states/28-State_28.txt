@@ -1,0 +1,22 @@
+state={
+	id=28
+	name="STATE_28"
+	provinces={
+		19 44 136 147 559 812 1144 1184 1442 1519 1759 1948 2286 2312 2316 2322 
+	}
+	manpower=3525338
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DES
+		victory_points = {
+			19 28
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 3
+		}
+		add_core_of = DES
+	}
+}

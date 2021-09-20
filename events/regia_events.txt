@@ -1,0 +1,127 @@
+﻿###########################
+# Regia events
+###########################
+
+add_namespace = regia
+
+# Evolia Invites Us
+country_event = {
+	id = regia.1
+	title = regia.1.t
+	desc = regia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Join
+		name = regia.1.a
+		ai_chance = { factor = 90 }
+		EVO = { add_to_faction = REG }
+		news_event = mithrasnews.4
+	}
+	option = { # Decline
+		name = regia.1.b
+		ai_chance = { factor = 10 }
+		EVO = { country_event = { id = evolia.3 } }
+	}
+}
+
+# Eurada Faction - One Condition
+country_event = {
+	id = regia.2
+	title = regia.2.t
+	desc = regia.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Accept
+		name = regia.2.a
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+		EUR = { add_to_faction = REG }
+		news_event = mithrasnews.23
+	}
+	option = { # Decline
+		name = regia.2.b
+		EUR = { country_event = { id = eurada.11 } }
+	}
+}
+
+# Eurada Denies Request
+country_event = {
+	id = regia.3
+	title = regia.3.t
+	desc = regia.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # A shame.
+		name = regia.3.a
+	}
+
+}
+
+# Eurada Denies Request
+country_event = {
+	id = regia.4
+	title = regia.4.t
+	desc = regia.4.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Their loss.
+		name = regia.4.a
+	}
+
+}
+
+# Botrelia Desires Non-Aggression Pact
+country_event = {
+	id = regia.5
+	title = regia.5.t
+	desc = regia.5.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # We accept this peace.
+		name = regia.5.a
+		ai_chance = { factor = 90 }
+		diplomatic_relation = {
+			country = BOT
+			relation = non_aggression_pact
+			active = yes
+		}
+		BOT = { country_event = { id = botrelia.3 } }
+	}
+	option = { # We reject your offer.
+		name = regia.5.b
+		ai_chance = { factor = 10 }
+		BOT = { country_event = { id = botrelia.4 } }
+	}
+}

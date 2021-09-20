@@ -1,0 +1,20 @@
+state={
+	id=245
+	name="STATE_245"
+	provinces={
+		29 113 513 531 578 727 1454 1497 1773 1905 2429 
+	}
+	manpower=3156456
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 10
+		}
+		add_core_of = EVO
+	}
+}

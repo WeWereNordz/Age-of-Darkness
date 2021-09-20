@@ -1,0 +1,24 @@
+state={
+	id=348
+	name="STATE_348"
+	provinces={
+		543 785 1027 1095 1392 1526 1727 2007 2150 
+	}
+	manpower=46
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+
+		buildings = {
+			infrastructure = 7
+			dockyard = 6
+			1727 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = POL
+	}
+}

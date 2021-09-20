@@ -1,0 +1,24 @@
+state={
+	id=193
+	name="STATE_193"
+	provinces={
+		272 425 480 923 957 1244 1569 1775 2266 2292 2294 
+	}
+	manpower=3156456
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+		victory_points = {
+			2266 5
+		}
+		buildings = {
+			infrastructure = 4
+			2266 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = EVO
+	}
+}

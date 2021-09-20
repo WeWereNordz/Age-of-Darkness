@@ -1,0 +1,2036 @@
+﻿focus_tree = {
+	id = evoliafocus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = EVO
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1620 }
+
+	#Motorized Infantry
+	focus = {
+		id = EVO_motorized_infantry
+		icon = GFX_goal_generic_army_motorized
+		x = 9
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = EVO_mobile_tank_focus focus = EVO_heavy_tank_focus }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_motorized_infantry
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	#Reconstruction
+	focus = {
+		id = EVO_reconstruction
+		icon = GFX_reconstruction
+		x = 3
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+			name = EVO_reconstruction
+			bonus = 0.5
+			uses = 2
+			category = industry
+			}
+		}
+	}
+
+	#Complete the 10 Year Plan
+	focus = {
+		id = EVO_complete_the_10_year_plan
+		icon = GFX_goal_generic_production
+		x = 5
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_total_autarky }
+		completion_reward = {
+			add_tech_bonus = {
+			name = EVO_complete_the_10_year_plan
+			bonus = 1
+			uses = 2
+			category = industry
+			}
+		}
+
+	}
+
+	#Government Reforms
+	focus = {
+		id = EVO_government_reforms
+		icon = GFX_governmentreform
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EVO_reconstruction  }
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Industrial Mobilization
+	focus = {
+		id = EVO_industrial_mobilization
+		icon = GFX_focus_generic_steel
+		x = 5
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_reconstruction  }
+	
+		completion_reward = {
+			add_timed_idea = { idea = industrial_mobilization days = 1095 }
+			}
+	}
+
+	#Corridor Railroad
+	focus = {
+		id = EVO_corridor_railroad
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_industrial_mobilization  }
+
+		completion_reward = {
+		48 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 8
+					instant_build = yes
+				}
+		}
+		246 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 7
+				instant_build = yes
+			}
+		}
+		244 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 6
+					instant_build = yes
+				}
+		}
+		249 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 6
+					instant_build = yes
+					}
+			}
+		}
+	}
+
+	#Flandrenian Industry
+	focus = {
+		id = EVO_flandrenian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_industrial_mobilization  }
+
+		completion_reward = {
+			244 = {
+					 add_extra_state_shared_building_slots = 1
+					 add_building_construction = {
+						 type = industrial_complex
+						 level = 1
+						 instant_build = yes
+					 }
+				 }
+				 246 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			 }
+	}
+
+	#The Populist Army
+	focus = {
+		id = EVO_the_populist_army
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 9
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	#Recruitment Propaganda
+	focus = {
+		id = EVO_recruitment_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 9
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = EVO_the_populist_army  }
+
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = recruitment_propaganda
+		}
+	}
+
+	#Crush Intercorps Rivalry
+	focus = {
+		id = EVO_crush_intercorps_rivalry
+		icon = GFX_goal_generic_national_unity
+		x = 11
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EVO_a_grand_strategy }
+		completion_reward = {
+			remove_ideas = intercorps_rivalry
+			army_experience = 20
+			
+		}
+	}
+
+	#Army Expansion
+	focus = {
+		id = EVO_army_expansion
+		icon = GFX_focus_chi_army_reform
+		x = 8
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_recruitment_propaganda  }
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	#March of the Youth
+	focus = {
+		id = EVO_march_of_the_youth
+		icon = GFX_youthmarch
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = EVO_government_reforms  }
+
+		completion_reward = {
+			add_manpower = 150000
+			add_political_power = 120
+		}
+	}
+
+	#The Chancellor Wolf Society
+	focus = {
+		id = EVO_the_chancellor_wolf_society
+		icon = GFX_goal_support_fascism
+		x = 5
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_unified_realm }
+		prerequisite= { focus = EVO_complete_the_10_year_plan }
+		prerequisite= { focus = EVO_massive_effort  }
+
+		completion_reward = {
+			add_ideas = chancellor
+		}
+	}
+
+	#Death Korps
+	focus = {
+		id = EVO_death_korps
+		icon = GFX_goal_generic_secret_weapon
+		x = 10
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = EVO_recruitment_propaganda  }
+		completion_reward = {
+			hidden_effect = {
+				load_oob = EVO_korps
+			}
+			custom_effect_tooltip =  EVO_korps_tooltip
+		}
+
+	}
+
+	#Unify the Party
+	focus = {
+		id = EVO_unify_the_party
+		icon = GFX_goal_generic_alliance
+		x = 16
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_the_chancellors_speech  }
+
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 120
+		}
+	}
+
+	#The Chancellor's Speech
+	focus = {
+		id = EVO_the_chancellors_speech
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 16
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.10
+		}
+	}
+
+	#Diplomatic Efforts
+	focus = {
+		id = EVO_diplomatic_efforts
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 13
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_unify_the_party }
+	
+		completion_reward = {
+			remove_ideas = weak_foreign_policy
+			set_rule = { can_create_factions = yes }
+			create_faction = "Die Koalition"
+		}
+	}
+
+	#Old Allies
+	focus = {
+		id = EVO_old_allies
+		icon = GFX_goal_generic_improve_relations
+		x = 12
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_diplomatic_efforts  }
+
+		completion_reward = {
+			REG = {
+				add_opinion_modifier = { target = EVO modifier = huge_increase }
+			}
+		}
+		mutually_exclusive = {
+			focus = EVO_new_allies
+		}
+	}
+
+	#Alliance with Regia
+	focus = {
+		id = EVO_alliance_with_regia
+		icon = GFX_regiarelations
+		x = 12
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_old_allies  }
+		bypass = {
+            is_in_faction_with = REG
+        }
+		completion_reward = {
+			REG = {
+				country_event = { id = regia.1 days = 1 }
+			}
+		}
+
+	}
+
+	#The Propaganda Machine
+	focus = {
+		id = EVO_the_propaganda_machine
+		icon = GFX_goal_generic_propaganda
+		x = 16
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_unify_the_party  }
+		completion_reward = {
+			add_political_power = 120
+			add_opinion_modifier = { target = BOT modifier = large_decrease }
+			reverse_add_opinion_modifier = { target = EVO modifier = large_decrease }
+		}
+
+	}
+
+	#Expand the SSD
+	focus = {
+		id = EVO_expand_the_ssd
+		icon = GFX_network_overhaul
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EVO_government_reforms }
+
+		completion_reward = {
+			add_ideas = statesd
+		}
+	}
+
+	#Wissenschaftabteilung
+	focus = {
+		id = EVO_wissenschaftabteilung
+		icon = GFX_focus_research2
+		x = 20
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_through_the_gap }
+
+		completion_reward = {
+			add_ideas = wissen
+				add_tech_bonus = {
+					name = secret_bonus
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+					category = rocketry
+				}
+			}
+	}
+
+	#Empower the Chancellery
+	focus = {
+		id = EVO_empower_the_chancellery
+		icon = GFX_empower
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_expand_the_ssd }
+		mutually_exclusive = { focus = EVO_devolution }
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	#Education Reform
+	focus = {
+		id = EVO_education_reform
+		icon = GFX_educationreform
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_empower_the_chancellery focus = EVO_devolution}
+
+		completion_reward = {
+			add_ideas = education_re
+		}
+	}
+
+	#New Allies
+	focus = {
+		id = EVO_new_allies
+		icon = GFX_goal_generic_improve_relations
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_diplomatic_efforts }
+
+		completion_reward = {
+			PES = {
+				add_opinion_modifier = { target = EVO modifier = huge_increase }
+			}
+		}
+		mutually_exclusive = {
+			focus = EVO_old_allies
+		}
+	}
+
+	#Through the Gap
+	focus = {
+		id = EVO_through_the_gap
+		icon = GFX_goal_generic_scientific_exchange
+		x = 20
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_kriegers_theory }
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+
+	#Krieger's Theory
+	focus = {
+		id = EVO_kriegers_theory
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 20
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_gensokyo }
+		completion_reward = {
+				add_tech_bonus = {
+					name = EVO_kriegers_theory
+					bonus = 1.0
+					uses = 1
+					category = encryption_tech
+					category = decryption_tech
+				}
+			}
+
+	}
+
+	#Gensokyo
+	focus = {
+		id = EVO_gensokyo
+		icon = GFX_gensokyo
+		x = 18
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_unify_the_party }
+		available = {
+			NOT = { has_idea = weak_foreign_policy }
+			has_army_manpower = { size > 500000 }
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GEN
+			}
+		}
+	}
+
+	#Protect Gerolstein
+	focus = {
+		id = EVO_protect_gerolstein
+		icon = GFX_goal_generic_military_sphere
+		x = 18
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_gensokyo }
+		bypass = {
+			GEL = { has_war_with = BOT }
+			GEL =  { exists = yes }
+			GEL = { is_in_faction_with = BOT }
+		}
+		available = {
+			has_army_manpower = { size > 1500000 }
+		}
+
+		completion_reward = {
+			give_guarantee = GEL
+		}
+	}
+
+	#Trade Policy
+	focus = {
+		id = EVO_trade_policy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 8
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_agriculture_mechanization }
+		completion_reward = {
+			add_ideas = EVO_focus_foreign_policy
+		}
+	}
+
+	#Trade Deal with Polonia
+	focus = {
+		id = EVO_trade_deal_with_polonia
+		icon = GFX_goal_generic_trade
+		x = 9
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_trade_policy  }
+		completion_reward = {
+			add_opinion_modifier = { target = POL modifier = medium_increase }
+			reverse_add_opinion_modifier = { target = EVO modifier = medium_increase }
+		}
+		mutually_exclusive = { focus = EVO_trade_deal_with_pestfriland  }
+	}
+
+	#Pyrrhus River Factories
+	focus = {
+		id = EVO_pyrrhus_river_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_flandrenian_industry  }
+	
+		completion_reward = {
+			245 = {
+					 add_extra_state_shared_building_slots = 2
+					 add_building_construction = {
+						 type = industrial_complex
+						 level = 2
+						 instant_build = yes
+					 }
+				 }
+			 }
+	}
+
+	#Mobile Tank Focus
+	focus = {
+		id = EVO_mobile_tank_focus
+		icon = GFX_goal_generic_army_tanks
+		x = 8
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_army_expansion  }
+		mutually_exclusive = { focus = EVO_heavy_tank_focus  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_mobile_tank_focus
+				bonus = 0.5
+				uses = 2
+				category = cat_light_armor
+				category = cat_medium_armor
+			}
+		}
+	}
+
+	#Devolution
+	focus = {
+		id = EVO_devolution
+		icon = GFX_devolution
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_march_of_the_youth  }
+		mutually_exclusive = { focus = EVO_empower_the_chancellery  }
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Unified Realm
+	focus = {
+		id = EVO_unified_realm
+		icon = GFX_unifiedrealm
+		x = 1
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = EVO_dignity_and_purpose  }
+		completion_reward = {
+			add_ideas = EVO_focus_unified_realm
+		}
+
+	}
+
+	#Fortress Pyrrhussieg
+	focus = {
+		id = EVO_fortress_pyrrhussieg
+		icon = GFX_goal_generic_fortify_city
+		x = 3
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = EVO_move_industry_to_starke  }
+		available = {
+			has_war = yes
+			225 = {
+				is_owned_and_controlled_by = EVO
+			}
+		}
+		completion_reward = {
+			225 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 1161
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 2382
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 2384
+							instant_build = yes
+						}
+				}
+			}
+			225 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+	#Move Industry to Starke
+	focus = {
+		id = EVO_move_industry_to_starke
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 3
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_tuuran_highway  }
+		completion_reward = {
+			233 = {
+					 add_extra_state_shared_building_slots = 2
+					 add_building_construction = {
+						 type = arms_factory
+						 level = 2
+						 instant_build = yes
+					 }
+				 }
+			 }
+	}
+
+	#Air Armament
+	focus = {
+		id = EVO_air_armament
+		icon = GFX_goal_generic_air_production
+		x = 23
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {
+			air_experience = 10
+		}
+	}
+
+	#The Chancellor's Navy
+	focus = {
+		id = EVO_the_chancellors_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 29
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+
+		completion_reward = {
+			navy_experience = 10
+		}
+	}
+	#Luftstreitkrafte
+	focus = {
+		id = EVO_luftstreitkrafte
+		icon = GFX_goal_generic_build_airforce
+		x = 23
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_aircraft_conversions  }
+		completion_reward = {
+			add_tech_bonus = {
+				name =  EVO_luftstreitkrafte
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+			}
+	}
+
+	#Aircraft Conversions
+	focus = {
+		id = EVO_aircraft_conversions
+		icon = GFX_goal_continuous_air_production
+		x = 23
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_air_armament  }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			 type = fighter_equipment_0
+			amount = 50
+			producer = EVO
+			}
+			add_equipment_to_stockpile = {
+			 type = tac_bomber_equipment_0
+			amount = 50
+			producer = EVO
+			}
+			add_equipment_to_stockpile = {
+			 type = transport_plane_equipment_1
+			amount = 50
+			producer = EVO
+			}
+		}
+	}
+
+	#Heavy Aircraft Priority
+	focus = {
+		id = EVO_heavy_aircraft_priority
+		icon = GFX_goal_generic_air_fighter
+		x = 22
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_luftstreitkrafte  }
+		mutually_exclusive = { focus = EVO_light_aircraft_priority  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_heavy_aircraft_priority
+				bonus = 0.5
+				uses = 2
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+				category = heavy_air
+
+			}
+		}
+	}
+
+	#The Atha Question
+	focus = {
+		id = EVO_the_atha_question
+		icon = GFX_athaquestion
+		x = 18
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_protect_gerolstein }
+	}
+
+	#Guns Towards Botrelia
+	focus = {
+		id = EVO_guns_towards_botrelia
+		icon = GFX_gunstowardsbotrelia
+		x = 16
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_the_propaganda_machine  }
+
+		available = {
+			has_army_manpower = { size > 2000000 }
+			has_completed_focus = EVO_protect_gerolstein
+		}
+		bypass = {
+			has_war_with = BOT
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BOT }
+		}
+		will_lead_to_war_with = BOT
+	}
+
+	#Turn the Guns
+	focus = {
+		id = EVO_turn_the_guns
+		icon = GFX_turntheguns
+		x = 16
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_guns_towards_botrelia  }
+		bypass = {
+			has_war_with = EUR
+		}
+		available = {
+			has_army_manpower = { size > 3000000 }
+			BOT = { exists = no }
+		}
+		mutually_exclusive = { focus = EVO_alliance_with_eurada  }
+	
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = EUR }
+		}
+		will_lead_to_war_with = EUR
+	}
+
+	#Alliance with Eurada
+	focus = {
+		id = EVO_alliance_with_eurada
+		icon = GFX_euradarelations
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_alliance_with_pestfriland  }
+		available = {
+			EUR = { is_faction_leader= no }
+		}
+		bypass = {
+            is_in_faction_with = EUR
+        }
+		completion_reward = {
+			EUR = {
+				country_event = { id = eurada.2 days = 1 } 
+			}
+
+		}
+		mutually_exclusive = { focus = EVO_turn_the_guns  }
+
+	}
+
+	#Alliance with Pestfriland
+	focus = {
+		id = EVO_alliance_with_pestfriland
+		icon = GFX_pestfrilandrelations
+		x = 14
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_new_allies  }
+		bypass = {
+            is_in_faction_with = PES
+        }
+		completion_reward = {
+			PES = {
+				country_event = { id = pestfriland.1 days = 1 } 
+			}
+		}
+
+	}
+
+		#Retaliation
+		focus = {
+			id = EVO_retaliation
+			icon = GFX_goal_poland_goal
+			x = 17
+			y = 7
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_ANNEXATION
+			}
+			prerequisite = { focus = EVO_support_desunion  }
+			completion_reward = {
+				DES = {
+					create_wargoal = {
+						target = GES
+						type = annex_everything
+					}
+					add_opinion_modifier = { target = EVO modifier = small_increase }
+					if = {
+						limit = {
+							EVO = {
+								has_government = fascism
+							}
+						}
+						add_timed_idea = { idea = fascist_assault_divisions days = 1095 }
+					}
+					if = {
+						limit = {
+							EVO = {
+								has_government = communism
+							}
+						}
+						add_timed_idea = { idea = communist_partisans_recruiting days = 1095 }
+					}
+					if = {
+						limit = {
+							EVO = {
+								has_government = democratic
+							}
+						}
+						add_timed_idea = { idea = democratic_influence days = 1095 }
+					}
+					country_event = { id = generic.1 }
+					
+				}
+			}
+
+		}
+
+			#Support Sunyat
+	focus = {
+		id = EVO_support_sunyat
+		icon = GFX_support_gesie
+		x = 16
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_the_atha_question  }
+		completion_reward = {
+			GES = {
+				add_opinion_modifier = { target = EVO modifier = huge_increase }
+			}
+			DES = {
+				add_opinion_modifier = { target = EVO modifier = large_decrease }
+			}
+		}
+		mutually_exclusive = { focus = EVO_support_desunion  }
+
+	}
+
+	#Support Desunion
+	focus = {
+		id = EVO_support_desunion
+		icon = GFX_support_desunion
+		x = 18
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_the_atha_question  }
+		completion_reward = {
+			DES = {
+				add_opinion_modifier = { target = EVO modifier = huge_increase }
+			}
+			GES = {
+				add_opinion_modifier = { target = EVO modifier = large_decrease }
+			}
+		}
+		mutually_exclusive = { focus = EVO_support_sunyat  }
+
+	}
+
+	#A Populist Desunion
+	focus = {
+		id = EVO_a_populist_desunion
+		icon = GFX_goal_support_fascism
+		x = 19
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_support_desunion  }
+		completion_reward = {
+			DES = {
+				add_opinion_modifier = { target = EVO modifier = medium_increase }
+				if = {
+					limit = {
+						EVO = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = { idea = fascist_influence days = 1095 }
+				}
+				if = {
+					limit = {
+						EVO = {
+							has_government = communism
+						}
+					}
+					add_timed_idea = { idea = communist_influence days = 1095 }
+				}
+				if = {
+					limit = {
+						EVO = {
+							has_government = democratic
+						}
+					}
+					add_timed_idea = { idea = democratic_influence days = 1095 }
+				}
+				country_event = { id = generic.1 }
+			}
+		}
+
+	}
+
+	#Cooperation
+	focus = {
+		id = EVO_cooperation
+		icon = GFX_focus_prc_social_democracy
+		x = 15
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_support_sunyat }
+		completion_reward = {
+			GES = {
+				create_wargoal = {
+					target = DES
+					type = annex_everything
+				}
+				add_opinion_modifier = { target = EVO modifier = small_increase }
+				if = {
+					limit = {
+						EVO = {
+							has_government = fascism
+						}
+					}
+					add_timed_idea = { idea = fascist_assault_divisions days = 1095 }
+				}
+				if = {
+					limit = {
+						EVO = {
+							has_government = communism
+						}
+					}
+					add_timed_idea = { idea = communist_partisans_recruiting days = 1095 }
+				}
+				if = {
+					limit = {
+						EVO = {
+							has_government = democratic
+						}
+					}
+					add_timed_idea = { idea = democratic_influence days = 1095 }
+				}
+				country_event = { id = generic.1 }
+				
+			}
+		}
+	}
+
+		#Trade Deal with Pestfriland
+		focus = {
+			id = EVO_trade_deal_with_pestfriland
+			icon = GFX_goal_generic_trade
+			x = 7
+			y = 7
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = { focus = EVO_trade_policy  }
+			completion_reward = {
+				add_opinion_modifier = { target = PES modifier = medium_increase }
+				reverse_add_opinion_modifier = { target = EVO modifier = medium_increase }
+			}
+			mutually_exclusive = { focus = EVO_trade_deal_with_polonia  }
+		}
+
+		#Why We Fight
+	focus = {
+		id = EVO_why_we_fight
+		icon = GFX_goal_demand_sudetenland
+		x = 5
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_the_chancellor_wolf_society }
+		completion_reward = {
+			remove_ideas = civilwarmemories
+		}
+	}
+
+	#A Grand Strategy
+	focus = {
+		id = EVO_a_grand_strategy
+		icon = GFX_goal_generic_position_armies
+		x = 10
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = EVO_motorized_infantry }
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	#Heavy Tank Focus
+	focus = {
+		id = EVO_heavy_tank_focus
+		icon = GFX_focus_generic_army_tanks2
+		x = 10
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_death_korps  }
+		mutually_exclusive = { focus = EVO_mobile_tank_focus  }
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EVO_heavy_tank_focus
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_armor
+			}
+		}
+	}
+
+	#Massive Effort
+	focus = {
+		id = EVO_massive_effort
+		icon = GFX_focus_generic_little_entente
+		x = 9
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = EVO_assault_tactics  }
+		completion_reward = {
+			add_manpower = 2000000 
+		}
+
+	}
+
+	#Assault Tactics
+	focus = {
+		id = EVO_assault_tactics
+		icon = GFX_goal_generic_small_arms
+		x = 11
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_crush_intercorps_rivalry  }
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EVO_assault_tactics
+				bonus = 1
+				uses = 5
+				technology = peoples_army
+				technology = infantry_offensive
+				technology = large_front_offensive
+				technology = human_wave_offensive
+				technology = guerilla_warfare
+			}
+		}
+	}
+
+	#Total Autarky
+	focus = {
+		id = EVO_total_autarky
+		icon = GFX_focus_generic_industry_3
+		x = 5
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_realm_industrial_act  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_total_autarky
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+	}
+
+	#Revamp Southern Forts
+	focus = {
+		id = EVO_revamp_southern_forts
+		icon = GFX_goal_generic_construct_military
+		x = 3
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_fortress_pyrrhussieg  }
+		completion_reward = {
+			280 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 1480
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 1645
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 1679
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 2524
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 1931
+							instant_build = yes
+						}
+				}
+			}		
+		}
+	}
+
+	#Fairy Corps
+	focus = {
+		id = EVO_fairy_corps
+		icon = GFX_focus_jap_zero
+		x = 24
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_USA_CONGRESS
+		}
+		prerequisite = { focus = EVO_radio_guided_bombs  }
+		available = {
+			has_completed_focus = EVO_gensokyo
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = fairy_corps_tooltip
+		}
+	}
+
+	#Tuuran Highway
+	focus = {
+		id = EVO_tuuran_highway
+		icon = GFX_focus_generic_rubber
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_corridor_railroad  }
+		completion_reward = {
+		252 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 7
+					instant_build = yes
+				}
+		}
+		262 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 7
+				instant_build = yes
+			}
+		288 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 7
+					instant_build = yes
+				}
+		294 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 7
+						instant_build = yes
+					}
+			}
+		}
+	}
+		}
+	}
+
+	#Cirnogorsk Tank Factory
+	focus = {
+		id = EVO_cirnogorsk_tank_factory
+		icon = GFX_focus_generic_tank_production
+		x = 7
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_mobile_tank_focus  focus = EVO_pyrrhus_river_factories  }
+		completion_reward = {
+			288 = {
+					 add_extra_state_shared_building_slots = 1
+					 add_building_construction = {
+						 type = arms_factory
+						 level = 1
+						 instant_build = yes
+					 }
+				 }
+			 }
+	}
+
+	#Anti-Imperialism
+	focus = {
+		id = EVO_antiimperialism
+		icon = GFX_focus_AST_never_gallipoli
+		x = 16
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_cooperation focus = EVO_retaliation  }
+		mutually_exclusive = { focus = EVO_gensokyo_supremacy  }
+
+		completion_reward = {
+			create_wargoal = {
+				target = LEG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HEY
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ESP
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = LEG
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = HEY
+		will_lead_to_war_with = ESP
+	}
+
+	#Heavy Naval Effort
+	focus = {
+		id = EVO_heavy_naval_effort
+		icon = GFX_goal_generic_navy_cruiser
+		x = 30
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_the_chancellors_navy  }
+		mutually_exclusive = { focus = EVO_light_naval_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_heavy_naval_effort
+				bonus = 1
+				uses = 2
+				category = fleet_in_being_tree
+				category = base_strike_main
+			}
+		}
+	}
+
+	#Light Naval Effort
+	focus = {
+		id = EVO_light_naval_effort
+		icon = GFX_goal_generic_amphibious_assault
+		x = 28
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_the_chancellors_navy  }
+		mutually_exclusive = { focus = EVO_heavy_naval_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_light_naval_effort
+				bonus = 1
+				uses = 2
+				category = trade_interdiction_tree
+				}
+		}
+	}
+
+	#Battleship Effort
+	focus = {
+		id = EVO_battleship_effort
+		icon = GFX_focus_generic_navy_battleship2
+		x = 30
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_heavy_naval_effort  }
+		mutually_exclusive = { focus = EVO_carrier_primacy  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_battleship_effort
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+			}
+		}
+	}
+
+	#Carrier Primacy
+	focus = {
+		id = EVO_carrier_primacy
+		icon = GFX_goal_generic_navy_carrier
+		x = 32
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_heavy_naval_effort  }
+		mutually_exclusive = { focus = EVO_battleship_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_carrier_primacy
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	#A Super Battleship
+	focus = {
+		id = EVO_a_super_battleship
+		icon = GFX_goal_generic_navy_battleship
+		x = 30
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_battleship_effort }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_a_super_battleship
+				bonus = 1.0
+				uses = 1
+				category = shbb_tech
+			}
+		}
+	}
+
+	#Wolfpacks
+	focus = {
+		id = EVO_wolfpacks
+		icon = GFX_goal_generic_wolf_pack
+		x = 28
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_submarine_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_wolfpacks
+				bonus = 1
+				uses = 2
+				technology = convoy_interdiction
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	#The Divided Sea
+	focus = {
+		id = EVO_the_divided_sea
+		icon = GFX_goal_demand_sudetenland
+		x = 29
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = EVO_wolfpacks focus = EVO_a_super_battleship }
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	#Submarine Effort
+	focus = {
+		id = EVO_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		x = 28
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_light_naval_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_submarine_effort
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	#Torpedo Boat Production
+	focus = {
+		id = EVO_torpedo_boat_production
+		icon = GFX_focus_generic_destroyer
+		x = 26
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_light_naval_effort  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_torpedo_boat_production
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	#Escort Zeppelins
+	focus = {
+		id = EVO_escort_zeppelins
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 23
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_aerial_death_korps }
+		prerequisite = { focus = EVO_fairy_corps  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_escort_zeppelins
+				bonus = 0.5
+				uses = 1
+				technology = airship1
+			}
+		}
+	}
+
+	#Battle Zeppelins
+	focus = {
+		id = EVO_battle_zeppelins
+		icon = GFX_goal_generic_occupy_start_war
+		x = 23
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_escort_zeppelins  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_battle_zeppelins
+				bonus = 0.5
+				uses = 1
+				technology = airship2
+			}
+		}
+	}
+
+	#Light Aircraft Priority
+	focus = {
+		id = EVO_light_aircraft_priority
+		icon = GFX_goal_generic_air_fighter2
+		x = 24
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_luftstreitkrafte  }
+		mutually_exclusive = { focus = EVO_heavy_aircraft_priority  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_light_aircraft_priority
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+	}
+
+	#Radio Guided Bombs
+	focus = {
+		id = EVO_radio_guided_bombs
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 23
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_heavy_aircraft_priority focus = EVO_light_aircraft_priority  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_radio_guided_bombs
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#G-Projekt Energy
+	focus = {
+		id = EVO_gprojekt_energy
+		icon = GFX_goal_generic_oil_refinery
+		x = 20
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_wissenschaftabteilung }
+		completion_reward = {
+			add_ideas = g_projekt_synthesis
+			news_event = { id = mithrasnews.13 days = 1 }
+		}
+
+	}
+
+	#Super Soldiers
+	focus = {
+		id = EVO_super_soldiers
+		icon = GFX_goal_generic_special_forces
+		x = 20
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_gprojekt_energy  }
+		completion_reward = {
+			hidden_effect = {
+				load_oob = EVO_super
+			}
+			custom_effect_tooltip =  EVO_super_tooltip
+		}
+
+	}
+
+	#Fort Krieger
+	focus = {
+		id = EVO_fort_krieger
+		icon = GFX_goal_generic_construct_military
+		x = 3
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = EVO_revamp_southern_forts  }
+		available = {
+			228 =  { is_controlled_by = EVO }
+		}
+		completion_reward = {
+			228 = {
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 2364
+							instant_build = yes
+						}
+			}		
+		}
+	}
+
+	#Victory or Death
+	focus = {
+		id = EVO_victory_or_death
+		icon = GFX_victoryordeath
+		x = 5
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = EVO_why_we_fight }
+		completion_reward = {
+			add_ideas = EVO_focus_victory_or_death
+		}
+	}
+
+	#Dignity and Purpose
+	focus = {
+		id = EVO_dignity_and_purpose
+		icon = GFX_dignity
+		x = 1
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = EVO_education_reform  }
+		completion_reward = {
+			add_ideas = EVO_focus_dignity_and_purpose
+		}
+
+	}
+
+	#Tuuranian Oil
+	focus = {
+		id = EVO_tuuranian_oil
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_tuuran_highway  focus = EVO_pyrrhus_river_factories  }
+
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 262
+			}
+		}
+	}
+
+	#Aerial Death Korps
+	focus = {
+		id = EVO_aerial_death_korps
+		icon = GFX_goal_generic_CAS
+		x = 22
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = EVO_radio_guided_bombs  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EVO_aerial_death_korps
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	#Realm Industrial Act
+	focus = {
+		id = EVO_realm_industrial_act
+		icon = GFX_focus_generic_industry_2
+		x = 5
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_agriculture_mechanization  }
+		completion_reward = {
+			add_ideas = realm_industrial_act
+		}
+	}
+
+	#Agriculture Mechanization
+	focus = {
+		id = EVO_agriculture_mechanization
+		icon = GFX_goal_generic_production2
+		x = 5
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = EVO_tuuranian_oil  }
+		completion_reward = {
+			add_ideas = agriculture_mech
+		}
+	}
+
+	#Gensokyo Supremacy
+	focus = {
+		id = EVO_gensokyo_supremacy
+		icon = GFX_goal_generic_attack_allies
+		x = 20
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = EVO_a_populist_desunion } prerequisite = { focus = EVO_super_soldiers }
+		mutually_exclusive = { focus = EVO_antiimperialism  }
+		completion_reward = {
+			GEN = {
+			create_wargoal = {
+				target = ESP
+				type = annex_everything
+			}
+			}
+			create_wargoal = {
+				target = GES
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HEY
+				type = annex_everything
+			}
+		}
+
+		will_lead_to_war_with = ESP
+		will_lead_to_war_with = GES
+		will_lead_to_war_with = HEY
+	}
+}

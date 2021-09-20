@@ -1,0 +1,23 @@
+state={
+	id=258
+	name="STATE_258"
+	provinces={
+		193 208 391 414 607 722 799 855 912 936 948 1051 1101 1202 1433 1435 1436 1560 1594 1672 1852 1929 1974 2070 2481 2487 2488 2506 2516 2527 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		rubber=24
+	}
+
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = BOT
+	}
+}

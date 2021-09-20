@@ -1,0 +1,23 @@
+state={
+	id=318
+	name="STATE_318"
+	provinces={
+		1017 2643 2646 2653 
+	}
+	manpower=3842674
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = NEV
+		victory_points = {
+			2653 14
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			dockyard = 2
+		}
+		add_core_of = NEV
+	}
+}

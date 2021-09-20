@@ -1,0 +1,21 @@
+state={
+	id=32
+	name="STATE_32"
+	provinces={
+		804 1933 
+	}
+	manpower=6452
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = PES
+		buildings = {
+			infrastructure = 3
+			arms_factory = 4
+			industrial_complex = 5
+			dockyard = 3
+		}
+		add_core_of = PES
+	}
+}

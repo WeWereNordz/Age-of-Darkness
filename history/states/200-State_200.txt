@@ -1,0 +1,19 @@
+state={
+	id=200
+	name="STATE_200"
+	provinces={
+		21 57 576 772 886 1178 1316 1358 1381 1536 1702 1783 1812 2191 2202 2277 2300 2309 2310 2324 2333 
+	}
+	manpower=3156456
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = EVO
+	}
+}

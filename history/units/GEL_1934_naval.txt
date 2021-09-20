@@ -1,0 +1,21 @@
+units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Küstenverteidigung"
+		naval_base = 1587
+		task_force = {				
+			name = "Über Wasserflotte"
+			location = 1587 # Danzig
+			ship = { name = "GES Sturm" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ALA } } }	
+			ship = { name = "GES Drang" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ALA } } }	
+		}		
+		task_force = {
+			name = "Unterwasserflotte"
+			location = 1587 # Danzig
+			ship = { name = "GES Braun" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }					
+			ship = { name = "GES Weiss" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }					
+			ship = { name = "GES Schwarz" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ALA } } }			
+		}
+	}
+}

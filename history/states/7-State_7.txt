@@ -1,0 +1,28 @@
+state={
+	id=7
+	name="STATE_7"
+	provinces={
+		117 231 322 361 1130 1152 1250 1353 1412 1849 2179 2259 2268 
+	}
+	manpower=1122265
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=24
+	}
+
+	history={
+		owner = EIR
+		victory_points = {
+			2268 30
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 5
+			arms_factory = 2
+			industrial_complex = 4
+		}
+		add_core_of = EIR
+	}
+}

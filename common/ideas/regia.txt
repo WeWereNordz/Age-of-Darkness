@@ -1,0 +1,770 @@
+ideas = {
+
+	country = {
+		international_trade = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.5
+				trade_laws_cost_factor = 1
+			}
+		}
+
+		sailor_cavo = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_org_factor = 0.15
+				war_support_weekly = 0.02
+			}
+		}
+
+		escuadron_201 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_air_superiority_attack_factor = 0.1
+				air_air_superiority_defence_factor = 0.05
+				air_air_superiority_agility_factor = 0.05
+			}
+		}
+
+		oceanic_ambitions = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_max_range_factor = 0.25
+				navy_org_factor = 0.25
+			}
+		}
+
+		scientific_thought = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		tiratori_scelti = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.1
+				special_forces_training_time_factor = -0.05
+			}
+		}
+
+		quinterosdraft = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population_factor = 0.15
+			}
+		}
+
+		mechanical_tinkering = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		eaglesaxes = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				surrender_limit = 0.25
+			}
+		}
+
+		regian_aces = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_ace_generation_chance_factor = 0.3
+			}
+		}
+
+		capitans_calibre = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_attack_factor = 0.05
+			}
+		}
+
+		improved_engines = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_speed_factor = 0.2
+			}
+			}
+		
+	}
+
+	political_advisor = {
+		
+		tancredo = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { fortification_engineer }
+		}
+
+		piero = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
+		milani = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { democratic_reformer }
+		}
+
+		giampaolo = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
+		fanucci = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { popular_figurehead }
+		}
+		basilio = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { silent_workhorse }
+		}
+		padovesi = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { prince_of_terror }
+		}
+		giampiero = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { backroom_backstabber }
+		}
+	}
+
+	theorist = {
+		menegotto = {
+			ledger = army
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		adone = {
+			ledger = air
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		pinto = {
+			ledger = navy
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	tank_manufacturer = {
+		
+		designer = yes
+		
+		cavallaro = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+		
+		flavio = {
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {			
+		designer = yes
+		
+		fantasma = { 
+			allowed = {
+				original_tag = REG
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		rosa = { 
+			allowed = {
+				original_tag = REG
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		aviazione = { 
+			allowed = {
+				original_tag = REG
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corellini = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		eredita = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		bonaldo = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+		}
+		
+		bertolini = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+		}
+
+		dellest = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { naval_manufacturer }
+			
+		}
+	}
+
+	industrial_concern = {
+		caggiano = {
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+		monele = {
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+
+		lombardi = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		regno = {
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		barbera = {
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	army_chief = {
+		camel = {
+
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { army_chief_planning_3 }			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		vitti = {
+
+			allowed = {
+				original_tag = REG
+			}
+						
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		bago = {
+
+			
+			allowed = {
+				original_tag = REG
+			}
+						
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+
+	high_command = {
+		
+		giuseppe = {
+			ledger = army
+
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { army_artillery_1 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		lori = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		
+		gasparo = {
+			ledger = navy
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { navy_screen_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+
+		pagnatto = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+
+		ottaviano = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { air_naval_strike_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		angelo = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { air_tactical_bombing_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		dellucci = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { army_cavalry_3 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+		crescenzo = {
+			ledger = air
+
+			
+			allowed = {
+				original_tag = REG
+			}
+			
+			traits = { air_airborne_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+	}
+}

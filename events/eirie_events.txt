@@ -1,0 +1,69 @@
+﻿###########################
+# Eirie events
+###########################
+
+add_namespace = eirie
+
+# Korvenia declines
+country_event = {
+	id = eirie.1
+	title = eirie.1.t
+	desc = eirie.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Very well.
+		name = eirie.1.a
+	}
+
+}
+
+# Espia declines
+country_event = {
+	id = eirie.3
+	title = eirie.3.t
+	desc = eirie.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Very well.
+		name = eirie.3.a
+	}
+
+}
+
+# Denied by Evolia
+country_event = {
+	id = eirie.6
+	title = eirie.6.t
+	desc = eirie.6.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # We'll look somewhere else.
+		name = eirie.6.a
+	}
+
+}
+
+# Denied by Eurada
+country_event = {
+	id = eirie.8
+	title = eirie.8.t
+	desc = eirie.8.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # We'll look somewhere else.
+		name = eirie.8.a
+	}
+
+}

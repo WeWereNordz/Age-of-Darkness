@@ -1,0 +1,202 @@
+division_template = {
+	name = "Rannán Coisithe Poblachtach"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Airtléire Tarraingthe Marcra"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2268
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2268
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2268
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1959
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 907
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 1903
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.18
+		start_equipment_factor = 0.4
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 1903
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.18
+		start_equipment_factor = 0.4
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 1959
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 1959
+		division_template = "Rannán Coisithe Poblachtach"
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 907
+		division_template = "Airtléire Tarraingthe Marcra"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 907
+		division_template = "Airtléire Tarraingthe Marcra"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 907
+		division_template = "Airtléire Tarraingthe Marcra"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 2268
+		division_template = "Airtléire Tarraingthe Marcra"
+		start_experience_factor = 0.11
+	}
+}
+
+air_wings = {
+	7 = {
+		fighter_equipment_0 = {
+			owner = "EIR"
+			amount = 120
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EIR"
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EIR"
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "EIR"
+		}
+		requested_factories = 1
+		progress = 0.64
+		efficiency = 70
+	}
+}

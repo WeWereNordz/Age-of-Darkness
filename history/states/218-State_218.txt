@@ -1,0 +1,31 @@
+state={
+	id=218
+	name="STATE_218"
+	provinces={
+		219 264 501 532 739 788 952 974 1103 1531 1912 1934 2015 2023 2343 
+	}
+	manpower=1728879
+	state_category = large_city
+	buildings_max_level_factor=1.000
+
+	resources={
+		steel=10
+	}
+	
+	history={
+		owner = ALA
+		victory_points = {
+			501 27
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 6
+			industrial_complex = 2
+			219 = {
+                naval_base = 8
+
+            }
+		}
+		add_core_of = ALA
+	}
+}

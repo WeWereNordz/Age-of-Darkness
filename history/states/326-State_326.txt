@@ -1,0 +1,21 @@
+state={
+	id=326
+	name="STATE_326"
+	provinces={
+		1451 1484 
+	}
+	manpower=434890
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			1484 2
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = POL
+	}
+}

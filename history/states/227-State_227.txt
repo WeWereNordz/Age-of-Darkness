@@ -1,0 +1,39 @@
+state={
+	id=227
+	name="STATE_227"
+	manpower = 1122265
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium = 86
+	}
+
+	history={
+		victory_points = {
+			1821 30
+		}
+		victory_points = {
+			431 7
+		}
+		victory_points = {
+			247 23
+		}
+		owner = NAB
+		
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			arms_factory = 2
+			industrial_complex = 2
+			2425 = {
+                naval_base = 3
+
+            }
+		}
+		add_core_of = NAB
+	}
+provinces={
+		205 247 402 431 586 602 618 744 748 766 897 904 1205 1278 1427 1533 1563 1580 1621 1656 1691 1766 1821 2014 2247 2351 2359 2386 2422 2425 2430 2434 
+	}
+}

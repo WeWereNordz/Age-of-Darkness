@@ -1,0 +1,25 @@
+state={
+	id=325
+	name="STATE_325"
+	provinces={
+		221 257 466 508 978 1026 1049 1551 1874 2076 2651 2654 2660 
+	}
+	manpower=3842674
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = NEV
+		victory_points = {
+			2076 30
+		}
+		victory_points = {
+			2651 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		add_core_of = NEV
+	}
+}

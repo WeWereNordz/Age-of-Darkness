@@ -1,0 +1,20 @@
+state={
+	id=238
+	name="STATE_238"
+	provinces={
+		10 435 439 590 707 732 830 925 950 1012 1199 1248 1361 1458 1675 1888 1978 2085 2166 2224 2379 2427 2436 
+	}
+	manpower=3303970
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 10
+		}
+		add_core_of = BOT
+	}
+}

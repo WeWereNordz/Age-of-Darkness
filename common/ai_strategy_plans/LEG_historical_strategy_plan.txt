@@ -1,0 +1,61 @@
+LEG_historical_plan = {
+	name = "Legatia Historical Plan"
+	desc = "Historical Legatia"
+
+	allowed = {
+		original_tag = LEG
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = democratic
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		LEG_STOP_THE_ROT
+		LEG_CRACKDOWN_CORRUP
+		LEG_STOP_COLLAPSE
+		LEG_EVERY_HOUSE
+		LEG_NOBLE_ELITE
+		LEG_FIVE_HOUSES
+		LEG_PACIFY_TOMBRAND
+		LEG_CRACKDOWN_COPPERBURN
+		LEG_HOUSE_BUCKMAR
+		LEG_HOUSE_GILMOUR
+		LEG_HOUSE_TOWNWAY
+		LEG_TOMBRAND_MINING
+		LEG_BUCKMAR_FARMING
+		LEG_LEGITIUS_RETURNS
+		LEG_DISBAND_COMMONS
+		LEG_CRACKDOWN_SPIRIT
+		LEG_DISBAND_MITRAS
+		LEG_REARMING
+		LEG_REWORKING_BUDGET
+		LEG_CON_REARMAMENT
+		LEG_PREPARE_FOR_INEVITABLE
+		LEG_FORTIFY_NORTH
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

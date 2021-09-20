@@ -1,0 +1,124 @@
+#reload countrycolors
+
+RSL = {
+	color = rgb { 166 136 183 }
+	color_ui = rgb { 166 136 183 }
+}
+
+ALA = {
+	color = rgb { 169 156 139 }
+	color_ui = rgb { 169 156 139 }
+}
+BAT = {
+	color = rgb { 198 149 117 }
+	color_ui = rgb { 198 149 117 }
+}
+BEF = {
+	color = rgb { 150 170 130 }
+	color_ui = rgb { 150 170 130 }
+}
+BOT = {
+	color = rgb { 40 110 80 }
+	color_ui = rgb { 40 110 80 }
+}
+CHE = {
+	color = rgb { 199 176 22 }
+	color_ui = rgb { 199 176 22 }
+}
+DES = {
+	color = rgb { 107 108 50 }
+	color_ui = rgb { 107 108 50 }
+}
+DUR = {
+	color = rgb { 40 75 150 }
+	color_ui = rgb { 40 75 150 }
+}
+EIR = {
+	color = rgb { 50 190 170 }
+	color_ui = rgb { 50 190 170 }
+}
+ESP = {
+	color = rgb { 125 13 0 }
+	color_ui = rgb { 125 13 0 }
+}
+EUR = {
+	color = rgb { 140 97 124 }
+	color_ui = rgb { 140 97 124 }
+}
+EVO = {
+	color = rgb { 50 97 121 }
+	color_ui = rgb { 50 97 121 }
+}
+FED = {
+	color = rgb { 101 114 88 }
+	color_ui = rgb { 101 114 88 }
+}
+GEN = {
+	color = rgb { 200 100 30 }
+	color_ui = rgb { 200 100 30 }
+}
+GES = {
+	color = rgb { 119 53 61 }
+	color_ui = rgb { 119 53 61 }
+}
+HER = {
+	color = rgb { 18 145 255 }
+	color_ui = rgb { 18 145 255 }
+}
+HEY = {
+	color = rgb { 18 145 255 }
+	color_ui = rgb { 18 145 255 }
+}
+LEG = {
+	color = rgb { 45 125 79 }
+	color_ui = rgb { 45 125 79 }
+}
+LIK = {
+	color = rgb { 109 146 160 }
+	color_ui = rgb { 109 146 160 }
+}
+NAB = {
+	color = rgb { 150 10 50 }
+	color_ui = rgb { 150 10 50 }
+}
+NAG = {
+	color = rgb { 173 231 255 }
+	color_ui = rgb { 173 231 255 }
+}
+NEV = {
+	color = rgb { 140 100 93 }
+	color_ui = rgb { 140 100 93 }
+}
+OYO = {
+	color = rgb { 109 70 103 }
+	color_ui = rgb { 109 70 103 }
+}
+PES = {
+	color = rgb { 100 70 60 }
+	color_ui = rgb { 100 70 60 }
+}
+POL = {
+	color = rgb { 193 46 46 }
+	color_ui = rgb { 193 46 46 }
+}
+REG = {
+	color = rgb { 200 190 100 }
+	color_ui = rgb { 200 190 100 }
+}
+TER = {
+	color = rgb { 219 219 219 }
+	color_ui = rgb { 219 219 219 }
+}
+NER = {
+	color = rgb { 73 62 72 }
+	color_ui = rgb { 73 62 72 }
+}
+GEL = {
+	color = rgb { 165 106 93 }
+	color_ui = rgb { 165 106 93 }
+}
+
+KOR = {
+	color = rgb { 255  240  195 }
+	color_ui = rgb { 255  240  195 }
+}

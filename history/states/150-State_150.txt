@@ -1,0 +1,18 @@
+state={
+	id=150
+	name="STATE_150"
+	provinces={
+		2799 
+	}
+	manpower=577
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = NAG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = NAG
+	}
+}

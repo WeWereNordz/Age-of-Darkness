@@ -1,0 +1,24 @@
+state={
+	id=231
+	name="STATE_231"
+	manpower = 1122265
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	history={
+		victory_points = {
+			1009 24
+		}
+		owner = NAB
+		
+		buildings = {
+			infrastructure = 1
+			dockyard = 2
+		}
+		add_core_of = NAB
+	}
+
+	provinces={
+		80 1009 1449 1648 1932 2160 
+	}
+}

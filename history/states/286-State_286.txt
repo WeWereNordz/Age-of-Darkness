@@ -1,0 +1,25 @@
+state={
+	id=286
+	name="STATE_286"
+	provinces={
+		23 443 469 519 538 775 944 1042 1203 1271 1585 1615 1758 1892 2041 2046 2050 2153 2230 
+	}
+	manpower=1062650
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = RSL
+		victory_points = {
+			469 13
+		}
+		buildings = {
+			infrastructure = 3
+			2153 = {
+                naval_base = 8
+
+            }
+		}
+		add_core_of = POL
+	}
+}

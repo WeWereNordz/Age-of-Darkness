@@ -1,0 +1,25 @@
+state={
+	id=99
+	name="STATE_99"
+	provinces={
+		65 2588 
+	}
+	manpower=65
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = REG
+		victory_points = {
+			65 2
+		}
+		buildings = {
+			infrastructure = 1
+			65 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = REG
+		add_core_of = POL
+	}
+}

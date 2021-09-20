@@ -1,0 +1,24 @@
+state={
+	id=333
+	name="STATE_333"
+	manpower = 650834
+	resources={
+		tungsten=3
+		steel=1
+	}
+	
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BAT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CHE
+		add_core_of = BAT
+	}
+	provinces={
+		475 481 848 858 1056 1128 1173 1362 1369 1634 1686 1979 2666 2674 
+	}
+}

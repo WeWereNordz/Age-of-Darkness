@@ -1,0 +1,35 @@
+state={
+	id=293
+	name="STATE_293"
+	provinces={
+		59 128 145 251 299 311 364 662 703 900 939 971 1001 1242 1280 1292 1376 1402 1523 1555 1747 1969 2163 2568 2579 2582 2590 2593 2594 
+	}
+	manpower=1728879
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+
+	resources={
+		tungsten=2
+	}
+	
+	history={
+		owner = LEG
+		victory_points = {
+			299 25
+		}
+		victory_points = {
+			1242 7
+		}
+		buildings = {
+			air_base = 5
+			infrastructure = 4
+			arms_factory = 4
+			dockyard = 8
+			1292 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = LEG
+	}
+}

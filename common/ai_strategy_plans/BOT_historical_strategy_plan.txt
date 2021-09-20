@@ -1,0 +1,85 @@
+BOT_historical_plan = {
+	name = "Botrelia Historical Plan"
+	desc = "Historical Botrelia"
+
+	allowed = {
+		original_tag = BOT
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = neutrality
+			has_government = democratic
+		}
+	}
+
+	ai_national_focuses = {
+		BOT_spreading_beltrism
+		BOT_horseworks_plan
+		BOT_securing_gerolstein
+		BOT_industrial_investments
+		BOT_chemical_experiments
+		BOT_research_in_chernaria
+		BOT_synthetic_fuel
+		BOT_horse_biofuel
+		BOT_liquid_gold
+		BOT_ministry_of_science
+		BOT_biofuel_work_camps
+		BOT_rules_for_thee
+		BOT_our_armed_forces
+		BOT_army_evaluation
+		BOT_efficient_instruction
+		BOT_botrelian_war_academy
+		BOT_beltrist_union
+		BOT_pacify_pithia
+		BOT_pacify_the_east
+		BOT_align_astovia
+		BOT_radolfsburg_or_war
+		BOT_through_the_corridor
+		BOT_infrastructure
+		BOT_tankworks
+		BOT_highway_projects
+		BOT_transportation
+		BOT_tergotto_industry
+		BOT_ironworks
+		BOT_cinieno_mines
+		BOT_slave_labor
+		BOT_human_experimentation
+		BOT_reinforce_despotism
+		BOT_strengthen_befglorta
+		BOT_seawall
+		BOT_westwall
+		BOT_reduced_requirements
+		BOT_lower_enlistment_age
+		BOT_both_genders_serve
+		BOT_lessons_of_war
+		BOT_maximum_injury
+		BOT_botrelian_war_horses
+		BOT_scrap_metal_machinery
+		BOT_big_befglowtus
+		BOT_mass_destruction_doctrine
+		BOT_child_soldier_divisions
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

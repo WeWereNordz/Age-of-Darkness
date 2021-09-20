@@ -1,0 +1,20 @@
+state={
+	id=290
+	name="STATE_290"
+	provinces={
+		398 511 582 932 1345 1797 2552 
+	}
+	manpower=1728879
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = REG
+
+		buildings = {
+			infrastructure = 5
+			dockyard = 2
+		}
+		add_core_of = REG
+	}
+}

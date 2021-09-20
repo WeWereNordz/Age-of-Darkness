@@ -1,0 +1,521 @@
+units = {
+	fleet = {
+		name = "Home Administration Polonia"			
+		naval_base = 1352 # capital
+		task_force = {
+			name = "Home Fleet"
+			location = 1352 # capital
+			ship = { name = "TA 88" definition = carrier equipment = { carrier_1 = { amount = 1 owner = POL } } 
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "POL" amount = 9 }
+					cv_nav_bomber_equipment_1 =  { owner = "POL" amount = 12 }
+				}
+			}
+			ship = { name = "TA 1" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 2" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 3" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 4" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 5" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 6"  definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 7" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 8" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 9" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Pyszka" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Piszczek" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Zulawski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Zawacki" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-95" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-96" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			### 1st Destroyer Flotilla
+			ship = { name = "N-98" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-99" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-100" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-101" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-102" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 12
+			ship = { name = "N-103" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-104" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-105" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-106" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			### 2nd Destroyer Flotilla
+			ship = { name = "N-97" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			# Destroyer Division 15
+			ship = { name = "N-111" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } } 						# to RCN as Qu'Appelle, 1943	
+			ship = { name = "N-112" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			ship = { name = "N-113" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			ship = { name = "N-114" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			# Destroyer Division 16
+			ship = { name = "N-107" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			ship = { name = "N-108" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			ship = { name = "N-109" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }
+			ship = { name = "N-110" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }							# to RCN as Saskatchewan, 1943	
+		}				
+		task_force = {
+			name = "Reserve Fleet"			
+			location = 1995 # Portsmouth
+			ship = { name = "TA 10" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 11" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 12" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 13" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Paduch" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Olender" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# Reserve Destroyer Division
+			ship = { name = "N-27" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-28" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-29" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-30" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-31" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "Divided Sea Patrol"
+			location = 1995 # Portsmouth
+			ship = { name = "HMS Courageous" definition = carrier equipment = { carrier_1 = { amount = 1 owner = POL } }
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "POL" amount = 9 }
+					cv_nav_bomber_equipment_1 =  { owner = "POL" amount = 24 }
+				}
+			}
+			ship = { name = "TA 14" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "TA 15" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }					
+			ship = { name = "TA Kubiś" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Ciborowski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Mickiewicz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# 5th Destroyer Flotilla
+			ship = { name = "TA 16" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		# to RCN as Assiniboine, 1939
+			# Destroyer Division 9
+			ship = { name = "N-32" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-33" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-34" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-35" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			# Destroyer Division 10
+			ship = { name = "N-36" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }				
+			ship = { name = "N-37" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-38" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-39" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+		}
+		task_force = {
+			name = "Zabask Force"
+			location = 1409 # Hull
+			### 7th Destroyer Flotilla
+			# Destroyer Division 13
+			ship = { name = "N-1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			# Destroyer Division 14
+			ship = { name = "N-5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-7" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-8" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+		}				
+		task_force = {
+			name = "Lithian Force"
+			location = 1157 # Scapa Flow
+			# 7th Cruiser Squadron
+			ship = { name = "TA Gala" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Bakowski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# 12th Cruiser Squadron
+			ship = { name = "TA 17" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Pilat" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Chmielowski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Suchy" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "King's Escort Force"
+			location = 1409 # Rosyth
+			# Rosyth Destroyer Division
+			ship = { name = "N-14" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-15" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-16" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+	}
+	### ARCTIC ADMINISTRATION ###
+	fleet = {
+		name = "South Arctic Administration"			
+		naval_base = 1943 # Scapa Flow
+		task_force = {
+			name = "Hellna's Fleet"
+			location = 265 # Dover
+			ship = { name = "TA 18" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Mierzejewski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# Nore Destroyer Division
+			ship = { name = "N-9" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-10" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-11" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-12" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-13" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			### 14th Destroyer Flotilla
+			ship = { name = "N-17" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 27
+			ship = { name = "N-18" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-19" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-20" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-21" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			# Destroyer Division 28
+			ship = { name = "N-26" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-115" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-116" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-117" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "Base 17 Fleet"
+			location = 1943 # Portsmouth
+			ship = { name = "TA 19" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			### 9th Destroyer Flotilla
+			# Destroyer Division 17
+			ship = { name = "N-22" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-23" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-24" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-25" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 18
+			ship = { name = "N-127" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-118" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "August's Fleet"
+			location = 1943 # Plymouth
+			# Western Approaches Destroyer Division
+			ship = { name = "N-119" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-120" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-121" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-122" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-123" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# 11th Destroyer Flotilla
+			ship = { name = "N-40" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 21
+			ship = { name = "N-41" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-42" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-43" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-44" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 22
+			ship = { name = "N-45" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-46" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-47" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-48" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "Nerjo Fleet"
+			location = 2201 # Gibraltar
+			ship = { name = "TA Czapiewski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Gwizdala" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-124" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			# 13th Destroyer Flotilla
+			ship = { name = "N-125" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 25
+			ship = { name = "N-126" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-49" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-50" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-51" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 26
+			ship = { name = "N-54" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-55" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-56" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-57" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "2nd Submarine Flotilla"
+			location = 2201 # Scapa Flow
+			# Submarine Division 21
+			ship = { name = "LP-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			# Submarine Division 22
+			ship = { name = "LP-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-7" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+		}
+		task_force = {
+			name = "5th Submarine Flotilla"
+			location = 2201 # Portsmouth
+			# Submarine Division 51
+			ship = { name = "LP-9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-10" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			# Submarine Division 52
+			ship = { name = "LP-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+		}
+	}
+
+	### GOLDEN SEA FLEET  ###			
+	fleet = {
+		name = "Golden Ocean Administration"
+		naval_base = 1028 # Alexandria
+		task_force = {
+			name = "Golden Ocean Fleet"
+			location = 1028 # Alexandria
+			ship = { name = "TA " definition = carrier equipment = { carrier_1 = { amount = 1 owner = POL } } 
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "POL" amount = 6 } #historical 9
+					cv_nav_bomber_equipment_1 =  { owner = "POL" amount = 24 } #historical 36
+				}
+			}
+			ship = { name = "TA 20" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "TA 21" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "TA 22" definition = battleship equipment = { battleship_1 = { amount = 1 owner = POL } } }				
+			ship = { name = "TA 23" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL  } } }
+			ship = { name = "TA 24" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL  } } }
+			ship = { name = "TA 25" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL  } } }		
+			ship = { name = "TA Kunda" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL  } } }	
+			ship = { name = "TA Dobosz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL  } } }
+			ship = { name = "TA Banaszak" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-52" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-53" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+			### 1st Destroyer Flotilla
+			ship = { name = "N-58" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			# Destroyer Division 1
+			ship = { name = "N-59" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-60" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-61" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-62" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			# Destroyer Division 2
+			ship = { name = "N-63" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-64" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-65" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			### 2nd Destroyer Flotilla
+			# Destroyer Division 3
+			ship = { name = "N-66" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-67" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-68" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-69" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			### 3rd Destroyer Flotilla
+			ship = { name = "N-70" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			# Destroyer Division 5
+			ship = { name = "N-74" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-75" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-76" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-77" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			# Destroyer Division 6
+			ship = { name = "N-78" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-79" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-80" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-81" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = POL } } }											
+			### 4th Destroyer Flotilla
+			ship = { name = "N-82" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			# Destroyer Division 7
+			ship = { name = "N-87" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			ship = { name = "N-88" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }
+			ship = { name = "N-89" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-90" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }			
+			# Destroyer Division 8
+			ship = { name = "N-83" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-84" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-85" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-86" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }				
+		}				
+		task_force = {				
+			name = "1st Submarine Flotilla"
+			location = 1537 # Alexandria
+			# Submarine Division 11
+			ship = { name = "LP-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			# Submarine Division 12
+			ship = { name = "LP-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-29" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-30" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }			
+		}				
+	}
+				
+	### EASTERN CONTINENT ###			
+	fleet = {
+		name = "Eastern Continent Administration"
+		naval_base = 1179 # Sierra Leone
+		task_force = {				
+			name = "America and West Indies Fleet"
+			location = 1179  # Bermuda
+			ship = { name = "TA 26" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 27" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "TA Zubek" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+		}				
+		task_force = {				
+			name = "South Atlantic Fleet"
+			location = 1179 # Sierra Leone
+			ship = { name = "TA Dziekan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "TA Janusz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# Destroyer Division 4
+			ship = { name = "N-71" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-72" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "N-73" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }	
+		}
+		task_force = {				
+			name = "South America Squadron"
+			location = 1179 # Falkland Is.
+			ship = { name = "TA 28" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "TA 29" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL  } } }
+			ship = { name = "TA Mróz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL  } } }	
+		}				
+		task_force = {				
+			name = "3rd Submarine Flotilla"			
+			location = 1179 # Sierra Leone
+			# Submarine Division 71
+			ship = { name = "LP-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+		}
+	}
+
+	### ATHA ###			
+	fleet = {
+		name = "Akrasian Ocean Administration"
+		naval_base = 326 # Singapore
+		task_force = {				
+			name = "Desunion Fleet"
+			location = 326 # Trincomalee, Ceylon
+			ship = { name = "TA Galicki" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Skokan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA Kotowski" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+		}				
+		task_force = {				
+			name = "Heydra Fleet"
+			location = 326 # Hong Kong			
+			ship = { name = "HMS Eagle" definition = carrier equipment = { carrier_1 = { amount = 1 owner = POL } } 
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "POL" amount = 18 }
+					cv_nav_bomber_equipment_1 =  { owner = "POL" amount = 18 }
+				}
+			}
+			ship = { name = "TA 30" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "TA 31" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "TA 32" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 33" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			ship = { name = "TA 34" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }
+			# Singapore & Hong Kong Division
+			ship = { name = "N-91" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "N-92" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "N-93" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "N-94" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POL } } }		
+		}				
+		task_force = {				
+			name = "7th Division"
+			location = 326 # Fongfale	
+			ship = { name = "TA Witucki" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }		# to RNZN 1941
+			ship = { name = "TA Lesiak" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = POL } } }		# to RNZN 1941
+		}				
+		task_force = {				
+			name = "4th Submarine Flotilla"			
+			location = 326 # Singapore
+			# Submarine Division 41
+			ship = { name = "LP-39" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-40" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-41" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-42" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-43" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			# Submarine Division 42
+			ship = { name = "LP-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-32" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-33" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }
+			ship = { name = "LP-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-36" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }		
+			ship = { name = "LP-37" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+			ship = { name = "LP-38" definition = submarine equipment = { submarine_1 = { amount = 1 owner = POL } } }	
+		}				
+	}
+}
+
+instant_effect = {
+	### Ongoing Ship Production Jan 1 1936 ###
+	# DD: G/H class (x9) ("HMS Gallant" "HMS Garland" "HMS Gipsy" "HMS Glowworm" "HMS Grafton" "HMS Grenade" "HMS Grenville" "HMS Greyhound" "HMS Griffin")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.33
+		amount = 1
+	}
+	# SS: S-class variant (x2) ("HMS Seawolf" "HMS Narwhal")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.40
+		amount = 1
+	}
+	# CL: Amphion-class variant ("HMS Amphion", Comm. 15-Jun, 1936, "HMS Apollo", Comm. 13-Jan 1936, "HMS Penelope", Comm. 12-Nov 1936)
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "POL" 
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "POL"
+		}
+		requested_factories = 1
+		progress = 0.50
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_1
+			creator = "POL"
+		}
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+	}
+}

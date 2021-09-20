@@ -1,0 +1,256 @@
+﻿###########################
+# Botrelia events
+###########################
+
+add_namespace = botrelia
+
+# Polonia Accepts Pact
+country_event = {
+	id = botrelia.1
+	title = botrelia.1.t
+	desc = botrelia.1.d
+	picture = GFX_report_event_canada_treaty
+	
+	is_triggered_only = yes
+
+	
+	option = { # Excellent.
+		name = botrelia.1.a
+	}
+
+}
+
+# Polonia Declines Pact
+country_event = {
+	id = botrelia.2
+	title = botrelia.2.t
+	desc = botrelia.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	
+	option = { # Drat!
+		name = botrelia.2.a
+	}
+
+}
+
+# Regia Accepts Pact
+country_event = {
+	id = botrelia.3
+	title = botrelia.3.t
+	desc = botrelia.3.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Excellent.
+		name = botrelia.3.a
+	}
+
+}
+
+# Regia Declines Pact
+country_event = {
+	id = botrelia.4
+	title = botrelia.4.t
+	desc = botrelia.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	
+	option = { # Drat!
+		name = botrelia.4.a
+	}
+
+}
+
+# Legatia Accepts Pact
+country_event = {
+	id = botrelia.5
+	title = botrelia.5.t
+	desc = botrelia.5.d
+	picture = GFX_report_event_canada_patriation
+	
+	is_triggered_only = yes
+
+	
+	option = { # Excellent.
+		name = botrelia.5.a
+	}
+
+}
+
+# Legatia Declines Pact
+country_event = {
+	id = botrelia.6
+	title = botrelia.6.t
+	desc = botrelia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	
+	option = { # Drat!
+		name = botrelia.6.a
+	}
+
+}
+
+
+# Eurada Accepts Pact
+country_event = {
+	id = botrelia.7
+	title = botrelia.7.t
+	desc = botrelia.7.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	
+	option = { # Excellent.
+		name = botrelia.7.a
+	}
+
+}
+
+# Eurada Declines Pact
+country_event = {
+	id = botrelia.8
+	title = botrelia.8.t
+	desc = botrelia.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	
+	option = { # Drat!
+		name = botrelia.8.a
+	}
+
+}
+
+#Evolia Refuses Demands
+country_event = {
+	id = botrelia.9
+	title = botrelia.9.t
+	desc = botrelia.9.d
+	picture = GFX_report_event_tur_cakmak_general_staff
+	
+	is_triggered_only = yes
+
+	
+	option = { #Leaves us no choice.
+		name = botrelia.9.a
+		declare_war_on = { type = annex_everything    target = EVO }
+	}
+
+}
+
+# Evolia Cedes Radolfsburg
+country_event = {
+	id = botrelia.10
+	title = botrelia.10.t
+	desc = botrelia.10.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+
+	
+	option = { #That went better than expected.
+		name = botrelia.10.a
+	}
+
+}
+
+#Civil War
+country_event = {
+    id = botrelia.11
+    title = botrelia.11.t
+    desc = botrelia.11.d
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+    fire_only_once = yes
+	
+    option = {
+        name = botrelia.11.a
+		
+        }
+    }
+
+# Guns to Botrelia
+country_event = {
+	id = botrelia.12
+	title = botrelia.12.t
+	desc = botrelia.12.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+
+	
+	option = { # Accept Deal
+		name = botrelia.12.a
+		ai_chance = { factor = 90 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		diplomatic_relation = {
+			country = POL
+			relation = non_aggression_pact
+			active = yes
+		}
+		POL = { country_event = { id = pithia.7 days = 1 } }
+	}
+	option = { # Reject Deal
+		name = botrelia.12.b
+		ai_chance = { factor = 10 }
+		POL = { country_event = { id = pithia.8 days = 1 } }
+	}
+}
+
+# Asking for Loncarres
+country_event = {
+	id = botrelia.13
+	title = botrelia.13.t
+	desc = botrelia.13.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # We are in no position to say no.
+		name = botrelia.13.a
+		ai_chance = { factor = 99 }
+		POL = {
+			transfer_state = 80
+			transfer_state = 278
+		}
+		POL = { country_event = { id = pithia.13 days = 1 } }
+	}
+	option = { # Reject Demands
+		name = botrelia.13.b
+		ai_chance = { factor = 1 }
+		POL = { country_event = { id = pithia.14 days = 1 } }
+	}
+}

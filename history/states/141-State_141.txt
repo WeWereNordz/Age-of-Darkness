@@ -1,0 +1,28 @@
+state={
+	id=141
+	name="STATE_141"
+	manpower = 1453764
+	resources={
+		steel=6
+		oil = 52
+	}
+	
+	state_category = town
+	buildings_max_level_factor=1.000
+
+	history={
+		owner = CHE
+		victory_points = {
+			2676 30
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = CHE
+	}
+	provinces={
+		12 191 601 824 847 876 1151 1226 1597 1938 2672 2676 2682 
+	}
+}

@@ -1,0 +1,15 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Heydrian Navy"			
+		naval_base = 753  # 
+		task_force = {				
+			name = "1st Fleet"
+			location = 753  # 
+			ship = { name = "Korvex" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = HEY } } } 		
+			ship = { name = "Huyui" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HEY } } }		
+			ship = { name = "D1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HEY } } }
+		}
+	}
+}
+

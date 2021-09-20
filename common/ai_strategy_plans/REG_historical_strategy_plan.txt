@@ -1,0 +1,63 @@
+REG_historical_plan = {
+	name = "Regia Historical Plan"
+	desc = "Historical Regia"
+
+	allowed = {
+		original_tag = REG
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			is_in_faction_with = EUR
+			has_government = communism
+			has_government = democratic
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		REG_KING_SPEECH
+		REG_UNIFIED_GOAL
+		REG_REFORMITY
+		REG_INFANTRY_BACK
+		REG_ARMS_MOVEMENT
+		REG_FACTORYMAN
+		REG_MARCHING_ADVANCE
+		REG_VIALS_AND_VICES
+		REG_EAGLES
+		REG_REGIA_MARINA
+		REG_MACHINEGUN_MOTORCYCLES
+		REG_GEN_INDUSTRY
+		REG_SCIENCE_EVO
+		REG_CHEM_WAR
+		REG_DIPLOMACY
+		REG_RATPACK
+		REG_FOSSIL
+		REG_DNA
+		REG_BUGLE_CALLS
+		REG_MECH_TWEAKS
+		REG_FEATHER_HEL
+		REG_GRUPO_ELITE
+		REG_ROARS
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

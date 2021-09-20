@@ -1,0 +1,21 @@
+state={
+	id=294
+	name="STATE_294"
+	provinces={
+		48 96 133 164 197 307 394 408 715 778 821 856 909 1090 1153 1247 1261 1270 1295 1378 1418 1742 1774 1778 1813 2013 2122 2127 2548 2572 2577 2608 2614 
+	}
+	manpower=3156456
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+		victory_points = {
+			2577 6
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EVO
+	}
+}

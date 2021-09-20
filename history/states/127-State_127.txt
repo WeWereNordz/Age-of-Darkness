@@ -1,0 +1,22 @@
+state={
+	id=127
+	name="STATE_127"
+	provinces={
+		212 742 2642 2645 
+	}
+	manpower=3842674
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = NEV
+		buildings = {
+			infrastructure = 3
+			742 = {
+                naval_base = 5
+
+            }
+		}
+		add_core_of = NEV
+	}
+}

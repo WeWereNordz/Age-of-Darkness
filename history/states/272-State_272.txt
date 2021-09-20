@@ -1,0 +1,21 @@
+state={
+	id=272
+	name="STATE_272"
+	provinces={
+		105 123 389 393 867 1142 1318 1548 1559 1705 1726 1730 1794 1920 2095 2110 2509 2510 2517 2537 
+	}
+	manpower=3303970
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+		victory_points = {
+			393 5
+		}
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = BOT
+	}
+}

@@ -1,0 +1,41 @@
+desperate_measures_category = {
+
+	PES_critical_atom_state = {
+
+		icon = generic_ignite_civil_war
+
+
+		allowed = {
+			original_tag = PES
+		}
+
+		available = {
+			has_completed_focus = PES_ATSP
+			surrender_progress > 0.3
+		}
+
+		visible = {
+			has_completed_focus = PES_ATSP
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = atomstate_tooltip
+			hidden_effect = {
+				add_nuclear_bombs = 1
+				launch_nuke = {
+				province = 2287
+				state = 9
+				use_nuke = yes
+				}
+				9 = {
+					remove_building = {
+						type = nuclear_reactor
+						level = 1
+					}
+				}
+				news_event = { id = mithrasnews.34 days = 2 }
+		}
+	}
+}
+}

@@ -1,0 +1,23 @@
+state={
+	id=41
+	name="STATE_41"
+	provinces={
+		996 998 1112 1366 1643 2328 2349 
+	}
+	manpower=3525338
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DES
+		victory_points = {
+			1366 30
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 6
+			industrial_complex = 6
+		}
+		add_core_of = DES
+	}
+}

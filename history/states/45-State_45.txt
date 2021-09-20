@@ -1,0 +1,19 @@
+state={
+	id=45
+	name="STATE_45"
+	provinces={
+		432 914 1853 2380 
+	}
+	manpower=7646
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BEF
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
+		add_core_of = BEF
+	}
+}

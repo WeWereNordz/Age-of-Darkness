@@ -1,0 +1,313 @@
+
+category = 
+{
+ name = "Voices"
+ soundeffects = {
+	EVO_infantry_idle
+	EVO_infantry_neutral_combat
+	EVO_infantry_positive_combat
+	EVO_infantry_retreat
+	 }
+	 
+	compressor = 
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+############# SOUNDEFFECTS
+
+########## EVO
+
+soundeffect = 
+{
+    name = "EVO_infantry_idle"
+    sounds = {
+		sound = evo_idle_001
+		sound = evo_idle_002
+		sound = evo_idle_003
+		sound = evo_idle_004
+		sound = evo_idle_005
+		sound = evo_idle_006
+		sound = evo_idle_007
+		sound = evo_idle_008
+		sound = evo_idle_009
+		sound = evo_idle_010
+		sound = evo_idle_011
+		sound = evo_idle_012
+		sound = evo_idle_013
+		sound = evo_idle_014
+		sound = evo_idle_015
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.70
+	volume_random_offset = { 0.0 -0.05 }
+	playbackrate_random_offset = { 0.0 -0.05 }
+}
+soundeffect = 
+{
+    name = "EVO_infantry_neutral_combat"
+    sounds = {
+		sound = evo_neutral_001
+		sound = evo_neutral_002
+		sound = evo_neutral_003
+		sound = evo_neutral_004
+		sound = evo_neutral_005
+		sound = evo_neutral_006
+		sound = evo_neutral_007
+		sound = evo_neutral_008
+		sound = evo_neutral_009
+		sound = evo_neutral_010
+
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.70
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect = 
+{
+    name = "EVO_infantry_positive_combat"
+    sounds = {
+		sound = evo_positive_001
+		sound = evo_positive_002
+		sound = evo_positive_003
+		sound = evo_positive_004
+		sound = evo_positive_005
+		sound = evo_positive_006
+		sound = evo_positive_007
+
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.70
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect = 
+{
+    name = "EVO_infantry_retreat"
+    sounds = {
+		sound = evo_retreat_001
+		sound = evo_retreat_002
+		sound = evo_retreat_003
+		sound = evo_retreat_004
+		sound = evo_retreat_005
+		sound = evo_retreat_006
+		sound = evo_retreat_007
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.70
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+############## AUDIO ASSETS
+
+########### EIR
+sound = 
+{
+	name = "evo_idle_001"
+	file = "evo/stay_alert.wav"
+}
+sound = 
+{
+	name = "evo_idle_002"
+	file = "evo/stay_alert2.wav"
+}
+sound = 
+{
+	name = "evo_idle_003"
+	file = "evo/stay_in_line.wav"
+}
+sound = 
+{
+	name = "evo_idle_004"
+	file = "evo/advance.wav"
+}
+sound = 
+{
+	name = "evo_idle_005"
+	file = "evo/advance2.wav"
+}
+sound = 
+{
+	name = "evo_idle_006"
+	file = "evo/come_on.wav"
+}
+sound = 
+{
+	name = "evo_idle_007"
+	file = "evo/everybody_move.wav"
+}
+sound = 
+{
+	name = "evo_idle_008"
+	
+	file = "evo/everybody_move2.wav"
+}
+sound = 
+{
+	name = "evo_idle_009"
+	file = "evo/get_moving.wav"
+}
+sound = 
+{
+	name = "evo_idle_010"
+	file = "evo/lets_go.wav"
+}
+sound = 
+{
+	name = "evo_idle_011"
+	file = "evo/move_it.wav"
+}
+sound = 
+{
+	name = "evo_idle_012"
+	file = "evo/move_up.wav"
+}
+sound = 
+{
+	name = "evo_idle_013"
+	file = "evo/move_up2.wav"
+}
+sound = 
+{
+	name = "evo_idle_014"
+	file = "evo/ok_move_move.wav"
+}
+sound = 
+{
+	name = "evo_idle_015"
+	file = "evo/squad_move_up.wav"
+}
+sound = 
+{
+	name = "evo_neutral_001"
+	file = "evo/contact.wav"
+}
+sound = 
+{
+	name = "evo_neutral_002"
+	file = "evo/covering_fire.wav"
+}
+sound = 
+{
+	name = "evo_neutral_003"
+	file = "evo/enemy_in_sight.wav"
+}
+sound = 
+{
+	name = "evo_neutral_004"
+	file = "evo/enemy_in_sight2.wav"
+}
+sound = 
+{
+	name = "evo_neutral_005"
+	file = "evo/enemy_spotted.wav"
+}
+sound = 
+{
+	name = "evo_neutral_006"
+	file = "evo/enemy.wav"
+}
+sound = 
+{
+	name = "evo_neutral_007"
+	file = "evo/got_company.wav"
+}
+sound = 
+{
+	name = "evo_neutral_008"
+	file = "evo/here_they_come.wav"
+}
+sound = 
+{
+	name = "evo_neutral_009"
+	file = "evo/incoming_fire.wav"
+}
+sound = 
+{
+	name = "evo_neutral_010"
+	file = "evo/keep_low.wav"
+}
+sound = 
+{
+	name = "evo_positive_001"
+	file = "evo/over_their_heads.wav"
+}
+sound = 
+{
+	name = "evo_positive_002"
+	file = "evo/got_him.wav"
+}
+sound = 
+{
+	name = "evo_positive_003"
+	file = "evo/one_down.wav"
+}
+sound = 
+{
+	name = "evo_positive_004"
+	file = "evo/enemy_down.wav"
+}
+sound = 
+{
+	name = "evo_positive_005"
+	file = "evo/neutralized.wav"
+}
+sound = 
+{
+	name = "evo_positive_006"
+	file = "evo/got_one.wav"
+}
+sound = 
+{
+	name = "evo_positive_007"
+	file = "evo/suppressive_fire.wav"
+}
+sound = 
+{
+	name = "evo_retreat_001"
+	file = "evo/medic.wav"
+}
+sound = 
+{
+	name = "evo_retreat_002"
+	file = "evo/pinned_down.wav"
+}
+sound = 
+{
+	name = "evo_retreat_003"
+	file = "evo/pinned_down2.wav"
+}
+sound = 
+{
+	name = "evo_retreat_004"
+	file = "evo/taking_fire.wav"
+}
+sound = 
+{
+	name = "evo_retreat_005"
+	file = "evo/taking_fire2.wav"
+}
+sound = 
+{
+	name = "evo_retreat_006"
+	file = "evo/heavy_fire.wav"
+}
+sound = 
+{
+	name = "evo_retreat_007"
+	file = "evo/heavy_fire2.wav"
+}

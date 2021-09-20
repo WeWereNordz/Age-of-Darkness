@@ -1,0 +1,6 @@
+﻿l_english:
+ desperate_measures_category:0 "Desperate Measures"
+ desperate_measures_category_desc:0 "Desperate times call for desperate measures. It is becoming evident that the war will be lost soon. If the enemy ever lands on our shores, we must take extreme action."
+ PES_critical_atom_state:0 "Detonate Atom Station Plant No. 1"
+ PES_critical_atom_state_desc:0 "The end is near. To prevent our atomic research from falling into enemy hands, we must destroy it ourselves."
+ atomstate_tooltip:0 "Destroys §YAtom Station Plant No. 1§!"

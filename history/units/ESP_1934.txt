@@ -1,0 +1,49 @@
+division_template = {
+	name = "Volunteer Force"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Southern Garrison"
+		location = 656
+		division_template = "Volunteer Force"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Northern Garrison"
+		location = 1065
+		division_template = "Volunteer Force"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.5
+	}
+}
+
+air_wings = {
+	236 = {
+		fighter_equipment_0 = {
+			owner = "ESP"
+			amount = 8
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ESP"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+}

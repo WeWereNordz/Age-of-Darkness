@@ -1,0 +1,20 @@
+state={
+	id=300
+	name="STATE_300"
+	provinces={
+		353 472 959 1534 1735 2037 2576 2589 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 3
+			dockyard = 2
+		}
+		add_core_of = BOT
+	}
+}

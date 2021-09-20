@@ -1,0 +1,27 @@
+state={
+	id=222
+	name="STATE_222"
+	manpower = 1122265
+	state_category = rural
+	buildings_max_level_factor=1.000
+	resources={
+		oil = 8
+	}
+
+	history={
+		victory_points = {
+			249 25
+		}
+		owner = HER
+		
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+		}
+		add_core_of = HER
+	}
+	
+	provinces={
+		91 249 1257 1379 1508 1608 
+	}
+}

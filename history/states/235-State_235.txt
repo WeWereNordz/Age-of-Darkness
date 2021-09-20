@@ -1,0 +1,40 @@
+state={
+	id=235
+	name="STATE_235"
+	provinces={
+		13 74 114 129 235 269 318 369 374 463 666 719 820 836 861 883 972 983 987 1046 1063 1092 1102 1195 1211 1359 1365 1393 1439 1450 1487 1495 1550 1689 1703 1776 1814 1851 1860 1893 1894 2071 2139 2143 2149 2223 2354 2361 2402 2404 2417 2433 2437 2452 
+	}
+	manpower=1728879
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+
+	resources={
+		chromium=14
+	}
+	
+	history={
+		owner = ALA
+		victory_points = {
+			1851 5
+		}
+		victory_points = {
+			1439 30
+		}
+		buildings = {
+			infrastructure = 5
+			air_base = 6
+			arms_factory = 3
+			dockyard = 5
+			2404 = {
+                naval_base = 6
+
+            }
+			1102 = {
+                naval_base = 6
+
+            }
+			
+		}
+		add_core_of = ALA
+	}
+}

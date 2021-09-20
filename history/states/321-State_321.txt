@@ -1,0 +1,22 @@
+state={
+	id=321
+	name="STATE_321"
+	provinces={
+		5 377 811 1170 1281 1504 1807 1863 2012 2084 2091 2655 
+	}
+	manpower=3842674
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DUR
+		victory_points = {
+			1504 23
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+		}
+		add_core_of = DUR
+	}
+}

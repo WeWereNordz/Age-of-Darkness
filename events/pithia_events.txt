@@ -1,0 +1,371 @@
+﻿###########################
+# Pithia events
+###########################
+
+add_namespace = pithia
+
+# Botrelia Desires Non-Aggression Pact
+country_event = {
+	id = pithia.1
+	title = pithia.1.t
+	desc = pithia.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # We accept this peace.
+		name = pithia.1.a
+		ai_chance = { factor = 90 }
+		diplomatic_relation = {
+			country = BOT
+			relation = non_aggression_pact
+			active = yes
+		}
+		BOT = { country_event = { id = botrelia.1  days = 1 } }
+	}
+	option = { # We reject your offer.
+		name = pithia.1.b
+		ai_chance = { factor = 10 }
+		BOT = { country_event = { id = botrelia.2 days = 1 } }
+	}
+}
+
+# Nagijix Refuses
+country_event = {
+	id = pithia.2
+	title = pithia.2.t
+	desc = pithia.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	option = { # Pithia will not be refused.
+		name = pithia.2.a
+		declare_war_on = { type = annex_everything    target = NAG }
+	}
+
+}
+
+# Heydra Refuses
+country_event = {
+	id = pithia.3
+	title = pithia.3.t
+	desc = pithia.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Pithia will not be refused.
+		name = pithia.3.a
+		declare_war_on = { type = annex_everything    target = HEY }
+	}
+
+}
+
+# Trial of Leon Cisek
+country_event = {
+	id = pithia.4
+	title = pithia.4.t
+	desc = pithia.4.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Lifetime Prison
+		name = pithia.4.a
+		ai_chance = { factor = 28 }
+		remove_ideas = unionist_sympathizers
+	}
+
+	option = { # Hung
+		name = pithia.4.b
+		ai_chance = { factor = 70 }
+		remove_ideas = unionist_sympathizers
+		add_stability = 0.1
+	}
+
+	option = { # Pardon Him
+		name = pithia.4.c
+		ai_chance = { factor = 2 }
+		add_stability = -0.2
+		remove_ideas = unionist_sympathizers
+		create_navy_leader = {
+			name = "Leon Cisek"
+			portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+			traits = { bold caustic_personality }
+		}
+	}
+
+}
+
+# Evolia Accepts Deal
+country_event = {
+	id = pithia.5
+	title = pithia.5.t
+	desc = pithia.5.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Our Influence Grows.
+		name = pithia.5.a
+	}
+
+}
+
+# Evolia Declines Deal
+country_event = {
+	id = pithia.6
+	title = pithia.6.t
+	desc = pithia.6.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # A shame.
+		name = pithia.6.a
+	}
+
+}
+
+# Botrelia Accepts Deal
+country_event = {
+	id = pithia.7
+	title = pithia.7.t
+	desc = pithia.7.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	option = { # Our Influence Grows.
+		name = pithia.7.a
+	}
+
+}
+
+# Botrelia Declines Deal
+country_event = {
+	id = pithia.8
+	title = pithia.8.t
+	desc = pithia.8.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # A shame.
+		name = pithia.8.a
+	}
+
+}
+
+# Befglorta Accepts Deal
+country_event = {
+	id = pithia.9
+	title = pithia.9.t
+	desc = pithia.9.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Our Influence Grows.
+		name = pithia.9.a
+	}
+
+}
+
+# Befglorta Declines Deal
+country_event = {
+	id = pithia.10
+	title = pithia.10.t
+	desc = pithia.10.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # A shame.
+		name = pithia.10.a
+	}
+
+}
+
+# Eirians Refuse
+country_event = {
+	id = pithia.11
+	title = pithia.11.t
+	desc = pithia.11.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Pithia will not be refused.
+		name = pithia.11.a
+		if = {
+			limit = { HER = { controls_state = 27 } }
+			declare_war_on = { type = annex_everything    target = HER }
+		}
+		if = {
+			limit = { EIR = { controls_state = 27 } }
+			declare_war_on = { type = annex_everything    target = EIR }
+		}
+		if = {
+			limit = { NAB = { controls_state = 27 } }
+			declare_war_on = { type = annex_everything    target = NAB }
+		}
+	}
+
+}
+
+# Korvenia Refuses
+country_event = {
+	id = pithia.12
+	title = pithia.12.t
+	desc = pithia.12.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Pithia will not be refused.
+		name = pithia.12.a
+		declare_war_on = { type = annex_everything    target = KOR }
+	}
+
+}
+
+# Botrelia Cedes South
+country_event = {
+	id = pithia.13
+	title = pithia.13.t
+	desc = pithia.13.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Excellent.
+		name = pithia.13.a
+	}
+
+}
+
+# Botrelia Denies South
+country_event = {
+	id = pithia.14
+	title = pithia.14.t
+	desc = pithia.14.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Time to take it by force.
+		name = pithia.14.a
+		declare_war_on = {
+			type = take_state_focus
+			generator = {
+				80
+			}
+			target = BOT
+		}
+		declare_war_on = {
+			type = take_state_focus
+			generator = {
+				278
+			}
+			target = BEF
+		}
+	}
+
+}
+
+# Befglorta Cedes Coast
+country_event = {
+	id = pithia.15
+	title = pithia.15.t
+	desc = pithia.15.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # Excellent.
+		name = pithia.15.a
+	}
+
+}
+
+# Befglorta Denies Coast
+country_event = {
+	id = pithia.16
+	title = pithia.16.t
+	desc = pithia.16.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Time to take it by force.
+		name = pithia.16.a
+		declare_war_on = {
+			type = take_state_focus
+			generator = {
+				253
+			}
+			target = BEF
+		}
+	}
+
+}
+
+# Deal With The Devil
+country_event = {
+	id = pithia.17
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		set_country_flag = sol_dialogue_twilight_first
+		clr_country_flag = sol_dialogue_twilight_second
+		clr_country_flag = sol_dialogue_twilight_third
+		clr_country_flag = sol_dialogue_twilight_fourth
+		clr_country_flag = sol_dialogue_twilight_win
+		clr_country_flag = sol_dialogue_twilight_lose
+		set_variable = { sol_dialogue_window_var = 1 }
+		sol_dialogue_display_effect = yes
+	}
+
+}
+
+# Evolia Rejects Membership
+country_event = {
+	id = pithia.18
+	title = pithia.18.t
+	desc = pithia.18.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	
+	option = { # We never liked them anyway...
+		name = pithia.18.a
+	}
+
+}

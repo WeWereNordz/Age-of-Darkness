@@ -1,0 +1,32 @@
+state={
+	id=295
+	name="STATE_295"
+	provinces={
+		51 403 410 553 558 596 882 1038 1168 1297 1312 1471 1475 1485 1492 1573 1596 1713 1756 1880 1899 1970 2563 2573 2585 2596 2603 
+	}
+	manpower=1062650
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=16
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			2603 15
+		}
+		victory_points = {
+			2585 5
+		}
+		buildings = {
+			infrastructure = 3
+			1485 = {
+                naval_base = 7
+
+            }
+		}
+		add_core_of = POL
+	}
+}

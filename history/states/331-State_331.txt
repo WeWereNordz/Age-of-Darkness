@@ -1,0 +1,34 @@
+state={
+	id=331
+	name="STATE_331"
+	provinces={
+		224 270 271 702 840 1083 1302 1310 1323 1339 2669 2677 
+	}
+	manpower=3842674
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium=12
+	}
+
+	history={
+		owner = TER
+		victory_points = {
+			1083 30
+		}
+		victory_points = {
+			271 11
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			industrial_complex = 2
+			2669 = {
+                naval_base = 5
+
+            }
+		}
+		add_core_of = TER
+	}
+}

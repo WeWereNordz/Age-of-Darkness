@@ -1,0 +1,74 @@
+﻿###########################
+# befglorta events
+###########################
+
+add_namespace = befglorta
+
+# Guns to Botrelia
+country_event = {
+	id = befglorta.1
+	title = befglorta.1.t
+	desc = befglorta.1.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = { # Accept Deal
+		name = befglorta.1.a
+		ai_chance = { factor = 90 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		diplomatic_relation = {
+			country = POL
+			relation = non_aggression_pact
+			active = yes
+		}
+		POL = { country_event = { id = pithia.9 days = 1 } }
+	}
+	option = { # Reject Deal
+		name = befglorta.1.b
+		ai_chance = { factor = 10 }
+		POL = { country_event = { id = pithia.10 days = 1 } }
+	}
+}
+
+# Asking for Bredadorp
+country_event = {
+	id = befglorta.2
+	title = befglorta.2.t
+	desc = befglorta.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+	
+	option = { # We are in no position to say no.
+		name = befglorta.2.a
+		ai_chance = { factor = 99 }
+		POL = {
+			transfer_state = 253
+		}
+		POL = { country_event = { id = pithia.15 days = 1 } }
+	}
+	option = { # Reject Demands
+		name = befglorta.2.b
+		ai_chance = { factor = 1 }
+		POL = { country_event = { id = pithia.16 days = 1 } }
+	}
+}

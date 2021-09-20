@@ -1,0 +1,38 @@
+state={
+	id=9
+	name="STATE_9"
+	provinces={
+		86 118 289 592 614 726 931 1219 1431 1632 1728 1960 1990 2197 2236 2261 2264 2269 2272 2278 2282 2287 2289 2301 
+	}
+	manpower=2873048
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+
+	resources={
+		steel=52
+		oil = 14
+	}
+
+	
+	history={
+		owner = PES
+		victory_points = {
+			2287 30
+		}
+		victory_points = {
+			2272 10
+		}
+		buildings = {
+			infrastructure = 7
+			fuel_silo = 2
+			arms_factory = 6
+			air_base = 7
+			dockyard = 4
+			2301 = {
+                naval_base = 10
+
+            }
+		}
+		add_core_of = PES
+	}
+}

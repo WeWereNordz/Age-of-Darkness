@@ -1,0 +1,18 @@
+state={
+	id=46
+	name="STATE_46"
+	provinces={
+		1368 
+	}
+	manpower=24
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BOT
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=180
+	name="STATE_180"
+	provinces={
+		1332 1716 2706 
+	}
+	manpower=310522
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			2706 2
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = POL
+	}
+}

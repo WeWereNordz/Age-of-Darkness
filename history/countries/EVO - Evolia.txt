@@ -1,0 +1,281 @@
+﻿capital = 225
+
+oob = "EVO_1934"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "EVO_1934_naval"
+	else = {
+		set_naval_oob = "EVO_1934_naval"
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	mass_assault = 1
+	gwtank = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	support_weapons = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_submarine = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	basic_battleship = 1
+	basic_light_cruiser = 1
+	basic_heavy_cruiser = 1
+	tech_military_police = 1
+	tech_recon = 1
+	basic_submarine = 1
+	basic_destroyer = 1
+	early_battlecruiser = 1
+}
+
+add_ideas = {
+	civilwarmemories
+	intercorps_rivalry
+	weak_foreign_policy
+	closed_economy
+}
+
+set_research_slots = 4
+set_war_support = 0.50
+set_stability = 0.50
+
+add_opinion_modifier = {
+	target = BOT
+	modifier = large_decrease
+}
+add_opinion_modifier = {
+	target = BOT
+	modifier = large_decrease
+}
+add_opinion_modifier = {
+	target = EUR
+	modifier = medium_decrease
+}
+add_opinion_modifier = { 
+	target = CHE
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = CHE
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = BEF
+	modifier = large_decrease
+}
+add_opinion_modifier = { 
+	target = BEF
+	modifier = large_decrease
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.6.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 89
+	communism = 4
+	neutrality = 7
+}
+
+	create_country_leader = {
+		name = "Franz Wolf"
+		desc = "wolf_desc"
+		picture = "gfx/leaders/Franz.dds"
+		expire = "1965.1.1"
+		ideology = populism
+		traits = {
+			dictator
+		}
+	}
+
+	create_field_marshal = {
+		name = "Ggiovalia von Sion"
+		portrait_path = "gfx/leaders/EVO/ggio.dds"
+		traits = { brilliant_strategist offensive_doctrine }
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Walther Siegmann"
+		portrait_path = "gfx/leaders/EVO/evo7.dds"
+		traits = { career_officer infantry_leader }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Armin Hitzieg"
+		portrait_path = "gfx/leaders/EVO/evo1.dds"
+		traits = { armor_officer trickster }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Atticus Krieger"
+		portrait_path = "gfx/leaders/EVO/krieger.dds"
+		traits = { old_guard harsh_leader trait_engineer }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Markus Eichenwald"
+		portrait_path = "gfx/leaders/EVO/evo2.dds"
+		traits = { trait_cautious }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Hans Model"
+		portrait_path = "gfx/leaders/EVO/hansmodel.dds"
+		traits = { old_guard war_hero infantry_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Reimer Hellmann"
+		portrait_path = "gfx/leaders/EVO/evo3.dds"
+		traits = { harsh_leader trait_reckless }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Gunther Senft"
+		portrait_path = "gfx/leaders/EVO/evo4.dds"
+		traits = { cavalry_officer }
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Franz Rauscher"
+		portrait_path = "gfx/leaders/EVO/evo5.dds"
+		traits = { infantry_officer }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Leopold von Pelt"
+		portrait_path = "gfx/leaders/EVO/evo6.dds"
+		traits = { trait_reckless }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Eduard Ruhr"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { navy_career_officer blue_water_expert }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		maneuvering_skill = 4
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Edmund Hargrove"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { naval_lineage gentlemanly ironside }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		maneuvering_skill = 4
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Karl Engelburg"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { superior_tactician }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Bastian Hoss"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { bold }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Anton Muras"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { naval_lineage fly_swatter }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 3
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Fritz Rieger"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { career_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}

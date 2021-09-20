@@ -1,0 +1,1414 @@
+focus_tree = {
+	id = pestfrilandfocus
+	continuous_focus_position = { x = 50 y = 950 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PES
+		}
+	}
+
+	default = no
+
+
+	#Aristocracy
+	focus = {
+		id = PES_ARISTOCRACY
+		icon = GFX_focus_generic_monarchy_1
+		x = 4
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+
+	#Cult of personality
+	focus = {
+		id = PES_COP
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = PES_ARISTOCRACY }
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+
+	#For the People
+	focus = {
+		id = PES_FTP
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = PES_ARISTOCRACY }
+		x = 6
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+
+	#Office of the faithful
+	########################################
+	#Needed for commissar
+	########################################
+	focus = {
+		id = PES_OOTF
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = PES_COP }
+		x = 3
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+	#Expansionism
+	focus = {
+		id = PES_EXPANSIONISM
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PES_COP }
+		x = 1
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			has_war_with = EIR
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = EIR }
+		}
+		will_lead_to_war_with = EIR
+
+	}
+	#Ideals for the future
+	focus = {
+		id = PES_IDEALSFTF
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = PES_EXPANSIONISM }
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+	}
+
+	#Political Favoring
+	focus = {
+		id = PES_PF
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = PES_EXPANSIONISM }
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 300
+		}
+
+	}
+	#War Time Economy
+	focus = {
+		id = PES_WTE
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = PES_PF }
+		prerequisite = { focus = PES_IDEALSFTF }
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = wartime_economy
+		}
+
+	}
+	#Direct Economy
+	focus = {
+		id = PES_DIRECTECONOMY
+		icon = GFX_focus_generic_self_management
+		prerequisite = { 
+			focus = PES_OOTF
+		}
+		prerequisite = { 
+			focus = PES_PURGEOPPOSITION
+		}
+		x = 4
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = { remove_ideas = weak_economy }
+
+	}
+	#Office of Truth
+	focus = {
+		id = PES_OOT
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = PES_DIRECTECONOMY }
+		x = 4
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+
+	}
+	#Futhering the Cause
+	focus = {
+		id = PES_FTC
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PES_OOT }
+		x = 4
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+
+	}
+	
+	#Salt Earth Conquered
+	focus = {
+		id = PES_SEC
+		icon = GFX_shovelearth
+		prerequisite = { focus = PES_FTC }
+		x = 4
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			18 = {
+			add_extra_state_shared_building_slots = 10
+					}
+					9 = {
+						add_extra_state_shared_building_slots = 10
+								}
+								39 = {
+									add_extra_state_shared_building_slots = 10
+											}
+											32 = {
+												add_extra_state_shared_building_slots = 10
+														}
+		}
+
+	}
+	
+	#Purge the Opposition
+	focus = {
+		id = PES_PURGEOPPOSITION
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = PES_FTP }
+		x = 5
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+	}
+	#United Cause
+	focus = {
+		id = PES_UNITEDCAUSE
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = PES_FTP }
+		x = 7
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+	#Revolution
+	focus = {
+		id = PES_REVOLUTION
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = PES_UNITEDCAUSE }
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+	#Trade Unions
+	focus = {
+		id = PES_TRADEUNIONS
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = PES_REVOLUTION }
+		x = 6
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = trade_unions
+		}
+
+	}
+	#Public Health
+	focus = {
+		id = PES_PUBLICHEALTH
+		icon = GFX_health
+		prerequisite = { focus = PES_TRADEUNIONS }
+		x = 6
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = widespread_disease
+		}
+
+	}
+	
+	#Past Heroes
+	focus = {
+		id = PES_PASTHEROES
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = PES_UNITEDCAUSE }
+		x = 8
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+	#Self Reliance
+	focus = {
+		id = PES_SELFRELIANCE
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = PES_PASTHEROES }
+		x = 8
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			18 = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+				}
+				add_resource = {
+					type = rubber
+					amount = 7
+				}
+			}
+		}
+
+	}
+	
+	#Well Versed Society
+	focus = {
+		id = PES_WVS
+		icon = GFX_book
+		prerequisite = { focus = PES_SELFRELIANCE }
+		x = 8
+		y = 5
+		cost = 10
+		available = {
+			has_completed_focus = PES_PUBLICU
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = { remove_ideas = low_literacy }
+
+	}
+
+	focus = {
+		id = PES_VOLKSFANTASIE
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		prerequisite = { focus = PES_WVS }
+		prerequisite = { focus = PES_PUBLICHEALTH }
+		x = 7
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = hivemind
+		}
+
+	}
+
+	
+
+	##############################################
+	####           INDUSTRY                   ####
+	##############################################
+
+	#The 15 year plan
+	focus = {
+		id = PES_TIYP
+		icon = GFX_focus_generic_industry_3
+		x = 12
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = PES_TIYP
+			bonus = 0.5
+			uses = 5
+			category = industry
+			}
+		}
+
+	}
+	#Public Universities
+	focus = {
+		id = PES_PUBLICU
+		icon = GFX_focus_research
+		prerequisite = { focus = PES_TIYP }
+		x = 12
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	#Academic investment
+	focus = {
+		id = PES_ACADEMICINV
+		icon = GFX_focus_research2
+		prerequisite = { focus = PES_PUBLICU }
+		x = 12
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	#Immigration of ???
+	focus = {
+		id = PES_IOI
+		icon = GFX_immigration
+		prerequisite = { focus = PES_ACADEMICINV }
+		x = 12
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = indigenous_migration
+				days = 1095
+			}
+		}
+
+	}
+
+	focus = {
+		id = PES_FORIEGN_THEORIES
+		icon = GFX_goal_continuous_research
+		prerequisite = { focus = PES_IOI }
+		x = 12
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = overseas_research
+		}
+
+	}
+	#Le nobel intellects
+	focus = {
+		id = PES_LNI
+		icon = GFX_brain
+		prerequisite = { focus = PES_FORIEGN_THEORIES }
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	#Rail Expansions
+	focus = {
+		id = PES_RE
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PES_TIYP }
+		x = 10
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			18 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+			}
+			}
+
+	}
+	#National Highways
+	focus = {
+		id = PES_NH
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = PES_RE }
+		x = 10
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			39 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+			}
+			32 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+			}
+
+	}
+	#Container Shipping
+	focus = {
+		id = PES_CS
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = PES_NH }
+		x = 10
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			47 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 4
+							province = 1623
+							instant_build = yes
+						}
+				}
+			}
+			43 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 4
+							province = 868
+							instant_build = yes
+						}
+				}
+			}
+			50 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 4
+							province = 2739
+							instant_build = yes
+						}
+				}
+			}
+		}
+
+	}
+	#Mass-Production Farming
+	focus = {
+		id = PES_MPF
+		icon = GFX_farming
+		prerequisite = { focus = PES_CS }
+		x = 10
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = PES_MPF
+			bonus = 1
+			uses = 5
+			category = industry
+			}
+		}
+
+	}
+	#Early Automation
+	focus = {
+		id = PES_EA
+		icon = GFX_innovation
+		prerequisite = { focus = PES_MPF }
+		x = 10
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = PES_MPF
+			bonus = 1
+			uses = 5
+			category = electronics
+			}
+		}
+
+	}
+	#Innovated Efficiency
+	focus = {
+		id = PES_IE
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = PES_EA }
+		prerequisite = { focus = PES_LNI }
+		x = 11
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = PES_IE
+			bonus = 1
+			uses = 1
+			technology = streamlined_line
+			technology = flexible_line
+			}
+		}
+
+	}
+
+
+	#Modern Grid
+	focus = {
+		id = PES_MG
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = PES_TIYP }
+		x = 14
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = PES_MG
+			bonus = 0.5
+			uses = 2
+			category = radar_tech
+			}
+		}
+
+	}
+	#High Power Hydroelectric
+	focus = {
+		id = PES_HPHE
+		icon = GFX_dam
+		prerequisite = { focus = PES_MG }
+		x = 14
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = hydroelectric_power
+		}
+
+	}
+	#Efficiency with Coal
+	focus = {
+		id = PES_EWC
+		icon = GFX_coal
+		prerequisite = { focus = PES_HPHE }
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = high_efficiency_energy
+		}
+
+	}
+	#Theory with Fission Power
+	focus = {
+		id = PES_TWFP
+		icon = GFX_magitekengine
+		prerequisite = { focus = PES_EWC }
+		x = 14
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EUR_magitek_theory
+				bonus = 2
+				uses = 1
+				technology = atomic_research
+			}
+		}
+
+	}
+	#Heavy Water
+	focus = {
+		id = PES_HW
+		icon = GFX_heavywater
+		prerequisite = { focus = PES_TWFP }
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = EUR_magitek_theory
+				bonus = 2
+				uses = 1
+				technology = atomic_research
+			}
+		}
+
+	}
+	#Atom Station Plant No. 1
+	focus = {
+		id = PES_ATSP
+		icon = GFX_atomstation
+		prerequisite = { focus = PES_HW }
+		x = 14
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+				set_technology = {
+					nuclear_reactor = 1
+				}
+			9 = {
+			add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = nuclear_reactor
+							level = 1
+							instant_build = yes
+						}
+					}
+		}
+
+	}
+
+
+	
+	##############################################
+	####           MANPOWER                  ####
+	##############################################
+
+	#Mobilization Drill
+	focus = {
+		id = PES_MD
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 18
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			army_experience = 10
+		}
+
+	}
+	#Coastal Navy
+	focus = {
+		id = PES_CN
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = PES_MD }
+		x = 16
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_CN
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+
+	}
+	#Offensive Fleets
+	focus = {
+		id = PES_OF
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = PES_CN }
+		x = 16
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_OF
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+		
+
+	}
+	#Merchant Guard
+	focus = {
+		id = PES_MERGUARD
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = PES_OF }
+		x = 16
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_MERGUARD
+				bonus = 0.5
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+				category = dd_tech
+			}
+		}
+
+	}
+	#Air Corps
+	focus = {
+		id = PES_AC
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = PES_MD }
+		x = 18
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_AC
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+			}
+		}
+
+	}
+	#Bomber Wings
+	focus = {
+		id = PES_BW
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = PES_AC }
+		x = 18
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_BW
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+
+	}
+	#Jet Testing
+	focus = {
+		id = PES_JT
+		icon = GFX_jettesting
+		prerequisite = { focus = PES_BW }
+		x = 18
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_JT
+				bonus = 0.5
+				uses = 2
+				category = jet_technology
+			}
+	}
+}
+	#Motorized Infantry
+	focus = {
+		id = PES_IC
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = PES_MD }
+		x = 20
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_IC
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+
+	}
+	#Armored Divisions
+	focus = {
+		id = PES_AD
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = PES_IC }
+		x = 20
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_AD
+				bonus = 3.0
+				category = armor
+			}
+		}
+
+	}
+	#Light Tank
+	focus = {
+		id = PES_LTANK
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = PES_AD }
+		x = 21
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_AD
+				bonus = 3.0
+				category = cat_light_armor
+			}
+		}
+
+	}
+	#Medium Tank
+	focus = {
+		id = PES_MTANK
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = PES_LTANK }
+		x = 20
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_AD
+				bonus = 3.0
+				category = cat_medium_armor
+			}
+		}
+
+	}
+	#Heavy Tank
+	focus = {
+		id = PES_HTANK
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = PES_LTANK }
+		x = 22
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_AD
+				bonus = 3.0
+				category = cat_heavy_armor
+			}
+		}
+
+	}
+	#Mech Divisions
+	focus = {
+		id = PES_MECHD
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = PES_AD }
+		x = 20
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_MECHD
+				bonus = 3.0
+				category = cat_mechanized_equipment
+			}
+		}
+		
+
+	}
+	#Grand Army of Pestfriland
+	focus = {
+		id = PES_GARMYOPFL
+		icon = GFX_grandarmy
+		prerequisite = { focus = PES_JT }
+		prerequisite = { focus = PES_MERGUARD }
+		prerequisite = { focus = PES_MECHD }
+		x = 18
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_manpower = 1000000
+		}
+
+	}
+
+	#Officers Corps
+	focus = {
+		id = PES_OCORPS
+		icon = GFX_focus_generic_home_defense
+		x = 26
+		y = 0
+		cost = 40
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		select_effect = {
+			country_event = { id = pestfriland.2 days = 1 }
+		}
+		completion_reward = {
+			custom_effect_tooltip = officer_corps_tooltip
+			hidden_effect = {
+				remove_ideas = crippled_officer_corps_3
+			}
+		}
+
+	}
+	#Officer Recruitment
+	focus = {
+		id = PES_OFFR
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = PES_OCORPS }
+		x = 28
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_manpower = 20000
+		}
+
+	}
+	#Old Guard Officers
+	focus = {
+		id = PES_OGO
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = PES_OFFR }
+		x = 27
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = { focus = PES_COFF }
+		completion_reward = {
+			add_ideas = old_guard_officers
+		}
+
+	}
+	#Cadet Officers
+	focus = {
+		id = PES_COFF
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = PES_OFFR }
+		x = 29
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		mutually_exclusive = { focus = PES_OGO }
+		completion_reward = {
+			add_ideas = young_buck_officers
+		}
+
+	}
+	#Commissars
+	focus = {
+		id = PES_COMMISSARS
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PES_COFF }
+		available = {
+			has_completed_focus = PES_OOTF
+		}
+		x = 30
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = political_commissars
+		}
+
+	}
+	#Academy Doctrines
+	focus = {
+		id = PES_ACADD
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { 
+			focus = PES_OGO
+			focus = PES_COFF
+		}
+		x = 28
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_ACADD
+				bonus = 1.0
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+
+	}
+	#War Games
+	focus = {
+		id = PES_WARG
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = PES_ACADD }
+		available = { has_completed_focus = PES_COMBA }
+		x = 28
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			army_experience = 30
+		}
+
+	}
+	#Invasion of Alamania
+	focus = {
+		id = PES_IOA
+		icon = GFX_alamaniawar
+		prerequisite = { focus = PES_WARG }
+		x = 28
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = ALA
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ALA }
+		}
+		will_lead_to_war_with = ALA
+
+	}
+	#Greater Pestfriland
+	focus = {
+		id = PES_GPEST
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		prerequisite = { focus = PES_IOA }
+		x = 28
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		bypass = {
+			has_war_with = REG
+			has_war_with = LEG
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = REG }
+			create_wargoal = { type = annex_everything target = LEG }
+		}
+		will_lead_to_war_with = REG
+		will_lead_to_war_with = LEG
+
+	}
+	#War Council
+	focus = {
+		id = PES_WARC
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = PES_OCORPS }
+		x = 24
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = war_council
+		}
+
+	}
+	#Strategic Planning
+	focus = {
+		id = PES_STRATP
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = PES_WARC }
+		x = 24
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_IC
+				bonus = 1.0
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+
+	}
+	#Offensive Planning
+	focus = {
+		id = PES_OFFP
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = PES_STRATP }
+		mutually_exclusive = {
+            focus = PES_DEFP
+        }
+		x = 25
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_OFFP
+				bonus = 1.0
+				uses = 3
+				technology = firebrigades
+				technology = backhand_blow
+				technology = modern_blitzkrieg
+			}
+		}
+
+	}
+	#Combined Arms
+	focus = {
+		id = PES_COMBA
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = PES_OFFP }
+		x = 25
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_OFFP
+				bonus = 5
+				uses = 2
+				category = signal_company_tech
+			}
+		}
+
+	}
+	#Long Campaign Logistics
+	focus = {
+		id = PES_LCL
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = PES_COMBA }
+		x = 25
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_OFFP
+				bonus = 5
+				uses = 2
+				category = logistics_tech
+			}
+		}
+
+	}
+	#Defensive Planning
+	focus = {
+		id = PES_DEFP
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = PES_STRATP }
+		mutually_exclusive = {
+            focus = PES_OFFP
+        }
+		x = 23
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = PES_DEFP
+				bonus = 1.0
+				uses = 3
+				technology = volkssturm
+				technology = nd_conscription
+				technology = werwolf_guerillas
+			}
+		}
+
+	}
+	#Island Fortress
+	focus = {
+		id = PES_ISLANDF
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = PES_DEFP }
+		x = 23
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		completion_reward = {
+			add_ideas = le_roc
+		}
+
+	}
+
+
+}

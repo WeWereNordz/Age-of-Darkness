@@ -1,0 +1,25 @@
+state={
+	id=240
+	name="STATE_240"
+	provinces={
+		54 82 162 533 550 638 657 664 690 701 792 865 908 993 1004 1018 1073 1124 1321 1354 1356 1387 1489 1614 1636 1782 1873 1963 2249 2389 2406 2414 2440 2441 2459 2467 
+	}
+	manpower=3303970
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		rubber=4
+	}
+
+	history={
+		owner = BOT
+		victory_points = {
+			664 20
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = BOT
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=262
+	name="STATE_262"
+	provinces={
+		26 126 138 171 180 418 540 581 851 906 933 1193 1647 1704 1902 1957 1993 2121 2175 2237 2248 2476 2498 2521 
+	}
+	manpower=3156456
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium=16
+		oil = 16
+	}
+
+	history={
+		owner = EVO
+		victory_points = {
+			2521 10
+		}
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = EVO
+	}
+}

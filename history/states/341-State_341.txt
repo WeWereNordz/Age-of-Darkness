@@ -1,0 +1,27 @@
+state={
+	id=341
+	name="STATE_341"
+	manpower = 650834
+	resources={
+		steel=12
+	}
+
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BAT
+		victory_points = {
+			2696 21 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CHE
+		add_core_of = BAT
+	}
+	
+	provinces={
+		143 275 387 401 1123 2001 2239 2696 2697 
+	}
+}

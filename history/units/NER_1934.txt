@@ -1,0 +1,106 @@
+division_template = {
+	name = "Garnizon Obrony"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brygada Alpinistów"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Garnizon Obrony"
+		location = 2693
+		division_template = "Garnizon Obrony"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Garnizon Obrony"
+		location = 30
+		division_template = "Garnizon Obrony"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "Garnizon Obrony"
+		location = 30
+		division_template = "Garnizon Obrony"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2695
+		division_template = "Brygada Alpinistów"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 30
+		division_template = "Brygada Alpinistów"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 695
+		division_template = "Brygada Alpinistów"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 695
+		division_template = "Brygada Alpinistów"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 567
+		division_template = "Brygada Alpinistów"
+		start_experience_factor = 0.2
+	}
+}
+
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "NER"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+}

@@ -1,0 +1,19 @@
+state={
+	id=117
+	name="STATE_117"
+	provinces={
+		175 516 963 1260 2638 
+	}
+	manpower=3842674
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = DUR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		add_core_of = DUR
+	}
+}

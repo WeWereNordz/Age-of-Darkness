@@ -1,0 +1,23 @@
+state={
+	id=251
+	name="STATE_251"
+	provinces={
+		16 102 233 273 291 303 346 588 672 771 1008 1301 1405 1859 2465 2490 
+	}
+	manpower=3156456
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	resources={
+		chromium=2
+	}
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EVO
+	}
+}

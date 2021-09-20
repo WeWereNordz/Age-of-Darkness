@@ -1,0 +1,22 @@
+state={
+	id=22
+	name="STATE_22"
+	provinces={
+		365 
+	}
+	manpower=124535
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GEN
+		buildings = {
+			infrastructure = 4
+			365 = {
+                naval_base = 1
+
+            }
+		}
+		add_core_of = GEN
+	}
+}

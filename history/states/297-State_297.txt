@@ -1,0 +1,35 @@
+state={
+	id=297
+	name="STATE_297"
+	provinces={
+		106 187 382 434 459 476 498 552 562 569 619 669 683 752 829 979 1075 1086 1111 1222 1415 1452 1802 1803 1897 1940 1955 1987 2045 2100 2567 2580 2601 2606 
+	}
+	manpower=1728879
+	state_category = large_city
+	buildings_max_level_factor=1.000
+
+	resources={
+		tungsten=2
+	}
+
+	
+	history={
+		owner = REG
+		victory_points = {
+			562 28
+		}
+		victory_points = {
+			829 5
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 5
+			829 = {
+                naval_base = 10
+
+            }
+		}
+		add_core_of = REG
+		add_core_of = LEG
+	}
+}

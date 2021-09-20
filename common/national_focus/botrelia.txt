@@ -1,0 +1,2023 @@
+﻿focus_tree = {
+	id = botreliafocus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BOT
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1080 }
+
+	#Horseworks Plan
+	focus = {
+		id = BOT_horseworks_plan
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_horseworks_plan
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+		}
+	}
+
+	#Chemical Experiments
+	focus = {
+		id = BOT_chemical_experiments
+		icon = GFX_focus_research
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = BOT_horseworks_plan
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_chemical_experiments
+				bonus = 1.0
+				uses = 1
+				technology = synth_oil_experiments
+			}
+		}
+	}
+
+	#Synthetic Fuel
+	focus = {
+		id = BOT_synthetic_fuel
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_chemical_experiments
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_synthetic_fuel
+				bonus = 1.0
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+
+	#Research in Chernaria
+	focus = {
+		id = BOT_research_in_chernaria
+		icon = GFX_goal_generic_scientific_exchange
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = BOT_chemical_experiments
+		}
+		completion_reward = {
+			add_ideas = secret_labs
+		}
+	}
+
+		#Industrial Investments
+		focus = {
+			id = BOT_industrial_investments
+			icon = GFX_goal_generic_construction
+			x = 5
+			y = 1
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_horseworks_plan
+			}
+			completion_reward = {
+				228 = {
+					add_extra_state_shared_building_slots = 10
+				}
+				258 = {
+					add_extra_state_shared_building_slots = 10
+				}
+				196 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				215 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				230 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				239 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				247 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				258 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				
+				210 = {
+					add_extra_state_shared_building_slots = 5
+				}
+				31 = {
+					add_extra_state_shared_building_slots = 5
+				}
+			}
+			
+			
+		}
+
+		#Industrial Investments
+		focus = {
+			id = BOT_infrastructure
+			icon = GFX_goal_generic_construct_infrastructure
+			x = 4
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_industrial_investments
+			}
+			completion_reward = {
+				253 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+				}
+				255 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+			}
+			119 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+			240 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+		}
+
+				
+				247 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+					239 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+				}
+			
+			228 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		}
+		207 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+			256 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+				}
+		}
+
+		#Tankworks
+		focus = {
+			id = BOT_tankworks
+			icon = GFX_focus_generic_tank_production
+			x = 6
+			y = 2
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_industrial_investments
+			}
+			completion_reward = {
+				240 = {
+				add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+						}
+			}
+		}
+
+		#Transportation
+		focus = {
+			id = BOT_transportation
+			icon = GFX_goal_generic_army_motorized
+			x = 6
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_tankworks
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = BOT_transportation
+					bonus = 1.0
+					uses = 2
+					category = motorized_equipment
+					category = cat_mechanized_equipment
+				}
+			}
+		}
+
+		#Tergotto Industry
+		focus = {
+			id = BOT_tergotto_industry
+			icon = GFX_goal_generic_construct_civ_factory
+			x = 5
+			y = 4
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_highway_projects
+			}
+			prerequisite = {
+				focus = BOT_transportation
+			}
+			completion_reward = {
+				268 = {
+				add_extra_state_shared_building_slots = 12
+							add_building_construction = {
+								type = industrial_complex
+								level = 12
+								instant_build = yes
+							}
+						}
+			}
+			
+		}
+
+		#Cinieno Mines
+		focus = {
+			id = BOT_cinieno_mines
+			icon = GFX_goal_generic_construction2
+			x = 6
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_tergotto_industry
+			}
+			completion_reward = {
+				279 = {
+					add_resource = {
+						type = chromium
+						amount = 24
+					}
+					add_resource = {
+						type = aluminium
+						amount = 19
+					}
+				}
+			}
+		}
+
+		#Ironworks
+		focus = {
+			id = BOT_ironworks
+			icon = GFX_focus_generic_steel
+			x = 4
+			y = 5
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_tergotto_industry
+			}
+			completion_reward = {
+				214 = {
+					add_resource = {
+						type = steel
+						amount = 66
+					}
+				}
+			}
+		}
+
+		#Slave Labor
+		focus = {
+			id = BOT_slave_labor
+			icon = GFX_slave
+			x = 5
+			y = 6
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_ironworks
+			}
+			prerequisite = {
+				focus = BOT_cinieno_mines
+			}
+			completion_reward = {
+				add_ideas = slave_labor_idea
+			}
+		}
+
+		#Highway Projects
+		focus = {
+			id = BOT_highway_projects
+			icon = GFX_focus_generic_rubber
+			x = 4
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INDUSTRY
+			}
+			prerequisite = {
+				focus = BOT_infrastructure
+			}
+			completion_reward = {
+				add_timed_idea = {
+					idea = highway_projects_idea
+					days = 1095
+				}
+			}
+		}
+
+	#Ministry of Science
+	focus = {
+		id = BOT_ministry_of_science
+		icon = GFX_focus_research2
+		x = 2
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = BOT_research_in_chernaria
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Horse Biofuel
+	focus = {
+		id = BOT_horse_biofuel
+		icon = GFX_biofuel
+		x = 0
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_synthetic_fuel
+		}
+		completion_reward = {
+			add_ideas = early_biofuel
+		}
+	}
+
+	#Liquid Gold
+	focus = {
+		id = BOT_liquid_gold
+		icon = GFX_gold
+		x = 0
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_horse_biofuel
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = early_biofuel
+				add_idea = liquid_gold_idea
+			}
+		}
+	}
+
+	#Biofuel Work Camps
+	focus = {
+		id = BOT_biofuel_work_camps
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_liquid_gold
+		}
+		prerequisite = {
+			focus = BOT_ministry_of_science
+		}
+		completion_reward = {
+			274 = {
+			add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = synthetic_refinery
+							level = 5
+							instant_build = yes
+						}
+					}
+		}
+	}
+
+	#Rules for Thee
+	focus = {
+		id = BOT_rules_for_thee
+		icon = GFX_focus_generic_royal_wedding
+		x = 1
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_biofuel_work_camps
+		}
+		completion_reward = {
+			remove_ideas = rampant_hedonism
+		}
+	}
+
+	#Human Experimentation
+	focus = {
+		id = BOT_human_experimentation
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 3
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = {
+			focus = BOT_rules_for_thee
+		}
+		prerequisite = {
+			focus = BOT_slave_labor
+		}
+		completion_reward = {
+			add_ideas = human_experimentation_idea
+		}
+	}
+
+	#Spreading Beltrism
+	focus = {
+		id = BOT_spreading_beltrism
+		icon = GFX_goal_support_fascism
+		x = 12
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = {
+			focus = BOT_oppose_johtan
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+
+		#Oppose Johtan
+		focus = {
+			id = BOT_oppose_johtan
+			icon = GFX_focus_generic_anti_fascist_diplomacy
+			x = 14
+			y = 0
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_INTERNAL_AFFAIRS
+			}
+			mutually_exclusive = {
+				focus = BOT_spreading_beltrism
+			}
+			completion_reward = {
+				country_event = { id = botrelia.11 days = 1 }
+			}
+		}
+
+	#Securing Gerolstein
+	focus = {
+		id = BOT_securing_gerolstein
+		icon = GFX_goal_generic_major_war
+		x = 13
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_spreading_beltrism focus = BOT_oppose_johtan
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GEL
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = GEL
+	}
+
+	#Reinforce Despotism
+	focus = {
+		id = BOT_reinforce_despotism
+		icon = GFX_goal_generic_demand_territory
+		x = 9
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_securing_gerolstein
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+
+	#Strengthen Befglorta
+	focus = {
+		id = BOT_strengthen_befglorta
+		icon = GFX_upgrade_bef
+		x = 8
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_reinforce_despotism
+		}
+		completion_reward = {
+			234 = {
+			add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = arms_factory
+							level = 3
+							instant_build = yes
+						}
+					}
+		}
+	}
+
+	#Seawall
+	focus = {
+		id = BOT_seawall
+		icon = GFX_focus_generic_coastal_fort
+		x = 8
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_strengthen_befglorta
+		}
+		completion_reward = {
+			253 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 696
+							instant_build = yes
+						}
+				}
+			}
+			195 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 2019
+							instant_build = yes
+						}
+				}
+			}
+			279 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 1052
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 4
+							province = 1885
+							instant_build = yes
+						}
+				}
+			}
+		}
+	}
+
+	#Westwall
+	focus = {
+		id = BOT_westwall
+		icon = GFX_goal_generic_construct_military
+		x = 8
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_seawall
+		}
+		completion_reward = {
+			240 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1782
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1004
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 638
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 664
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1073
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 2440
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 162
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 2249
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1321
+							instant_build = yes
+						}
+				}
+			}
+		}
+	}
+
+	#Strengthen Befglorta
+	focus = {
+		id = BOT_strengthen_chernaria
+		icon = GFX_upgrade_che
+		x = 10
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_reinforce_despotism
+		}
+		completion_reward = {
+			141 = {
+			add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = arms_factory
+							level = 3
+							instant_build = yes
+						}
+					}
+		}
+	}
+
+	#Secure the Desert
+	focus = {
+		id = BOT_securing_the_desert
+		icon = GFX_desert
+		x = 10
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_strengthen_chernaria
+		}
+		completion_reward = {
+			CHE= {
+			create_wargoal = {
+				target = BAT
+				type = annex_everything
+			}
+		}
+		}
+		will_lead_to_war_with = BAT
+	}
+
+	#Fortress Botrelia
+	focus = {
+		id = BOT_fortress_botrelia
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = {
+			focus = BOT_westwall
+		}
+		prerequisite = {
+			focus = BOT_securing_the_desert
+		}
+		completion_reward = {
+			add_ideas = bastion_of_beltrism
+		}
+	}
+
+	#Beltrist Union
+	focus = {
+		id = BOT_beltrist_union
+		icon = GFX_goal_generic_military_deal
+		x = 17
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_securing_gerolstein
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+
+	#Pacify Pithia
+	focus = {
+		id = BOT_pacify_pithia
+		icon = GFX_dealpolonia
+		x = 15
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_beltrist_union
+		}
+		completion_reward = {
+			POL = { country_event = { id =pithia.1 days = 1 } }
+		}
+	}
+
+	#Pacify the East
+	focus = {
+		id = BOT_pacify_the_east
+		icon = GFX_east_diplo
+		x = 19
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_beltrist_union
+		}
+		completion_reward = {
+			REG = { country_event = { id =regia.5 days = 1 } }
+			LEG = { country_event = { id = legatia.4 days = 2 } }
+			EUR = { country_event = { id = eurada.12 days = 3 } }
+		}
+	}
+
+	#Align Astovia
+	focus = {
+		id = BOT_align_astovia
+		icon = GFX_astovia
+		x = 18
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_pacify_the_east
+		}
+		mutually_exclusive = {
+			focus = BOT_invade_astovia
+		}
+		completion_reward = {
+			OYO = {
+				add_opinion_modifier = { target = BOT modifier = huge_increase }
+			}
+		}
+	}
+
+	#Invade Astovia
+	focus = {
+		id = BOT_invade_astovia
+		icon = GFX_attackastovia
+		x = 20
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_pacify_the_east
+		}
+		mutually_exclusive = {
+			focus = BOT_align_astovia
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = OYO
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = OYO
+	}
+
+	#Radolfsburg or War
+	focus = {
+		id = BOT_radolfsburg_or_war
+		icon = GFX_goal_generic_territory_or_war
+
+
+		x = 17
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_align_astovia focus = BOT_invade_astovia
+		}
+		prerequisite = {
+			focus = BOT_pacify_pithia
+		}
+		bypass = {
+			has_war_with = EVO
+		}
+		available = {
+			has_army_manpower = {
+				size > 1500000
+			}
+		}
+		completion_reward = {
+			EVO = { country_event = { id = evolia.7 days = 1 } }
+		}
+	}
+
+	#Through the Corridor
+	focus = {
+		id = BOT_through_the_corridor
+		icon = GFX_punch
+		x = 16
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_radolfsburg_or_war
+		}
+		completion_reward = {
+			if = {
+				limit = { NOT = {has_war_with = EVO } }
+				declare_war_on = {
+					target = EVO
+				}
+			}
+			add_timed_idea = {
+				idea = punching_through
+				days = 1095
+			}
+		}
+
+	}
+	#A Second Front
+	focus = {
+		id = BOT_a_second_front
+		icon = GFX_goal_generic_amphibious_assault
+		x = 18
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_radolfsburg_or_war
+		}
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_war_with = EVO } }
+				declare_war_on = {
+					target = EVO
+				}
+			}
+			add_timed_idea = {
+				idea = amphibious_planning
+				days = 1095
+			}
+		}
+
+	}
+
+	#Victory in Evolia
+	focus = {
+		id = BOT_victory_in_evolia
+		icon = GFX_victory
+		x = 17
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			OR = {
+				NOT = { country_exists = EVO }
+				EVO = { is_puppet_of = BOT }
+			}
+			
+		}
+		prerequisite = {
+			focus = BOT_through_the_corridor focus = BOT_a_second_front
+		}
+		completion_reward = {
+			add_ideas = beltrist_missionaries
+		}
+	}
+
+	#Victory in Evolia
+	focus = {
+		id = BOT_dismantle_pithian_hegemony
+		icon = GFX_focus_rom_abdicate
+		x = 14
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_victory_in_evolia
+		}
+		bypass = {
+			has_war_with = POL
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = POL
+	}
+
+	#Secrets of Nerjo
+	focus = {
+		id = BOT_secrets_of_nerjo
+		icon = GFX_secrets
+		x = 14
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_dismantle_pithian_hegemony
+		}
+	}
+
+	#Striking East
+	focus = {
+		id = BOT_striking_east
+		icon = GFX_east
+		x = 16
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_victory_in_evolia
+		}
+		bypass = {
+			has_war_with = ALA
+			has_war_with = REG
+			has_war_with = LEG
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = ALA }
+				create_wargoal = {
+					target = ALA
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = REG }
+				create_wargoal = {
+					target = REG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { country_exists = LEG }
+				create_wargoal = {
+					target = LEG
+					type = annex_everything
+				}
+			}
+		}
+		will_lead_to_war_with = REG
+		will_lead_to_war_with = ALA
+		will_lead_to_war_with = LEG
+	}
+
+		#Taking Sylvia
+		focus = {
+			id = BOT_taking_sylvia
+			icon = GFX_turntheguns
+			x = 16
+			y = 9
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_ANNEXATION
+			}
+			prerequisite = {
+				focus = BOT_striking_east
+			}
+			bypass = {
+				has_war_with = EUR
+			}
+			completion_reward = {
+				create_wargoal = {
+					target = EUR
+					type = annex_everything
+				}
+			}
+			will_lead_to_war_with = EUR
+		}
+
+		#Mass Conversions
+		focus = {
+			id = BOT_mass_conversions
+			icon = GFX_focus_CZE_german_puppet
+			x = 16
+			y = 10
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_POLITICAL
+			}
+			prerequisite = {
+				focus = BOT_taking_sylvia
+			}
+			available = {
+				has_completed_focus = BOT_human_experimentation
+			NOT = {
+				country_exists = EUR
+			}
+		}
+			completion_reward = {
+				custom_effect_tooltip = conversions_tooltip
+			}
+		}
+
+	#Pest Control
+	focus = {
+		id = BOT_pest_control
+		icon = GFX_pest
+		x = 18
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = {
+			focus = BOT_victory_in_evolia
+		}
+		bypass = {
+			has_war_with = PES
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = PES
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = PES
+	}
+
+	#Curing the Plague
+	focus = {
+		id = BOT_curing_the_plague
+		icon = GFX_plague
+		x = 18
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = BOT_pest_control
+		}
+		available = {
+			NOT = {
+				country_exists = PES
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = curing_plague_tooltip
+		}
+	}
+
+		#Minor States
+		focus = {
+			id = BOT_minor_states
+			icon = GFX_goal_generic_occupy_states_ongoing_war
+			x = 20
+			y = 8
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_ANNEXATION
+			}
+			prerequisite = {
+				focus = BOT_victory_in_evolia
+			}
+			bypass = {
+				has_war_with = EIR
+				has_war_with = DES
+			}
+			completion_reward = {
+				create_wargoal = {
+					target = EIR
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = DES
+					type = annex_everything
+				}
+			}
+			will_lead_to_war_with = EIR
+			will_lead_to_war_with = DES
+			
+		}
+
+		#Deal with Unionism
+		focus = {
+			id = BOT_deal_with_unionism
+			icon = GFX_goal_generic_war_with_comintern
+			x = 20
+			y = 10
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_ANNEXATION
+			}
+			prerequisite = {
+				focus = BOT_minor_states
+			}
+			bypass = {
+				has_war_with = KOR
+				has_war_with = ESP
+			}
+			completion_reward = {
+				create_wargoal = {
+					target = KOR
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = ESP
+					type = annex_everything
+				}
+			}
+			will_lead_to_war_with = KOR
+			will_lead_to_war_with = ESP
+		}
+
+		#Age of Darkness
+	focus = {
+		id = BOT_age_of_darkness
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		x = 17
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			NOT = {
+				country_exists = EVO
+				country_exists = POL
+				country_exists = LEG
+				country_exists = PES
+				country_exists = EUR
+				country_exists = REG
+			}
+		}
+		prerequisite = {
+			focus = BOT_secrets_of_nerjo
+		}
+		prerequisite = {
+			focus = BOT_mass_conversions
+		}
+		prerequisite = {
+			focus = BOT_curing_the_plague
+		}
+		prerequisite = {
+			focus = BOT_deal_with_unionism
+		}
+		completion_reward = {
+			set_cosmetic_tag = BOT_EMPIRE
+			news_event = { id = mithrasnews.53 days = 1 }
+			hidden_effect = {
+				play_age_of_darkness_effect = yes
+			}
+		}
+	}
+
+
+		#Our Armed Forces
+		focus = {
+			id = BOT_our_armed_forces
+			icon = GFX_focus_generic_combined_arms
+			x = 28
+			y = 0
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			completion_reward = {
+				army_experience = 5
+				air_experience = 5
+				navy_experience = 5
+			}
+		}
+
+	#Army Evaluation
+	focus = {
+	id = BOT_army_evaluation
+	icon = GFX_goal_generic_axis_build_infantry
+	x = 24
+	y = 1
+	cost = 10
+	search_filters = {
+		FOCUS_FILTER_MANPOWER
+	}
+	prerequisite = {
+		focus = BOT_our_armed_forces
+	}
+	completion_reward = {
+		army_experience = 10
+	}
+	}
+
+	#Efficient Instruction
+	focus = {
+		id = BOT_efficient_instruction
+		icon = GFX_focus_generic_military_academy
+		x = 23
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_army_evaluation
+		}
+		completion_reward = {
+			add_ideas = fast_training
+		}
+	}
+
+	#Botrelian War Academy
+	focus = {
+		id = BOT_botrelian_war_academy
+		icon = GFX_focus_generic_military_mission
+		x = 25
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_army_evaluation
+		}
+		completion_reward = {
+			add_ideas = botrelian_war_academy_idea
+		}
+	}
+
+	#Reduced Requirements
+	focus = {
+		id = BOT_reduced_requirements
+		icon = GFX_focus_generic_little_entente
+		x = 24
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_efficient_instruction
+		}
+		prerequisite = {
+			focus = BOT_botrelian_war_academy
+		}
+		completion_reward = {
+			add_ideas = reduced_requirements
+		}
+	}
+
+	#Lessons of War
+	focus = {
+		id = BOT_lessons_of_war
+		icon = GFX_goal_generic_position_armies
+		x = 22
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_reduced_requirements
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_lessons_of_war
+				bonus = 1.0
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	#Maximum Injury
+	focus = {
+		id = BOT_maximum_injury
+		icon = GFX_goal_generic_small_arms
+		x = 22
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_lessons_of_war
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_maximum_injury
+				bonus = 1.0
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+
+	#Mass Destruction Doctrine
+	focus = {
+		id = BOT_mass_destruction_doctrine
+		icon = GFX_goal_generic_army_artillery
+		x = 22
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_maximum_injury
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_mass_destruction_doctrine
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	#Lower Enlistment Age
+	focus = {
+		id = BOT_lower_enlistment_age
+		icon = GFX_focus_generic_manpower
+		x = 24
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_reduced_requirements
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = reduced_requirements
+				add_idea = low_enlistment_age
+			}
+		}
+	}
+
+	#Both Genders Serve
+	focus = {
+		id = BOT_both_genders_serve
+		icon = GFX_focus_chi_army_reform
+		x = 24
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_lower_enlistment_age
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = low_enlistment_age
+				add_idea = multigender_army
+			}
+		}
+	}
+
+	#Child Soldier Divisions
+	focus = {
+		id = BOT_child_soldier_divisions
+		icon = GFX_childsoldiers
+		x = 24
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_both_genders_serve
+		}
+		available = {
+			surrender_progress > 0.3
+		}
+		completion_reward = {
+			add_ideas = child_soldiers
+		}
+	}
+
+	#War Horses
+	focus = {
+		id = BOT_botrelian_war_horses
+		icon = GFX_goal_generic_cavalry
+		x = 26
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_reduced_requirements
+		}
+		completion_reward = {
+			add_ideas = botrelian_cavalry
+		}
+	}
+
+	#Scrap Metal Machinery
+	focus = {
+		id = BOT_scrap_metal_machinery
+		icon = GFX_focus_NZL_bob_semple_tank
+		x = 26
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_botrelian_war_horses
+		}
+		completion_reward = {
+			add_ideas = scrap_metal
+		}
+	}
+
+	#Big Befglowtus
+	focus = {
+		id = BOT_big_befglowtus
+		icon = GFX_focus_generic_army_tanks2
+		x = 26
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_scrap_metal_machinery
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_big_befglowtus
+				bonus = 2.0
+				uses = 1
+				technology = super_heavy_tank
+			}
+		}
+	}
+
+	#The Last War
+	focus = {
+		id = BOT_last_war
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_child_soldier_divisions
+		}
+		prerequisite = {
+			focus = BOT_mass_destruction_doctrine
+		}
+		prerequisite = {
+			focus = BOT_big_befglowtus
+		}
+		available = {
+			surrender_progress > 0.7
+		}
+		completion_reward = {
+			remove_ideas = reduced_requirements
+			remove_ideas = low_enlistment_age
+			remove_ideas = multigender_army
+			remove_ideas = child_soldiers
+			remove_ideas = fast_training
+			add_timed_idea = {
+				idea = the_last_war
+				days = 1825
+			}
+		}
+	}
+
+	#Air Force Evaluation
+	focus = {
+		id = BOT_air_force_evaluation
+		icon = GFX_goal_generic_build_airforce
+		x = 28
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_our_armed_forces
+		}
+		completion_reward = {
+			air_experience = 10
+		}
+		}
+
+	#Bomber Fleet
+	focus = {
+		id = BOT_bomber_fleet
+		icon = GFX_goal_generic_air_bomber
+		x = 27
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_air_force_evaluation
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_bomber_fleet
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		}
+
+	#Air Superiority Fighters
+	focus = {
+		id = BOT_air_superiority_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 29
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_air_force_evaluation
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_air_superiority_fighters
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+		}
+		}
+
+	#Interceptors
+	focus = {
+		id = BOT_interceptors
+		icon = GFX_goal_generic_air_fighter2
+		x = 28
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_bomber_fleet focus = BOT_air_superiority_fighters
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_interceptors
+				bonus = 1.0
+				uses = 1
+				category = heavy_air
+			}
+		}
+		}
+
+		#Rocket Tech
+		focus = {
+		id = BOT_rocket_tech
+		icon = GFX_focus_rocketry
+		x = 28
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_interceptors
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_rocket_tech
+				bonus = 2.0
+				uses = 1
+				category = rocketry
+			}
+		}
+		}
+
+	#Jet Experiments
+	focus = {
+		id = BOT_jet_experiments
+		icon = GFX_jettesting
+		x = 28
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_rocket_tech
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_jet_experiments
+				bonus = 2.0
+				uses = 1
+				category = jet_technology
+			}
+		}
+		}
+
+	#Leveling Cities
+	focus = {
+		id = BOT_leveling_cities
+		icon = GFX_focus_wonderweapons
+		x = 28
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_jet_experiments
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_leveling_cities
+				bonus = 1.0
+				uses = 5
+				category = strategic_destruction_tree
+			}
+		}
+		}
+
+	#The Final Flight
+	focus = {
+		id = BOT_the_final_flight
+		icon = GFX_goal_generic_CAS
+		x = 28
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_leveling_cities
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = final_flight_tooltip
+		}
+
+		}
+
+	#Naval Evaluation
+	focus = {
+		id = BOT_naval_evaluation
+		icon = GFX_goal_generic_build_navy
+		x = 32
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_our_armed_forces
+		}
+		completion_reward = {
+			navy_experience = 10
+		}
+		}
+
+		#Expand our Bases
+	focus = {
+		id = BOT_expand_our_bases
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 32
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_naval_evaluation
+		}
+		completion_reward = {
+			15 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 3
+							province = 920
+							instant_build = yes
+						}
+				}
+			}
+			300 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = naval_base
+							level = 3
+							province = 353
+							instant_build = yes
+						}
+				}
+			}
+		}
+		}
+
+		#Botrelian Superfleet
+		focus = {
+			id = BOT_botrelian_superfleet
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			x = 31
+			y = 3
+			cost = 10
+			search_filters = {
+				FOCUS_FILTER_MANPOWER
+			}
+			prerequisite = {
+				focus = BOT_expand_our_bases
+			}
+			completion_reward = {
+				add_tech_bonus = {
+					name = BOT_botrelian_superfleet
+					bonus = 1.0
+					uses = 1
+					category = bb_tech
+				}
+			}
+			}
+
+	#Modularity
+	focus = {
+		id = BOT_modularity
+		icon = GFX_goal_continuous_naval_production
+		x = 31
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_botrelian_superfleet
+		}
+		completion_reward = {
+			add_ideas = dreams_of_the_sea
+		}
+		}
+
+	#Submarine Strangulation
+	focus = {
+		id = BOT_submarine_strangulation
+		icon = GFX_goal_generic_wolf_pack
+		x = 33
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_expand_our_bases
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_submarine_strangulation
+				bonus = 1.0
+				uses = 2
+				technology = trade_interdiction
+				technology = convoy_interdiction
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+			}
+		}
+		}
+
+	#Improved Sub Designs
+	focus = {
+		id = BOT_improved_submarine_designs
+		icon = GFX_goal_generic_navy_submarine
+		x = 33
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_submarine_strangulation
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_improved_submarine_designs
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+		}
+
+	#Super Battleship
+	focus = {
+		id = BOT_the_super_battleship
+		icon = GFX_goal_generic_navy_battleship
+		x = 32
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_improved_submarine_designs focus = BOT_modularity
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BOT_the_super_battleship
+				bonus = 1.0
+				uses = 1
+				category = shbb_tech
+			}
+		}
+		}
+
+	#Extended Range Patrols
+	focus = {
+		id = BOT_extended_range_patrols
+		icon = GFX_bot_patrol
+		x = 32
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = {
+			focus = BOT_the_super_battleship
+		}
+		completion_reward = {
+			add_ideas = extended_range_patrols
+		}
+		}
+}

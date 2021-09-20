@@ -1,0 +1,18 @@
+units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Verdedigingsvloot"
+		naval_base = 2664
+		task_force = {				
+			name = "Vernietigingsvloot"
+			location = 2664 # Danzig
+			ship = { name = "DD-1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }	
+			ship = { name = "DD-2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }
+			ship = { name = "DD-3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }
+			ship = { name = "DD-4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }	
+			ship = { name = "DD-5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }	
+			ship = { name = "DD-6" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAG } } }	
+		}		
+	}
+}

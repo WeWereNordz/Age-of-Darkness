@@ -1,0 +1,278 @@
+﻿capital = 9
+
+oob = "PES_1934"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "PES_1934_naval"
+	else = {
+		set_naval_oob = "PES_1934_naval"
+	}
+}
+
+# Starting tech
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	mobile_warfare = 1
+	gwtank = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	fuel_silos = 1
+	motorised_infantry = 1
+	support_weapons = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_submarine = 1
+	tech_recon = 1
+	basic_battleship = 1
+	early_battleship = 1
+	basic_light_cruiser = 1
+	basic_heavy_cruiser = 1
+	basic_light_cruiser = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_heavy_cruiser = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+}
+
+add_ideas = {
+	crippled_officer_corps_1
+	low_literacy
+	weak_economy
+	widespread_disease
+}
+
+set_research_slots = 2
+set_war_support = 0.25
+set_stability = 0.25
+
+add_opinion_modifier = { 
+	target = BOT
+	modifier = medium_decrease
+}
+add_opinion_modifier = { 
+	target = BOT
+	modifier = small_decrease
+}
+add_opinion_modifier = { 
+	target = BEF
+	modifier = medium_decrease
+}
+add_opinion_modifier = { 
+	target = BEF
+	modifier = small_decrease
+}
+add_opinion_modifier = { 
+	target = CHE
+	modifier = medium_decrease
+}
+add_opinion_modifier = { 
+	target = CHE
+	modifier = small_decrease
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.6.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	fascism	= 100
+}
+
+	create_country_leader = {
+		name = "Otto Wahr"
+		desc = "POLITICS_GENERIC_DESC"
+		picture = "gfx/leaders/PES/baron.dds"
+		expire = "1965.1.1"
+		ideology = nazism
+		traits = {
+			empire_builder
+		}
+	}
+
+	create_field_marshal = {
+		name = "Hansou Wahr"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { offensive_doctrine }
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 1
+	}
+
+	create_field_marshal = {
+		name = "Rollo Norkden"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+	}
+
+	create_field_marshal = {
+		name = "Mephisto Krass"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { organizer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 4
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Jörgen Von Thröttle"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { armor_officer trickster }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Yossef Knutt"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard harsh_leader trait_engineer }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 4
+	}
+
+	create_corps_commander = {
+		name = "Theodore Krehl"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { trait_cautious }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Warren Nowitzki"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { old_guard war_hero infantry_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 3
+	}
+
+	create_corps_commander = {
+		name = "Raphael Goldfeld"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { harsh_leader trait_reckless }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_corps_commander = {
+		name = "Olivier Kroeger"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { cavalry_officer }
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+
+	create_corps_commander = {
+		name = "Sven Gehring"
+		portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+		traits = { infantry_officer }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Fredrick Klügmann"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { navy_career_officer }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		maneuvering_skill = 4
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Philip Gottlob"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { gentlemanly }
+		skill = 4
+		attack_skill = 4
+		defense_skill = 3
+		maneuvering_skill = 4
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Lowie Tendler"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { superior_tactician }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Lucas Ochs"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { bold }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}
+
+	create_navy_leader = {
+		name = "Albrecht Haugwitz"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { naval_lineage }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 3
+		maneuvering_skill = 3
+		coordination_skill = 2
+	}
+
+	create_navy_leader = {
+		name = "Feliks Jentzsch"
+			picture = "Portrait_USA_Raymond_A_Spruance.dds"
+		traits = { career_officer }
+		skill = 2
+		attack_skill = 3
+		defense_skill = 4
+		maneuvering_skill = 3
+		coordination_skill = 3
+	}

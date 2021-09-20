@@ -1,0 +1,25 @@
+state={
+	id=42
+	name="STATE_42"
+	provinces={
+		2330 
+	}
+	manpower=42
+	state_category = tiny_island
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+		victory_points = {
+			2330 2
+		}
+		buildings = {
+			infrastructure = 1
+			2330 = {
+                naval_base = 4
+
+            }
+		}
+		add_core_of = BOT
+	}
+}

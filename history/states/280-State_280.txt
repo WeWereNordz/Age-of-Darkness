@@ -1,0 +1,25 @@
+state={
+	id=280
+	name="STATE_280"
+	provinces={
+		55 166 232 242 321 380 478 482 801 890 984 1480 1567 1645 1679 1755 1805 1931 1951 1996 2062 2524 
+	}
+	manpower=3156456
+	state_category = rural
+	buildings_max_level_factor=1.000
+
+	resources={
+		rubber=52
+	}
+	
+	history={
+		owner = EVO
+		victory_points = {
+			232 17
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EVO
+	}
+}

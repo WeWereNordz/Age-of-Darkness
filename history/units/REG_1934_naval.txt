@@ -1,0 +1,303 @@
+units= {
+
+	##### NAVAL UNITS #####
+	### REGIA ###
+		
+	fleet = {
+		name = "Ammiraglio Luciano"
+		naval_base = 1384 # Trestina South
+		task_force = {
+			name = "1a Regione Navale"
+			location = 1384 # Trestina South			
+			# 2e Division des Contre-Torpilleurs
+			ship = { name = "Genest" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Charbonnier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Blanchet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Malfitano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 2e Légère Division des Contre-Torpilleurs
+			ship = { name = "Labriola" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Bettini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Coco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 4e Légère Division des Contre-Torpilleurs
+			ship = { name = "D'Urso" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Boudet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Jacquinot" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 5e Légère Division des Contre-Torpilleurs
+			ship = { name = "Pierrat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Le Cerminara" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Battistoni" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 6e Légère Division des Contre-Torpilleurs
+			ship = { name = "Falsetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Fouché" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Brunelle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+		}				
+		task_force = {				
+			name = "4ème Escadron Sous-Marins"			
+			location = 1384 # Trestina South			
+			# 2e Division des Sous-Marins
+			ship = { name = "Charbonneau" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Matthieu" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 6e Division des Sous-Marins
+			ship = { name = "Auclair" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Trintignant" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Chinnici" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Dello Russo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 8e Division des Sous-Marins
+			ship = { name = "Simonelli" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Sabino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+		}				
+	}
+
+	fleet = {
+		name = "Ammiraglio Ovest"			
+		naval_base = 2493 # Befglorta Channel Base
+		task_force = {				
+			name = "2a Regione Navale"			
+			location = 2493 # Befglorta Channel Base	
+			ship = { name = "Lo Bosco" definition = battleship equipment = { battleship_1 = { amount = 1 owner = REG } } }       
+			ship = { name = "De Palma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = REG } } }		
+			ship = { name = "Pietro" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = REG } } }	
+			ship = { name = "Chapelle" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Lagarde" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Baumé" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Pierre-Louis" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Chausson" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = REG } } }
+			# 4e Division des Contre-Torpilleurs
+			ship = { name = "Leblanc" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Doisneau" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 5e Division des Contre-Torpilleurs
+			ship = { name = "De Villiers" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Nazzareno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Braccia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 7e Division des Contre-Torpilleurs
+			ship = { name = "Bellanti" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Cappuccio" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Mascari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 9e Division des Contre-Torpilleurs
+			ship = { name = "D'Acunto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Gasperini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Masucci" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+		}				
+		task_force = {				
+			name = "Forza d'incursione del 1. Canale"			
+			location = 2493 # Toulon			
+			# 1e Division des Sous-Marins
+			ship = { name = "Lo Bello" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 3 Division des Sous-Marins
+			ship = { name = "Andreotti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Courbet" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Chappuis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Bazalgette" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 5e Division des Sous-Marins
+			ship = { name = "Mossé" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Jacquier" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Charpentier" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+		}				
+		task_force = {				
+			name = "Forza di incursione del 2. Canale"			
+			location = 2493 # Toulon			
+			# 7e Division des Sous-Marins
+			ship = { name = "Suzanne" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Micheaux" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 13e Division des Sous-Marins
+			ship = { name = "Thibault" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Edmond Lièvremont" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Romuald" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Baillieu" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			# 15e Division des Sous-Marins
+			ship = { name = "Pierre-Antoine" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Cuvillier" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Bachelot" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Cormier" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+		}				
+	}
+				
+	fleet = {
+		name = "Ammiraglio Sud"			
+		naval_base = 829 # Tartopolia
+		task_force = {				
+			name = "Flottiglia di Basso Mare"			
+			location = 829 # Taropolia			
+			ship = { name = "Figuier" definition = battleship equipment = { battleship_1 = { amount = 1 owner = REG } } }			
+			ship = { name = "Brunet" definition = battleship equipment = { battleship_1 = { amount = 1 owner = REG } } }			
+			ship = { name = "Deloffre" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = REG } } }			
+			ship = { name = "Fraioli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = REG } } }
+			# 1e Légère Division des Contre-Torpilleurs
+			ship = { name = "La Baccari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Le Giannuzzi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Palladia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 3e Légère Division des Contre-Torpilleurs
+			ship = { name = "Fiorenzo De Tore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Astorino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Patrizio" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 7e Légère Division des Contre-Torpilleurs
+			ship = { name = "Carbo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Sarni" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Sviturno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 8e Légère Division des Contre-Torpilleurs
+			ship = { name = "Raniero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Valfrido" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Auberto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			# 9e Légère Division des Contre-Torpilleurs
+			ship = { name = "Rosica" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+			ship = { name = "Cassese" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }	
+		}				
+		task_force = {				
+			name = "Force d'Attaque Légère"			
+			location = 829 # Bizerte, Tunisia	
+			ship = { name = "Bernier" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = REG } } }	# La Galissonnière variant
+			ship = { name = "Luongo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = REG } } }
+			# 1e Division des Contre-Torpilleurs
+			ship = { name = "Grazioso" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG  } } }
+			ship = { name = "Giaccone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Montalbano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 3e Division des Contre-Torpilleurs
+			ship = { name = "Gravino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Portelli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Tirone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			# 6e Division des Contre-Torpilleurs
+			ship = { name = "Gregorio Cutillo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Clinio Fidanza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Di Lella" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = REG } } }
+		}				
+		task_force = {				
+			name = "Flotte d'or"			
+			location = 829 # Tartopolia			
+			ship = { name = "Monaldo Michelini" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Di Giacomo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Sofia Gentile" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = REG } } }
+		}
+		task_force = {				
+			name = "2ème Escadron Sous-Marins" 			
+			location = 829 # Tartopolia			
+			# 4e Division des Sous-Marins
+			ship = { name = "Antioco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Spano Mantovani" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Battista" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Deodato" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 12e Division des Sous-Marins
+			ship = { name = "Paolini" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Giasone" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Cittadino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Gandolfo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Magliano" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Cassarino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			# 14e Division des Sous-Marins
+			ship = { name = "Odorico Tiberi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Pierluigi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Costanzo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Accurso" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+		}				
+		task_force = {				
+			name = "6ème Escadron Sous-Marins"			
+			location = 829 # Tartopolia	
+			# 9e Division des Sous-Marins
+			ship = { name = "Fazzina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Cresci" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Di Bacco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			# 10e Division des Sous-Marins
+			ship = { name = "Savoca" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Gesualdi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Lauriano" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			# 17e Division des Sous-Marins
+			ship = { name = "Ansaldo Furio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Prospera Pignone" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Iolanda Caranci" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+			ship = { name = "Graziella" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }
+		}				
+		task_force = {				
+			name = "Sous-Marins Force de Levant"			
+			location = 829 # Tartopolia			
+			# 11e Division des Sous-Marins
+			ship = { name = "D'Alonzo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Zama" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+			ship = { name = "Santeramo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = REG } } }				
+		}				
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	# Ship Production
+	# SS: Redoutable variant (x7) ("Le Héros" "Le Conquérant" "Le Tonnant" "Agosta" "Sfax" "Casabianca" "Bévéziers")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.90
+		amount = 4
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_1
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.85
+		amount = 3
+	}
+	# SS: Minerve class (x4) ("Iris" "Minerve" "Vénus" "Junon")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 4
+	}
+	# DD: Le Fantasque class (x4) ("Le Malin" "L'Indomptable" "Le Fantasque" "Le Triomphant")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 4
+	}
+	# BC: Dunkerque (Comm. 16-Apr, 1937)	# REVISIT -- class vs. ship type vs. starting techs inconsistent
+	add_equipment_production = {
+		equipment = {
+			type = battle_cruiser_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	 # CL: La Galissonnière class (x4) ("Jean de Vienne" "Marseillaise" "Gloire" "Montcalm") ("Georges Leygues" launched 24-Mar 1936)
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.35
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.20
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "REG" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		amount = 1
+	}
+}

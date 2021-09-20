@@ -1,0 +1,31 @@
+state={
+	id=128
+	name="STATE_128"
+	manpower = 650834
+	resources={
+		chromium=2
+	}
+
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BAT
+		victory_points = {
+			255 21
+		}
+		buildings = {
+			infrastructure = 2
+			1907 = {
+                naval_base = 3
+
+            }
+		}
+		add_core_of = CHE
+		add_core_of = BAT
+	}
+
+	provinces={
+		32 140 250 255 305 502 545 940 961 1224 1576 1732 1772 1907 2002 2067 2114 2652 2659 2663 2667 2670 
+	}
+}

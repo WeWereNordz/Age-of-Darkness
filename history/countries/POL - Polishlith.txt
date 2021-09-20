@@ -1,0 +1,261 @@
+﻿capital = 304
+
+oob = "POL_1934"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "POL_1934_naval"
+	else = {
+		set_naval_oob = "POL_1934_naval"
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	trench_warfare = 1
+	gwtank = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	fuel_silos = 1
+	support_weapons = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_submarine = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	early_carrier = 1
+	basic_destroyer = 1
+	basic_light_cruiser = 1
+	basic_heavy_cruiser = 1
+	basic_battleship = 1
+	heavy_battleship = 1
+	basic_carrier = 1
+	basic_submarine = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+}
+
+declare_war_on = {
+	target = RSL
+	type = annex_everything
+}
+
+add_ideas = {
+	medieval_nation
+	anti_war_sentiment
+	disjointed_army
+	civil_conflict
+	closed_economy
+}
+
+set_research_slots = 2
+set_war_support = 0.3
+set_stability = 0.7
+
+puppet = NER
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.6.3"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 20
+	neutrality = 80
+}
+
+create_country_leader = {
+	name = "Feliks Casimir"
+	desc = "feliks_desc"
+	picture = "gfx/leaders/Feliks.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		aging_monarch
+	}
+}
+
+create_field_marshal = {
+	name = "Jan Młynek"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { old_guard expert_delegator}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Adrian Literski"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { armor_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Anatol Prusiński"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { old_guard infantry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ludomir Gajda"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Maciej Bobiński"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Konstanty Urbański"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { cavalry_officer }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Andrzej Rynkiewicz"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "Hellna Paderewska"
+		picture = "Portrait_USA_Raymond_A_Spruance.dds"
+	traits = { naval_lineage navy_career_officer ironside }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Walerian Kupiec"
+		picture = "Portrait_Japan_Nobutake_Kondo.dds"
+	traits = { battleship_adherent naval_lineage fly_swatter }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Alfons Bula"
+		picture = "Portrait_Japan_Takeo_Takagi.dds"
+	traits = { spotter }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Daniel Sikorski"
+		picture = "Portrait_Japan_Soemu_Toyoda.dds"
+	traits = { bold ironside old_guard_navy }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Maksymilian Skarbek"
+		picture = "Portrait_Japan_Jisaburo_Ozawa.dds"
+	traits = { bold aviation_enthusiast navy_career_officer blockade_runner superior_tactician }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Marceli Bielec"
+		picture = "Portrait_Japan_Zengo_Yoshida.dds"
+	traits = { old_guard_navy }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Konstantyn Dragon"
+		picture = "Portrait_Japan_Hiroaki_Abe.dds"
+	traits = { battleship_adherent }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Zygfryd Nycz"
+		picture = "Portrait_Japan_Tadashige_Daigo.dds"
+	traits = { navy_career_officer seawolf }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Oskar Radziński"
+		picture = "Portrait_Japan_Gengo_Hyakutake.dds"
+	traits = { gentlemanly }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}

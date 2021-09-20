@@ -1,0 +1,22 @@
+state={
+	id=196
+	name="STATE_196"
+	provinces={
+		4 64 85 267 294 479 794 860 1071 1276 1398 1459 1810 1939 1962 2055 2167 2173 2271 2274 2297 2299 2321 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = BOT
+		victory_points = {
+			860 25
+		}
+		buildings = {
+			infrastructure = 4
+			dockyard = 2
+		}
+		add_core_of = BOT
+	}
+}

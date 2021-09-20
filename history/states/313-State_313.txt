@@ -1,0 +1,19 @@
+state={
+	id=313
+	name="STATE_313"
+	provinces={
+		60 1212 1644 2104 
+	}
+	manpower=1062650
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+	}
+}

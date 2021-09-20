@@ -1,0 +1,20 @@
+state={
+	id=345
+	name="STATE_345"
+	provinces={
+		120 1022 1543 1770 2714 
+	}
+	manpower=46
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+
+		buildings = {
+			infrastructure = 8
+			dockyard = 12
+		}
+		add_core_of = POL
+	}
+}

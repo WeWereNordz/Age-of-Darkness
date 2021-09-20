@@ -1,0 +1,41 @@
+﻿l_english:
+ # SHOULD NOT BE TRANSLATED FROM ENGLISH
+
+ # HOI4 Soundtrack
+ maintheme:0 "And Ever We Fight On"
+ general_peace_1:0 "An Unwelcome Discovery"
+ general_peace_2:0 "The Bomb Is Set"
+ general_peace_3:0 "Darkness"
+ general_peace_4:0 "The Horror, the Horror!"
+ general_peace_5:0 "Get You Home"
+ general_peace_6:0 "Grab that Minigun"
+ general_peace_7:0 "Sniper Crossfire"
+ general_peace_8:0 "Back In Action"
+ general_peace_9:0 "Battle My Own"
+ general_peace_10:0 "Energy Shielding"
+ general_peace_11:0 "The Mobile Factory"
+ general_peace_12:0 "The Crane"
+ general_peace_13:0 "The MAWLR"
+ general_peace_14:0 "Exploring Stahl Arms"
+ general_peace_15:0 "Dies Irae"
+ general_peace_16:0 "Just A Moment Ago"
+ general_peace_17:0 "Birth of War"
+ 
+ general_war_1:0 "Enter the Wasp"
+ general_war_2:0 "Escape on the Tram"
+ general_war_3:0 "Flight of the Intruder"
+ general_war_4:0 "Jetpack Flight"
+ general_war_5:0 "Spotted!"
+ general_war_6:0 "Rescue"
+ general_war_7:0 "Fortification"
+ general_war_8:0 "Hammer"
+ general_war_9:0 "General Gets Away"
+ general_war_10:0 "Ice Chase"
+ general_war_11:0 "The Heavy Returns"
+ general_war_12:0 "Unfair Fight & Captured"
+ general_war_13:0 "Forever"
+ general_war_14:0 "I am the Hunted"
+ general_war_15:0 "No Exit Strategy"
+ eirie_civil_war:0 "Óró! 'Sé do bheatha 'bhaile!"
+ 
+ # NEW MUSIC NAMES HERE BELOW

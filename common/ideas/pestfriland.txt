@@ -1,0 +1,791 @@
+ideas = {
+
+	country = {
+		hivemind = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.10
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
+				army_org_factor = 0.05
+				war_support_factor = 0.2
+			}
+		}
+
+		hydroelectric_power = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		war_council = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.25
+			}
+		}
+
+		overseas_research = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		le_roc = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
+			}
+		}
+
+		political_commissars = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.10
+				training_time_factor = 0.1
+			}
+		}
+
+		high_efficiency_energy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_fuel_consumption_factor = -0.25
+				navy_fuel_consumption_factor = -0.25
+				air_fuel_consumption_factor = -0.25
+			}
+		}
+
+		wartime_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conversion_cost_mil_to_civ_factor = -0.3
+			}
+		}
+
+		trade_unions = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.2
+			}
+		}
+
+		indigenous_migration = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+
+		old_guard_officers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_cost_factor = 1
+				army_leader_start_level = 4
+				navy_leader_cost_factor = 1
+				navy_leader_start_level = 4
+			}
+		}
+
+		young_buck_officers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_cost_factor = -0.3
+				army_leader_start_level = 2
+				navy_leader_cost_factor = -0.3
+				navy_leader_start_level = 2
+			}
+		}
+
+		weak_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		low_literacy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.4
+			}
+		}
+
+		crippled_officer_corps_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain_mult = -0.44
+				army_attack_factor = -0.33
+				army_defence_factor = -0.33
+				mobilization_speed = -0.2
+			}
+		}
+
+		crippled_officer_corps_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain_mult = -0.7
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				mobilization_speed = -0.3
+			}
+		}
+
+		crippled_officer_corps_3 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain_mult = -0.22
+				army_attack_factor = -0.16
+				army_defence_factor = -0.16
+				mobilization_speed = -0.1
+			}
+		}
+
+		widespread_disease = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.1
+			}
+		}
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		stausstanks = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	political_advisor = {
+		
+		dirkleon = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { quartermaster_general }
+		}
+		morten = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { war_industrialist }
+		}
+		pierre = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { backroom_backstabber }
+		}
+		nieln = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { communist_revolutionary }
+		}
+		marcone = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { democratic_reformer }
+		}
+		olaf = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { fascist_demagogue }
+		}
+	}
+
+	theorist = {
+		letzel = {
+			ledger = army
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		eisenstadt = {
+			ledger = air
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		rogergeiger = {
+			ledger = navy
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		oandr = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+		}
+
+		tempest = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { naval_manufacturer }
+			
+		}
+	}
+
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		drachenfeuer = { 
+			allowed = {
+				original_tag = PES
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		aerialsolutions = { 
+			allowed = {
+				original_tag = PES
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		griefdev = { 
+			allowed = {
+				original_tag = PES
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+
+		pesgrief = { 
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		greiefbomb = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	industrial_concern = {
+		hodel = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		drupp = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+		solle = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+
+		steinerstyer = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		zeughaus = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		staussleon = {
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	army_chief = {
+		lief = {
+
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { army_chief_morale_3 }			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		hansen = {
+
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { army_chief_drill_3 }			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		koskinen = {
+
+			allowed = {
+				original_tag = PES
+			}
+						
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+
+	navy_chief = {
+		
+		eldwin = {
+
+			
+			allowed = {
+				original_tag = PES
+			}
+						
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+
+	high_command = {
+
+		hwahr = {
+			ledger = army
+
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { army_logistics_3 }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		
+		rollo = {
+			ledger = army
+
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { army_artillery_1 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		mephisto = {
+			ledger = army
+
+			
+			allowed = {
+				original_tag = PES
+			}
+			
+			traits = { army_regrouping_1 }
+			
+			ai_will_do = {
+				factor = 1.5
+			}
+		}
+	}
+}

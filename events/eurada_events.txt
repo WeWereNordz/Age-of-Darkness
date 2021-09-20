@@ -1,0 +1,281 @@
+﻿###########################
+# Eurada events
+###########################
+
+add_namespace = eurada
+
+# Eirie Wishes to Join Our Faction
+country_event = {
+	id = eurada.1
+	title = eurada.1.t
+	desc = eurada.1.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+	option = { # Let Eirie Join
+		name = eurada.1.a
+		ai_chance = { factor = 90 }
+		add_to_faction = EIR
+		news_event = mithrasnews.8
+	}
+	option = { # Deny membership
+		name = eurada.1.b
+		ai_chance = { factor = 10 }
+		EIR = { country_event = { id = eirie.8 days = 1 } }
+	}
+}
+
+# Evolia Invites Us
+country_event = {
+	id = eurada.2
+	title = eurada.2.t
+	desc = eurada.2.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Join
+		name = eurada.2.a
+		ai_chance = { factor = 90 }
+		EVO = { add_to_faction = EUR }
+		news_event = { id = mithrasnews.6 days = 1 }
+	}
+	option = { # Decline
+		name = eurada.2.b
+		ai_chance = { factor = 10 }
+		EVO = { country_event = { id = evolia.2 } }
+	}
+}
+
+# Declined by Evolia
+country_event = {
+	id = eurada.3
+	title = eurada.3.t
+	desc = eurada.3.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # Hmph.
+		name = eurada.3.a
+	}
+
+}
+
+# Declined by Legatia
+country_event = {
+	id = eurada.4
+	title = eurada.4.t
+	desc = eurada.4.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # They will die alone.
+		name = eurada.4.a
+	}
+
+	option = { # Their loss.
+		name = eurada.4.b
+	}
+
+}
+
+# Johtan's Experiments
+country_event = {
+	id = eurada.5
+	title = eurada.5.t
+	desc = eurada.5.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # how horrific...
+		name = eurada.5.a
+	}
+
+	option = { # Tell the paper
+		name = eurada.5.b
+		news_event = { id = mithrasnews.16 days = 1 }
+	}
+
+	option = { # investigate further
+		name = eurada.5.c
+		country_event = { id = eurada.6 days = 1 }
+	}
+
+}
+
+# Johtan's Experiments Part 2
+country_event = {
+	id = eurada.6
+	title = eurada.6.t
+	desc = eurada.6.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # disgusting.
+		name = eurada.6.a
+	}
+
+	option = { # Tell the paper
+		name = eurada.6.b
+		news_event = { id = mithrasnews.16 days = 1 }
+	}
+
+	option = { # investigate further
+		name = eurada.6.c
+		country_event = { id = eurada.7 days = 1 }
+	}
+
+}
+
+# Johtan's Experiments Part 3
+country_event = {
+	id = eurada.7
+	title = eurada.7.t
+	desc = eurada.7.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	option = { # Tell the press.
+		name = eurada.7.b
+		news_event = { id = mithrasnews.17 days = 1 }
+	}
+
+}
+
+# Halvdes Revealed
+country_event = {
+	id = eurada.8
+	title = eurada.8.t
+	desc = eurada.8.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	option = { # Immigrate
+		name = eurada.8.a
+		news_event = mithrasnews.18
+		add_ideas = halvde_immigration
+	}
+
+	option = { # Tell no one.
+		name = eurada.8.b
+		hidden_effect = { news_event = { id = mithrasnews.19  days = 1 } }
+	}
+
+}
+
+# Non-Aggression Pact
+country_event = {
+	id = eurada.9
+	title = eurada.9.t
+	desc = eurada.9.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	option = { # Sign the Pact
+		name = eurada.9.a
+		diplomatic_relation = {
+			country = LEG
+			relation = non_aggression_pact
+			active = yes
+		}
+		LEG = { country_event = { id = legatia.3 days = 1 } }
+	}
+
+	option = { # Refuse
+		name = eurada.9.b
+		LEG = { country_event = { id = legatia.2 days = 1 } }
+	}
+
+}
+
+# Regians Coming into Faction
+country_event = {
+	id = eurada.10
+	title = eurada.10.t
+	desc = eurada.10.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	option = { # On One Condition
+		name = eurada.10.a
+		REG = { country_event = { id = regia.2 days = 1 } }
+	}
+
+	option = { # Refuse
+		name = eurada.10.b
+		REG = { country_event = { id = regia.3 days = 1 } }
+	}
+
+}
+
+# Regians Rejects Proposition
+country_event = {
+	id = eurada.11
+	title = eurada.11.t
+	desc = eurada.11.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+
+	option = { # A shame.
+		name = eurada.11.a
+	}
+
+}
+
+# Botrelia Desires Non-Aggression Pact
+country_event = {
+	id = eurada.12
+	title = eurada.12.t
+	desc = eurada.12.d
+	picture = GFX_kor_faction_invite
+	
+	is_triggered_only = yes
+
+
+	
+	option = { # We accept this peace.
+		name = eurada.12.a
+		ai_chance = { factor = 90 }
+		diplomatic_relation = {
+			country = BOT
+			relation = non_aggression_pact
+			active = yes
+		}
+		BOT = { country_event = { id = botrelia.7 days = 1 } }
+	}
+	option = { # We reject your offer.
+		name = eurada.12.b
+		ai_chance = { factor = 10 }
+		BOT = { country_event = { id = botrelia.8 days = 1 } }
+	}
+}

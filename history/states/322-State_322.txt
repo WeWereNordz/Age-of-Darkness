@@ -1,0 +1,36 @@
+state={
+	id=322
+	name="STATE_322"
+	manpower = 3872500
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	
+	resources={
+		chromium = 4
+		steel = 12
+	}
+
+	history={
+		victory_points = {
+			765 10
+		}
+		victory_points = {
+			938 6
+		}
+		victory_points = {
+			119 5
+		}
+		owner = OYO
+		
+		buildings = {
+			infrastructure = 6
+			arms_factory = 4
+			industrial_complex = 4
+		}
+		add_core_of = OYO
+	}
+
+	provinces={
+		119 206 555 604 640 671 674 765 938 1406 1565 1878 2086 2181 2212 2229 2647 2650 
+	}
+}

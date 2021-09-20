@@ -1,0 +1,24 @@
+state={
+	id=58
+	name="STATE_58"
+	provinces={
+		658 1021 1995 
+	}
+	manpower=745000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = POL
+		victory_points = {
+			1995 5
+		}
+		buildings = {
+			infrastructure = 4
+			1995 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = POL
+	}
+}

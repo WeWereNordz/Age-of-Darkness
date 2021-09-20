@@ -1,0 +1,911 @@
+ideas = {
+
+	country = {
+		legatian_steel = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_speed_factor = 0.1
+				army_armor_attack_factor = 0.05
+			}
+		}
+
+		shipping_route_defense = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		legatian_intelligence_service = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption = 1
+				decryption = 1
+			}
+		}
+
+		controversial_monarchy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 2
+			}
+		}
+
+		nonfunctioning_government = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
+
+		political_turbulence = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.2
+				communism_drift = 0.2
+			}
+		}
+
+		royal_commandos = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_training_time_factor = -0.1
+			}
+		}
+
+		defensive_priorities = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 0.25
+				production_speed_air_base_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
+			}
+		}
+
+		aerial_production_committee = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		small_arms_shortcuts = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		civil_defense_corps = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = 0.1
+				drift_defence_factor = 0.3
+			}
+		}
+
+		unbalanced_checkbooks = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.75
+				industry_repair_factor = -0.75
+			}
+		}
+
+		defensive_doctrine = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 0.2
+				max_dig_in_factor = 0.5
+			}
+		}
+
+		auroran_expansionism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		widespread_corruption = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.6
+				training_time_factor = 0.5
+			}
+		}
+
+		house_of_commons = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				disabled_ideas = 1
+			}
+		}
+	}
+
+	political_advisor = {
+		
+		lawson = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
+		kingsley = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
+		cmorgan = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { democratic_reformer }
+		}
+		rperry = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		brooks = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		haider = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		alfredb = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { quartermaster_general }
+		}
+
+		lukeg = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { quartermaster_general }
+		}
+		tmarshall = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { captain_of_industry }
+		}
+		campbell = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { armaments_organizer }
+		}
+	}
+
+	theorist = {
+		saunders = {
+			ledger = army
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		ivancook = {
+			ledger = air
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		fraser = {
+			ledger = navy
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		lra = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 10
+			}
+
+		}
+		
+		riverburchaof = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		mtdb = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+
+		rns = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { naval_manufacturer }
+			
+		}
+	}
+
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		levison = { 
+			allowed = {
+				original_tag = LEG
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		kirst = { 
+			allowed = {
+				original_tag = LEG
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		melvis = { 
+			allowed = {
+				original_tag = LEG
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+
+		asher = { 
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		squire = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	industrial_concern = {
+		easterngas = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		industrialc = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { industrial_concern }
+		}
+		legatianpeb = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+
+		Lloyd = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		starrowsaof = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		severin = {
+			
+			allowed = {
+				original_tag = LEG
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	army_chief = {
+		harper = {
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_chief_old_guard }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		watts = {
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_chief_planning_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		barnes = {
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_chief_drill_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+		patrickh = {
+
+			allowed = {
+				original_tag = LEG
+			}
+						
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+		sprice = {
+
+			allowed = {
+				original_tag = LEG
+			}
+						
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+		}
+	}
+
+	navy_chief = {
+		jchapman = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+						
+			traits = { navy_chief_maneuver_3 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+		frobinson = {
+
+			
+			allowed = {
+				original_tag = LEG
+			}
+						
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+
+	high_command = {
+		
+		rhys = {
+			ledger = army
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+
+		hamish = {
+			ledger = navy
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		cunningham = {
+			ledger = army
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		pearson = {
+			ledger = navy
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		edison = {
+			ledger = navy
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { navy_amphibious_assault_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		baxter = {
+			ledger = navy
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		sthompson = {
+			ledger = army
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_armored_1 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		antoineb = {
+			ledger = army
+
+			allowed = {
+				original_tag = LEG
+			}
+			
+			traits = { army_entrenchment_2 }
+			
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	}
+}

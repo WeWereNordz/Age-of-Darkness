@@ -1,0 +1,79 @@
+EUR_historical_plan = {
+	name = "Eurada Historical Plan"
+	desc = "Historical Eurada"
+
+	allowed = {
+		original_tag = EUR
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_government = communism
+			has_government = neutrality
+			has_government = fascism
+		}
+	}
+
+	ai_national_focuses = {
+		EUR_the_presidents_speech
+		EUR_our_euradan_agenda
+		EUR_modernization
+		EUR_reform_the_government
+		EUR_the_mitran_eurada
+		EUR_intelligence_network_overhaul
+		EUR_a_unitary_state
+		EUR_army_evaluation
+		EUR_industrialization
+		EUR_high_speed_rail
+		EUR_suham_mineworks
+		EUR_expand_the_mineworks
+		EUR_vanoxian_highway
+		EUR_vanoxian_factories
+		EUR_a_curious_discovery
+		EUR_ceruleum_deposits
+		EUR_privatize_the_arms_industry
+		EUR_magitek_theory
+		EUR_technocratic_theory
+		EUR_the_euradan_way
+		EUR_foreign_affairs
+		EUR_the_new_ways
+		EUR_recruitment_drives
+		EUR_motorized_infantry
+		EUR_beltrist_crusade
+		EUR_beltrism_in_bataj
+		EUR_armor_research
+		EUR_artillery_tactics
+		EUR_evolian_alliance
+		EUR_shock_and_awe
+		EUR_war_for_aurora
+		EUR_magitek_engines
+		EUR_johtans_experiments
+		EUR_the_halvde_question
+		EUR_halvde_regiments
+		EUR_a_science_division
+		EUR_magitek_weaponry
+		EUR_project_nightrose
+		EUR_the_bottom_feed
+		EUR_the_regian_question
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

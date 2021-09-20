@@ -1,0 +1,23 @@
+state={
+	id=247
+	name="STATE_247"
+	provinces={
+		27 68 561 593 636 714 759 784 849 1106 1163 1308 1428 1692 1966 2106 2147 2164 2409 2444 2453 2464 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		aluminium=12
+	}
+
+	history={
+		owner = BOT
+
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = BOT
+	}
+}

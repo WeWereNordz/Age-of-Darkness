@@ -1,0 +1,28 @@
+state={
+	id=314
+	name="STATE_314"
+	provinces={
+		112 121 594 837 1098 1215 1329 1593 2172 2624 2639 2644 
+	}
+	manpower=3842674
+	state_category = city
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=12
+	}
+
+	history={
+		owner = DUR
+		victory_points = {
+			837 30
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = DUR
+	}
+}

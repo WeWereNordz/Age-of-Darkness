@@ -1,0 +1,19 @@
+state={
+	id=189
+	name="STATE_189"
+	provinces={
+		41 357 455 612 678 717 889 1673 1682 2265 2267 2270 2275 2276 
+	}
+	manpower=3156456
+	state_category = town
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = EVO
+
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = EVO
+	}
+}

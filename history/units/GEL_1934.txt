@@ -1,0 +1,57 @@
+
+division_template = {
+	name = "Reservistenbrigade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		location = 1419
+		division_template = "Reservistenbrigade"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+	division= {	
+		location = 2184
+		division_template = "Reservistenbrigade"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+}
+
+air_wings = {
+	206 = {
+		fighter_equipment_0 = {
+			owner = "GEL"
+			amount = 55
+		}
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GEL"
+		}
+		requested_factories = 1
+		progress = 0.11
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GEL"
+		}
+		requested_factories = 1
+		progress = 0.62
+		efficiency = 70
+	}
+}

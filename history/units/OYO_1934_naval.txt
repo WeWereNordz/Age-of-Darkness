@@ -1,0 +1,21 @@
+﻿units = {
+
+	######## NAVAL OOB ########
+	fleet = {
+		name = "Jinminkantai"
+		naval_base = 2637
+		task_force = {				
+			name = "Kaisui Kantai"
+			location = 219 # Danzig
+			ship = { name = "DD-1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OYO } } }	
+			ship = { name = "DD-2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = OYO } } }	
+		}		
+		task_force = {
+			name = "Sensuikan Kantai"
+			location = 2637 # Danzig
+			ship = { name = "SC-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OYO } } }					
+			ship = { name = "SC-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OYO } } }					
+			ship = { name = "SC-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = OYO } } }			
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=289
+	name="STATE_289"
+	provinces={
+		163 237 544 1241 1477 2162 
+	}
+	manpower=1728879
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	
+	resources={
+		steel=80
+	}
+
+	history={
+		owner = LEG
+		victory_points = {
+			163 22
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 4
+			dockyard = 1
+		}
+		add_core_of = LEG
+	}
+}

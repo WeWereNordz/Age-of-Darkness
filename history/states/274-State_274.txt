@@ -1,0 +1,26 @@
+state={
+	id=274
+	name="STATE_274"
+	provinces={
+		22 89 258 276 325 332 385 697 745 786 806 818 903 916 922 1007 1047 1116 1160 1383 1538 1744 1835 1862 1886 2499 2526 2541 2566 
+	}
+	manpower=3303970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	
+	resources={
+		oil=18
+		steel = 80
+	}
+
+	history={
+		owner = BOT
+		victory_points = {
+			89 20
+		}
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = BOT
+	}
+}
