@@ -1,5 +1,5 @@
 ###########################
-# News Events
+# News Events Hi Github!!
 ###########################
 
 add_namespace = mithrasnews
